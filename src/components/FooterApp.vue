@@ -1,12 +1,10 @@
 <template>
-
   <footer
-          class="text-center text-lg-start text-white"
-          style="background-color: #3e4551"
-          >
+      class="text-center text-lg-start text-white"
+      style="background-color: rgb(0 112 255)"
+  >
     <!-- Grid container -->
     <div class="container p-4 pb-0">
-
       <!-- Section: CTA -->
       <section class="">
         <p class="d-flex justify-content-center align-items-center">
@@ -18,58 +16,54 @@
       </section>
       <!-- Section: CTA -->
 
-      <hr class="mb-4" />
+      <hr class="mb-4"/>
 
       <!-- Section: Social media -->
       <section class="mb-4 text-center">
         <!-- Facebook -->
         <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           >
-           <font-awesome-icon class="plus align-self-center" icon="fas fa-pen"/>
-           </a>
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+        >
+          <font-awesome-icon :icon="['fab','facebook']" class="icon alt"/>
+        </a>
 
         <!-- Twitter -->
         <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fab fa-twitter"></i
-          ></a>
-
-        <!-- Google -->
-        <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fab fa-google"></i
-          ></a>
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+        >
+          <font-awesome-icon :icon="['fab','twitter']" class="icon alt"/>
+        </a>
 
         <!-- Instagram -->
         <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fab fa-instagram"></i
-          ></a>
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+        >
+          <font-awesome-icon :icon="['fab','instagram']" class="icon alt"/>
+        </a>
 
         <!-- Linkedin -->
         <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fab fa-linkedin-in"></i
-          ></a>
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+        >
+          <font-awesome-icon :icon="['fab','linkedin']" class="icon alt"/>
+        </a>
 
         <!-- Github -->
         <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fab fa-github"></i
-          ></a>
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+        >
+          <font-awesome-icon :icon="['fab','github']" class="icon alt"/>
+        </a>
       </section>
       <!-- Section: Social media -->
     </div>
@@ -77,13 +71,11 @@
 
     <!-- Copyright -->
     <div
-         class="text-center p-3"
-         style="background-color: rgba(0, 0, 0, 0.2)"
-         >
+        class="text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+    >
       © 2022 Copyright:
-      <a class="text-white" href="#"
-         >reaseudessavoirfaire.com</a
-        >
+      <a class="text-white" href="#">reseaudessavoirfaire.com</a>
     </div>
     <!-- Copyright -->
   </footer>
@@ -91,9 +83,7 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style>

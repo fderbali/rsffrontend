@@ -22,11 +22,11 @@ require('bootstrap');
 
 //Font awesome
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter, faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faTimes, faAngleDown, faStar, faPlus, faFileAlt, faArrowRight, faSearch, faPen } from '@fortawesome/free-solid-svg-icons';
 import { } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-library.add(faTimes, faAngleDown, faStar, faFileAlt, faPlus, faArrowRight, faSearch, faPen);
+library.add(faTimes, faAngleDown, faStar, faFileAlt, faPlus, faArrowRight, faSearch, faPen, faFacebook, faTwitter, faInstagram, faLinkedin, faGithub);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 
@@ -36,9 +36,14 @@ Vue.use(VueSession, {
 });
 
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+// i18n
+import i18n from './libraries/i18n.js';
+Vue.use(i18n);
 
 new Vue({
+  i18n,
   render: h => h(App),
   store,
   router
