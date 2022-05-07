@@ -1,6 +1,12 @@
 <template>
   <div class="text-center">
-    <h1>Home page <font-awesome-icon class="plus align-self-center" icon="fas fa-pen"/></h1>
+    <h1>Home page
+
+      <font-awesome-icon :icon="['fas', 'pen']" class="icon alt"/>
+
+      <font-awesome-icon :icon="['fas','plus']" class="icon alt"/>
+    </h1>
+    <h2>{{ $i18n.t('home') }}</h2>
   </div>
 </template>
 

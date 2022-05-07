@@ -7,9 +7,9 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 link-secondary">Accueil</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Publier formation</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Publier Annonce</a></li>
+          <li><a href="#" class="nav-link px-2 link-secondary">{{ $i18n.t('home') }}</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">{{ $i18n.t('publish-training') }}</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">{{ $i18n.t('publish-announcement') }}</a></li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
