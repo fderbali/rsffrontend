@@ -1,7 +1,7 @@
 <template>
   <footer
       class="text-center text-lg-start text-white"
-      style="background-color: #3e4551"
+      style="background-color: rgb(0 112 255)"
   >
     <!-- Grid container -->
     <div class="container p-4 pb-0">
@@ -75,7 +75,7 @@
         style="background-color: rgba(0, 0, 0, 0.2)"
     >
       © 2022 Copyright:
-      <a class="text-white" href="#">reaseudessavoirfaire.com</a>
+      <a class="text-white" href="#">reseaudessavoirfaire.com</a>
     </div>
     <!-- Copyright -->
   </footer>
