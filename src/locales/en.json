@@ -1,5 +1,7 @@
 {
   "home":                 "Home",
   "publish-training":     "Publish training",
-  "publish-announcement": "Publish announcement"
+  "publish-announcement": "Publish announcement",
+  "training": "Training",
+  "search": "Search..."
 }

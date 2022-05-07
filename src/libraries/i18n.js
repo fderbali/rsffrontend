@@ -39,4 +39,3 @@ export default new VueI18n({
     silentFallbackWarn:  true,
     escapeParameterHtml: true
 });
-console.log(localStorage.getItem('locale'));

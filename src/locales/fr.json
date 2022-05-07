@@ -1,5 +1,7 @@
 {
   "home":                 "Acceuil",
   "publish-training":     "Publier formation",
-  "publish-announcement": "Publier annonce"
+  "publish-announcement": "Publier annonce",
+  "training": "Formation",
+  "search": "Recherche..."
 }
