@@ -1,7 +1,10 @@
 {
-  "home":                 "Home",
-  "publish-training":     "Publish training",
-  "publish-announcement": "Publish announcement",
-  "training": "Training",
-  "search": "Search..."
+    "home":                 "Home",
+    "publish-training":     "Publish training",
+    "publish-announcement": "Publish announcement",
+    "training": "Training",
+    "search": "Search...",
+    "login": "Login",
+    "welcome": "Welcome back 🖐",
+    "register": "Sign up"
 }

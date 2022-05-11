@@ -1,7 +1,10 @@
 {
-  "home":                 "Acceuil",
-  "publish-training":     "Publier formation",
-  "publish-announcement": "Publier annonce",
-  "training": "Formation",
-  "search": "Recherche..."
+    "home":                 "Acceuil",
+    "publish-training":     "Publier formation",
+    "publish-announcement": "Publier annonce",
+    "training": "Formation",
+    "search": "Recherche...",
+    "login": "Login",
+    "welcome": "Bienvenue 🖐",
+    "register": "S'inscrire"
 }
