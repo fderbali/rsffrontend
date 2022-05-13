@@ -4,7 +4,7 @@ const resource_csrf_cookies  = '/sanctum/csrf-cookie';
 const resource = '/api';
 
 const state = () => ({
-    user:     null
+    user: null
 });
 
 

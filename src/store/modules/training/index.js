@@ -17,6 +17,27 @@ const actions = {
                 reject(error);
             });
         });
+    },
+    saveTraining: (context, formTraining) => {
+        console.log(formTraining)
+        return new Promise((resolve, reject) => {
+            Api.post(`${resource}/create`, {
+                "title": formTraining.titre,
+                "description": formTraining.description,
+                "thumbnail": "xxxxxxxxxxxxxx",
+                "level": formTraining.niveau,
+                "location": formTraining.domicile ? "domicile" : formTraining.adresse,
+                "user_id":formTraining.user_id,
+                "category_id": formTraining.categorie,
+                "total_duration": formTraining.duree
+            }).then((response) => {
+                console.log(response);
+                resolve(response);
+            })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
     }
 };
 
