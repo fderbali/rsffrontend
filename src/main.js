@@ -1,16 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-// Routing 
-import VueRouter from 'vue-router'
-Vue.use(VueRouter);
-import Routes from './routes.js';
-const router = new VueRouter({
-  mode: 'history',
-  routes: Routes
-});
-
-
 // Session
 import VueSession from 'vue-session';
 
@@ -29,7 +19,6 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 library.add(faTimes, faAngleDown, faStar, faFileAlt, faPlus, faArrowRight, faSearch, faPen, faFacebook, faTwitter, faInstagram, faLinkedin, faGithub);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
-
 // Session may persist between tabs and browser instances
 Vue.use(VueSession, {
   persist: true
@@ -41,6 +30,9 @@ Vue.config.productionTip = false;
 // i18n
 import i18n from './libraries/i18n.js';
 Vue.use(i18n);
+
+// Import Router
+import router from './libraries/VueRouter.js';
 
 new Vue({
   i18n,
