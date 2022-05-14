@@ -77,6 +77,7 @@
 
 <script>
 import {mapActions, mapState} from "vuex";
+import router from "@/libraries/VueRouter";
 
 export default {
     name: "form-training",
@@ -112,7 +113,9 @@ export default {
                 'user_id': this.user.id
             };
             this.saveTraining(formTraining).then(()=>{
-                console.log('je passe apres le call ajax');
+                router.push({
+                    name: 'home'
+                });
             });
         }
     }

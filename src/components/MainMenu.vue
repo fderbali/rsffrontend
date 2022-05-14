@@ -30,7 +30,7 @@
                         <li><a class="dropdown-item" href="#">Devis envoyés</a></li>
                         <li><a class="dropdown-item" href="#">Devis reçus</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#" @click.prevent="logout()">Se déconnecter</a></li>
+                        <li><a class="dropdown-item" href="#" @click.prevent="deconnexion()">Se déconnecter</a></li>
                     </ul>
                 </div>
                 <ul v-else class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -44,6 +44,7 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
+import router from "@/libraries/VueRouter";
 export default {
     name:'MainMenu',
     data(){
@@ -59,8 +60,16 @@ export default {
     methods:{
         ...mapActions("core/auth", {
             logout: "logout"
-        })
+        }),
+        deconnexion(){
+            this.logout().then(()=>{
+                router.push({
+                    name: 'home'
+                });
+            });
+        }
     }
+
 
 }
 </script>
