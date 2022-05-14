@@ -2,20 +2,21 @@ import Api from '@/libraries/Api.js';
 const resource = '/api/training';
 
 const state = () => ({
-    trainings:     null
+    trainings: null
 });
 
 
 // Actions
 const actions = {
-    getTrainings: () => {
+    getTrainings: (context) => {
         return new Promise((resolve, reject) => {
             Api.get(resource).then((response) => {
+                context.commit('SET_TRAININGS', response);
                 resolve(response);
             })
-            .catch((error) => {
-                reject(error);
-            });
+                .catch((error) => {
+                    reject(error);
+                });
         });
     },
     saveTraining: (context, formTraining) => {
@@ -43,7 +44,9 @@ const actions = {
 
 // Mutations
 const mutations = {
-
+    ['SET_TRAININGS']: (state, payload) => {
+        state.trainings = payload.data.data;
+    },
 };
 
 // Export module
