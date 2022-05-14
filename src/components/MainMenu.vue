@@ -7,9 +7,9 @@
                 </a>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 link-secondary">{{ $i18n.t('home') }}</a></li>
-                    <li><a href="#" class="nav-link px-2 link-dark">{{ $i18n.t('publish-training') }}</a></li>
-                    <li><a href="#" class="nav-link px-2 link-dark">{{ $i18n.t('publish-announcement') }}</a></li>
+                    <li><a href="/" class="nav-link px-2 link-secondary">{{ $i18n.t('home') }}</a></li>
+                    <li><a v-if="user" href="form-trainings" class="nav-link px-2 link-dark">{{ $i18n.t('publish-training') }}</a></li>
+                    <li><a v-if="user" href="#" class="nav-link px-2 link-dark">{{ $i18n.t('publish-announcement') }}</a></li>
                 </ul>
 
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -30,7 +30,7 @@
                         <li><a class="dropdown-item" href="#">Devis envoyés</a></li>
                         <li><a class="dropdown-item" href="#">Devis reçus</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#" @click.prevent="logout()">Se déconnecter</a></li>
+                        <li><a class="dropdown-item" href="#" @click.prevent="deconnexion()">Se déconnecter</a></li>
                     </ul>
                 </div>
                 <ul v-else class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -44,6 +44,7 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
+import router from "@/libraries/VueRouter";
 export default {
     name:'MainMenu',
     data(){
@@ -59,8 +60,16 @@ export default {
     methods:{
         ...mapActions("core/auth", {
             logout: "logout"
-        })
+        }),
+        deconnexion(){
+            this.logout().then(()=>{
+                router.push({
+                    name: 'home'
+                });
+            });
+        }
     }
+
 
 }
 </script>

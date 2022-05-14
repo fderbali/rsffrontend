@@ -4,7 +4,7 @@ const resource_csrf_cookies  = '/sanctum/csrf-cookie';
 const resource = '/api';
 
 const state = () => ({
-    user:     null
+    user: null
 });
 
 
@@ -54,6 +54,9 @@ const actions = {
                 })
                 .catch((error) => {
                     reject(error);
+                }).finally(()=>{
+                    Vue.prototype.$session.destroy();
+                    context.commit('REMOVE_AUTH_USER');
                 });
         });
     },
