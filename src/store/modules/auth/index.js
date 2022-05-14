@@ -54,6 +54,9 @@ const actions = {
                 })
                 .catch((error) => {
                     reject(error);
+                }).finally(()=>{
+                    Vue.prototype.$session.destroy();
+                    context.commit('REMOVE_AUTH_USER');
                 });
         });
     },
