@@ -1,10 +1,17 @@
 {
-    "home":                 "Acceuil",
+    "home":                 "Accueil",
     "publish-training":     "Publier formation",
     "publish-announcement": "Publier annonce",
+
     "training": "Formation",
     "search": "Recherche...",
-    "login": "Login",
+    "login": "Connexion",
     "welcome": "Bienvenue 🖐",
-    "register": "S'inscrire"
+    "register": "Inscription",
+
+    "msg404-1": "Oups!",
+    "msg404-2": "Page inexistante",
+    "msg404-3": "La page que vous recherchée n'existe pas."
+
+
 }
