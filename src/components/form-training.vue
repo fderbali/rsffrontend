@@ -1,10 +1,9 @@
 <template>
-    <div class="container">
+    <div class="container d-flex align-items-center justify-content-center">
         <div class="row w-50">
             <div class="col align-self-center">
-
                 <form class="p-5">
-                    <h2 class="pb-5">Publier formation</h2>
+                    <h2 class="pb-3 text-center titre-principal">Publier formation</h2>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Catégorie</label>
                         <div class="col-sm-10">
