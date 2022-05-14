@@ -2,9 +2,14 @@
     "home":                 "Home",
     "publish-training":     "Publish training",
     "publish-announcement": "Publish announcement",
+    
     "training": "Training",
     "search": "Search...",
     "login": "Login",
     "welcome": "Welcome back 🖐",
-    "register": "Sign up"
+    "register": "Sign up",
+
+    "msg404-1": "Opps!",
+    "msg404-2": "Page not found.",
+    "msg404-3": "The page you’re looking for doesn’t exist."
 }
