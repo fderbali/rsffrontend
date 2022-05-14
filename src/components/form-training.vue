@@ -68,7 +68,7 @@
                             <input type="text" name="duree" class="form-control" v-model="duree">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" @click.prevent="enregistrerCategorie()">Soumettre</button>
+                    <button type="submit" class="btn btn-primary mb-5" @click.prevent="enregistrerCategorie()">Soumettre</button>
                 </form>
             </div>
         </div>
