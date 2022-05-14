@@ -6,7 +6,7 @@
     <!-- Grid container -->
     <div class="container p-4 pb-0">
       <!-- Section: CTA -->
-      <section class="">
+        <section class="" v-if="!user">
         <p class="d-flex justify-content-center align-items-center">
           <span class="me-3">Register for free</span>
           <button type="button" class="btn btn-outline-light btn-rounded">
@@ -83,7 +83,14 @@
 </template>
 
 <script>
-export default {}
+    import { mapState } from 'vuex';
+    export default {
+        computed: {
+            ...mapState('core/auth', [
+                'user'
+            ]),
+        },
+    }
 </script>
 
 <style>
