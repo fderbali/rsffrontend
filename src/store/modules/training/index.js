@@ -2,7 +2,8 @@ import Api from '@/libraries/Api.js';
 const resource = '/api/training';
 
 const state = () => ({
-    trainings: null
+    trainings: null,
+    trainingsLinks: null
 });
 
 
@@ -46,7 +47,12 @@ const actions = {
 const mutations = {
     ['SET_TRAININGS']: (state, payload) => {
         state.trainings = payload.data.data;
-    },
+        // Remove last and first element to get rid of previous and next links
+        let links = payload.data.links;
+        links.shift();
+        links.splice(-1);
+        state.trainingsLinks = links;
+    }
 };
 
 // Export module
