@@ -12,8 +12,22 @@
                     <li><a v-if="user" href="#" class="nav-link px-2 link-dark">{{ $i18n.t('publish-announcement') }}</a></li>
                 </ul>
 
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                    <input type="search" class="form-control" :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 d-flex flex-wrap align-items-center justify-content-center">
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li v-if="this.$i18n.locale=='fr'">
+                            <a href="#" @click.prevent="changeLanguage()">
+                                <img src="@/assets/images/en.png" alt="en">
+                            </a>
+                        </li>
+                        <li v-else>
+                            <a href="#" @click.prevent="changeLanguage()">
+                                <img src="@/assets/images/fr.png" alt="fr">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="ps-3">
+                        <input type="search" class="form-control" :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
+                    </div>
                 </form>
 
                 <div class="dropdown text-end" v-if="user">
@@ -67,6 +81,13 @@ export default {
                     name: 'login'
                 });
             });
+        },
+        changeLanguage(){
+            if(this.$i18n.locale === "fr"){
+                this.$i18n.locale = 'en';
+            } else {
+                this.$i18n.locale = 'fr';
+            }
         }
     }
 
