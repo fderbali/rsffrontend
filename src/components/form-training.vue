@@ -8,9 +8,9 @@
                         <label class="col-sm-2 col-form-label">{{ $i18n.t('category') }}</label>
                         <div class="col-sm-10">
                             <select class="form-select" name="categorie" v-model="categorie">
-                                <!-- <option v-for="category, index in categories" :key="index" :value="category.id">
+                                <option v-for="category, index in categories" :key="index" :value="category.id">
                                     {{category.title}}
-                                </option> -->
+                                </option>
                             </select>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" name="thumbnail">{{ $i18n.t('thumbnail') }}</label>
                         <div class="col-sm-10">
-                            <input type="file" name="tumbnail">
+                            <input type="file" name="tumbnail" accept="image/*" ref="file">
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -120,7 +120,8 @@ export default {
                 'domicile': this.domicile,
                 'adresse':this.adresse,
                 'duree':this.duree,
-                'user_id': this.user.id
+                'user_id': this.user.id,
+                'thumbnail': this.$refs.file.files[0]
             };
             this.saveTraining(formTraining).then(()=>{
                 router.push({

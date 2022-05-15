@@ -21,17 +21,20 @@ const actions = {
         });
     },
     saveTraining: (context, formTraining) => {
-        console.log(formTraining)
+        const formData = new FormData();
+        formData.append('thumbnail', formTraining.thumbnail);
+        formData.append('title', formTraining.titre);
+        formData.append('description', formTraining.description);
+        formData.append('level', formTraining.niveau);
+        formData.append('location', formTraining.domicile ? "domicile" : formTraining.adresse);
+        formData.append('user_id', formTraining.user_id);
+        formData.append('category_id', formTraining.categorie);
+        formData.append('total_duration', formTraining.duree);
         return new Promise((resolve, reject) => {
-            Api.post(`${resource}/create`, {
-                "title": formTraining.titre,
-                "description": formTraining.description,
-                "thumbnail": "xxxxxxxxxxxxxx",
-                "level": formTraining.niveau,
-                "location": formTraining.domicile ? "domicile" : formTraining.adresse,
-                "user_id":formTraining.user_id,
-                "category_id": formTraining.categorie,
-                "total_duration": formTraining.duree
+            Api.post(`${resource}/create`, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
             }).then((response) => {
                 console.log(response);
                 resolve(response);
