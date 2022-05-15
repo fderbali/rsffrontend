@@ -39,7 +39,7 @@
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('my-announces') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('i-teach') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('i-learn') }}</a></li>
-                        <li><a class="dropdown-item" href="#">{{ $i18n.t('s-demands') }}</a></li>
+                        <li><a class="dropdown-item" href="#" @click.prevent="getSentDemands()">{{ $i18n.t('s-demands') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('r-demands') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('s-estimates') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('r-estimates') }}</a></li>
@@ -75,6 +75,9 @@ export default {
         ...mapActions("core/auth", {
             logout: "logout"
         }),
+        ...mapActions("core/demand", {
+            getSentDemandsByUser:"getSentDemandsByUser"
+        }),
         deconnexion(){
             this.logout().then(()=>{
                 router.push({
@@ -88,6 +91,13 @@ export default {
             } else {
                 this.$i18n.locale = 'fr';
             }
+        },
+        getSentDemands(){
+            this.getSentDemandsByUser(this.user.id).then(()=>{
+                router.push({
+                    name: 'sentDemands'
+                });
+            })
         }
     }
 
