@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col" v-for="training, index in trainings" :key="index">
                     <div class="card" style="width: 18rem;">
-                        <img src="" class="card-img-top" alt="">
+                        <img :src="`http://rsfbackend.test/images/${training.thumbnail}`" class="card-img-top" alt="">
                         <div class="card-body">
                             <h5 class="card-title">{{ training.title }}</h5>
                             <p class="card-text">{{ training.description }}</p>

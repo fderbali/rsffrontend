@@ -29,7 +29,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" name="thumbnail">Thumbnail</label>
                         <div class="col-sm-10">
-                            <input type="file" name="tumbnail">
+                            <input type="file" name="tumbnail" accept="image/*" ref="file">
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -88,12 +88,13 @@ export default {
     data(){
         return{
             categorie: 1,
-            titre: 'jardinage',
-            description: 'desc',
-            niveau: 'middle',
+            titre: '',
+            description: '',
+            niveau: '',
             domicile: true,
             adresse: '',
-            duree: 5
+            duree: 5,
+            tumbnail: null
         }
     },
     computed:{
@@ -120,7 +121,8 @@ export default {
                 'domicile': this.domicile,
                 'adresse':this.adresse,
                 'duree':this.duree,
-                'user_id': this.user.id
+                'user_id': this.user.id,
+                'thumbnail': this.$refs.file.files[0]
             };
             this.saveTraining(formTraining).then(()=>{
                 router.push({
