@@ -7,7 +7,11 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Catégorie</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="categorie" v-model="categorie">
+                            <select class="form-select" name="categorie" v-model="categorie">
+                                <option v-for="category, index in categories" :key="index" :value="category.id">
+                                    {{category.title}}
+                                </option>
+                            </select>
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -68,7 +72,7 @@
                             <input type="text" name="duree" class="form-control" v-model="duree">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary mb-5" @click.prevent="enregistrerCategorie()">Soumettre</button>
+                    <button type="submit" class="btn btn-primary mb-5" @click.prevent="enregistrerTraining()">Soumettre</button>
                 </form>
             </div>
         </div>
@@ -78,7 +82,7 @@
 <script>
 import {mapActions, mapState} from "vuex";
 import router from "@/libraries/VueRouter";
-
+import Alert from "@/libraries/Alert";
 export default {
     name: "form-training",
     data(){
@@ -96,12 +100,18 @@ export default {
         ...mapState('core/auth', [
             'user'
         ]),
+        ...mapState('core/category', [
+            'categories'
+        ]),
     },
     methods:{
         ...mapActions('core/training', {
             saveTraining: 'saveTraining'
         }),
-        enregistrerCategorie(){
+        ...mapActions('core/category', {
+            getCategories: 'getCategories'
+        }),
+        enregistrerTraining(){
             let formTraining = {
                 'categorie': this.categorie,
                 'titre': this.titre,
@@ -118,6 +128,11 @@ export default {
                 });
             });
         }
+    },
+    mounted(){
+        this.getCategories().catch(()=>{
+            Alert.fail("Une erreur s'est produite sur la page, veuillez actualiser la page SVP !");
+        });
     }
 }
 </script>

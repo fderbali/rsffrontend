@@ -13,7 +13,7 @@ export default {
             position:           'top-end',
             icon:               'error',
             title:              'Erreur',
-            text:               message,
+            html:                message,
             showCloseButton:    true,
             allowEscapeKey:     false,
             showConfirmButton:  false,
