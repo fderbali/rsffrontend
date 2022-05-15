@@ -8,7 +8,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ training.title }}</h5>
                             <p class="card-text">{{ training.description }}</p>
-                            <a href="#" class="btn btn-success">{{ $i18n.t('do-demand') }}</a>
+                            <a href="#" class="btn btn-success" @click.prevent="sendDemand(training.id)">{{ $i18n.t('do-demand') }}</a>
                         </div>
                     </div>
                 </div>
@@ -40,17 +40,44 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
+import Alert from "@/libraries/Alert.js";
 export default {
     name: 'Home',
     computed: {
         ...mapState('core/training', [
             'trainings', 'trainingsLinks'
         ]),
+        ...mapState('core/auth', [
+            'user'
+        ])
     },
     methods: {
         ...mapActions('core/training', {
             getTrainings: 'getTrainings'
         }),
+        ...mapActions('core/demand', {
+            envoyerDemand: 'envoyerDemand'
+        }),
+        sendDemand(trainingId){
+            Alert.confirmation("Etes vous sûr !", "Vous allez envoyer une demande pour cette formation" ,"Oui")
+                .then((response) => {
+                    if (response.isConfirmed) {
+                        // Envoie de requête Ajax pour créer demande :
+                        let dataToSend = {
+                            "status":"initiated",
+                            "training_id":trainingId,
+                            "user_id":this.user.id
+                        }
+                        this.envoyerDemand(dataToSend).then(()=>{
+                            Alert.success("Demande bien envoyé");
+                        })
+                        .catch((e)=>{
+                            let errorMessage = (Object.values(e.response.data.errors)).join('<br/>');
+                            Alert.fail(errorMessage);
+                        })
+                    }
+                });
+        }
     },
     mounted(){
         this.getTrainings();
