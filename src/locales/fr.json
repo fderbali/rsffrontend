@@ -1,17 +1,58 @@
 {
-    "home":                 "Accueil",
-    "publish-training":     "Publier formation",
-    "publish-announcement": "Publier annonce",
+    "home":         "Accueil",
+    "publish-t":    "Publier formation",
+    "publish-a":    "Publier annonce",
+    "search":       "Recherche...",
+    "training":     "Formation",
+    
+    "register":     "Inscription",
+    "email":        "Courriel",
+    "pw":           "Mot de passe",
+    "pw-again":     "Confirmation mot de passe",
+    "first-name":   "Nom",
+    "last-name":    "Prénom",
+    "birth-date":   "Date de naissance",
+    "address":      "Adresse",
+    "city":         "Ville",
+    "country":      "Pays",
+    "zip-code":     "Code postal",
 
-    "training": "Formation",
-    "search": "Recherche...",
-    "login": "Connexion",
-    "welcome": "Bienvenue 🖐",
-    "register": "Inscription",
+    "login":        "Connexion",
+    "logoff":       "Déconnexion",
+    "welcome":      "Bienvenue 🖐",
+    "msg-login":    "Courriel et/ou Mot de passe invalides",
 
-    "msg404-1": "Oups!",
-    "msg404-2": "Page inexistante",
-    "msg404-3": "La page que vous recherchée n'existe pas."
+    "category":     "Catégorie",
+    "title":        "Titre",
+    "description":  "Description",
+    "level":        "Niveau",
+    "junior":       "Débutant",
+    "middle":       "Intermédiaire",
+    "senior":       "Avancé",
+    "location":     "Lieu",
+    "duration":     "Durée totale(hh)",
+    "thumbnail":    "Image",
+
+    "do-demand":    "Faire une demande",
+
+    "chat":         "Chat",
+    "my-announces": "Mes annonces",
+    "i-teach":      "J'enseigne",
+    "i-learn":      "J'apprend",
+    "s-demands":    "Demandes envoyées",
+    "r-demands":    "Demandes reçues",
+    "s-estimates":  "Devis envoyés",
+    "r-estimates":  "Devis reçus",
+
+    "submit":       "Soumettre",
+
+    "free-register": "Inscription gratuite",
+
+    "copyright":    "© 2022 Droits d'auteur : ",
+
+    "msg404-1":     "Oups!",
+    "msg404-2":     "Page inexistante",
+    "msg404-3":     "La page que vous recherchée n'existe pas."
 
 
 }

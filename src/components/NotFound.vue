@@ -11,7 +11,7 @@
                 <p class="fs-3"> <span class="text-danger">{{ $i18n.t('msg404-1') }}</span>
                  {{ $i18n.t('msg404-2') }}</p>
                 <p class="lead">{{ $i18n.t('msg404-3') }}</p>
-                <a href="#" class="btn btn-primary">{{ $i18n.t('home') }}</a>
+                <a href="/" class="btn btn-success">{{ $i18n.t('home') }}</a>
             </div>
         </div>
     </div>

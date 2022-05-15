@@ -8,8 +8,8 @@
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                     <li><a href="/" class="nav-link px-2 link-secondary">{{ $i18n.t('home') }}</a></li>
-                    <li><a v-if="user" href="form-trainings" class="nav-link px-2 link-dark">{{ $i18n.t('publish-training') }}</a></li>
-                    <li><a v-if="user" href="#" class="nav-link px-2 link-dark">{{ $i18n.t('publish-announcement') }}</a></li>
+                    <li><a v-if="user" href="form-trainings" class="nav-link px-2 link-dark">{{ $i18n.t('publish-t') }}</a></li>
+                    <li><a v-if="user" href="#" class="nav-link px-2 link-dark">{{ $i18n.t('publish-a') }}</a></li>
                 </ul>
 
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 d-flex flex-wrap align-items-center justify-content-center">
@@ -35,16 +35,16 @@
                         <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                     </a>
                     <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                        <li><a class="dropdown-item" href="#">Chat</a></li>
-                        <li><a class="dropdown-item" href="#">Mes annonces</a></li>
-                        <li><a class="dropdown-item" href="#">J'enseigne</a></li>
-                        <li><a class="dropdown-item" href="#">J'apprend</a></li>
-                        <li><a class="dropdown-item" href="#">Demandes envoyés</a></li>
-                        <li><a class="dropdown-item" href="#">Demandes reçus</a></li>
-                        <li><a class="dropdown-item" href="#">Devis envoyés</a></li>
-                        <li><a class="dropdown-item" href="#">Devis reçus</a></li>
+                        <li><a class="dropdown-item" href="#">{{ $i18n.t('chat') }}</a></li>
+                        <li><a class="dropdown-item" href="#">{{ $i18n.t('my-announces') }}</a></li>
+                        <li><a class="dropdown-item" href="#">{{ $i18n.t('i-teach') }}</a></li>
+                        <li><a class="dropdown-item" href="#">{{ $i18n.t('i-learn') }}</a></li>
+                        <li><a class="dropdown-item" href="#">{{ $i18n.t('s-demands') }}</a></li>
+                        <li><a class="dropdown-item" href="#">{{ $i18n.t('r-demands') }}</a></li>
+                        <li><a class="dropdown-item" href="#">{{ $i18n.t('s-estimates') }}</a></li>
+                        <li><a class="dropdown-item" href="#">{{ $i18n.t('r-estimates') }}</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#" @click.prevent="deconnexion()">Se déconnecter</a></li>
+                        <li><a class="dropdown-item" href="#" @click.prevent="deconnexion()">{{ $i18n.t('logoff') }}</a></li>
                     </ul>
                 </div>
                 <ul v-else class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
