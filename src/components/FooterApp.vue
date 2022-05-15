@@ -1,16 +1,16 @@
 <template>
   <footer
       class="text-center text-lg-start text-white"
-      style="background-color: rgb(0 112 255)"
+      style="background-color: rgb(0, 175, 0)"
   >
     <!-- Grid container -->
     <div class="container p-4 pb-0">
       <!-- Section: CTA -->
         <section class="" v-if="!user">
         <p class="d-flex justify-content-center align-items-center">
-          <span class="me-3">Register for free</span>
+          <span class="me-3">{{ $i18n.t('free-register') }}</span>
           <button type="button" class="btn btn-outline-light btn-rounded">
-            Sign up!
+            {{ $i18n.t('register') }}
           </button>
         </p>
       </section>
@@ -74,8 +74,8 @@
         class="text-center p-3"
         style="background-color: rgba(0, 0, 0, 0.2)"
     >
-      © 2022 Copyright:
-      <a class="text-white" href="#">reseaudessavoirfaire.com</a>
+      {{ $i18n.t('copyright') }}
+      <a class="text-white" href="#">ReseauSavoirFaire@gmail.com</a>
     </div>
     <!-- Copyright -->
   </footer>

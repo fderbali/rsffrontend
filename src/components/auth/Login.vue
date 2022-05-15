@@ -2,18 +2,18 @@
     <div id="login">
         <main class="form-signin">
             <form>
-                <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+                <h1 class="h3 mb-3 fw-normal">{{ $i18n.t('login') }}</h1>
                 <div class="form-floating">
                     <input type="email" class="form-control" id="floatingInput" v-model="email">
-                    <label for="floatingInput">Email address</label>
+                    <label for="floatingInput">{{ $i18n.t('email') }}</label>
                 </div>
                 <div class="form-floating">
                     <input type="password" class="form-control" id="floatingPassword" v-model="password">
-                    <label for="floatingPassword">Password</label>
+                    <label for="floatingPassword">{{ $i18n.t('pw') }}</label>
                 </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit" @click.prevent="login()">
+                <button class="w-100 btn btn-lg btn-success" type="submit" @click.prevent="login()">
                     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" v-if="loading"></span>
-                    Sign in
+                    {{ $i18n.t('submit') }}
                 </button>
             </form>
         </main>
@@ -65,7 +65,7 @@ export default {
             })
             .catch((error) => {
                 if (error.response.status === HttpStatus.UNPROCESSABLE_ENTITY) {
-                    Alert.fail("Le nom d'utilisateur ou le mot de passe est incorrect");
+                    Alert.fail(this.$i18n.t('msg-login')); //"Le nom d'utilisateur et/ou le mot de passe sont incorrects"
                 }
             })
             .finally(() => {

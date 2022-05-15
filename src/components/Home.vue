@@ -4,11 +4,11 @@
             <div class="row">
                 <div class="col" v-for="training, index in trainings" :key="index">
                     <div class="card" style="width: 18rem;">
-                        <img src="" class="card-img-top" alt="">
+                        <img src="@/assets/images/logo.png" class="card-img-top w-50 h-75" alt="">
                         <div class="card-body">
                             <h5 class="card-title">{{ training.title }}</h5>
                             <p class="card-text">{{ training.description }}</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-success">{{ $i18n.t('do-demand') }}</a>
                         </div>
                     </div>
                 </div>

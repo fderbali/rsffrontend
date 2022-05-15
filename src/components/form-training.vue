@@ -3,47 +3,47 @@
         <div class="row w-50">
             <div class="col align-self-center">
                 <form class="p-5">
-                    <h2 class="pb-3 text-center titre-principal">Publier formation</h2>
+                    <h2 class="pb-3 text-center titre-principal">{{ $i18n.t('publish-t') }}</h2>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">Catégorie</label>
+                        <label class="col-sm-2 col-form-label">{{ $i18n.t('category') }}</label>
                         <div class="col-sm-10">
                             <select class="form-select" name="categorie" v-model="categorie">
-                                <option v-for="category, index in categories" :key="index" :value="category.id">
+                                <!-- <option v-for="category, index in categories" :key="index" :value="category.id">
                                     {{category.title}}
-                                </option>
+                                </option> -->
                             </select>
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">Titre</label>
+                        <label class="col-sm-2 col-form-label">{{ $i18n.t('title') }}</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" name="titre" v-model="titre">
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">Description</label>
+                        <label class="col-sm-2 col-form-label">{{ $i18n.t('description') }}</label>
                         <div class="col-sm-10">
                             <textarea class="form-control" v-model="description" name="description"></textarea>
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" name="thumbnail">Thumbnail</label>
+                        <label class="col-sm-2 col-form-label" name="thumbnail">{{ $i18n.t('thumbnail') }}</label>
                         <div class="col-sm-10">
                             <input type="file" name="tumbnail">
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">Niveau</label>
+                        <label class="col-sm-2 col-form-label">{{ $i18n.t('level') }}</label>
                         <div class="col-sm-10">
                             <select class="form-select" v-model="niveau" name="niveau">
-                                <option value="junior">Débutant</option>
-                                <option value="middle">Intermédiaire</option>
-                                <option value="senior">Avancé</option>
+                                <option value="junior">{{ $i18n.t('junior') }}</option>
+                                <option value="middle">{{ $i18n.t('middle') }}</option>
+                                <option value="senior">{{ $i18n.t('senior') }}</option>
                             </select>
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">Lieu</label>
+                        <label class="col-sm-2 col-form-label">{{ $i18n.t('location') }}</label>
                         <div class="col-sm-10">
                             <div>
                                 <input class="form-check-input" type="radio" name="location" value="true" v-model="domicile">
@@ -60,19 +60,19 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">Adresse</label>
+                        <label class="col-sm-2 col-form-label">{{ $i18n.t('address') }}</label>
                         <div class="col-sm-10">
                             <input type="text" name="location" class="form-control" v-model="adresse">
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">Durée totale</label>
+                        <label class="col-sm-2 col-form-label">{{ $i18n.t('duration') }}</label>
                         <div class="col-sm-10">
-                            <input type="text" name="duree" class="form-control" v-model="duree">
+                            <input type="numeric" name="duree" class="form-control" v-model="duree">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary mb-5" @click.prevent="enregistrerTraining()">Soumettre</button>
+                    <button type="submit" class="btn btn-success mb-5" @click.prevent="enregistrerTraining()">{{ $i18n.t('submit') }}</button>
                 </form>
             </div>
         </div>

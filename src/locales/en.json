@@ -1,15 +1,57 @@
 {
-    "home":                 "Home",
-    "publish-training":     "Publish training",
-    "publish-announcement": "Publish announcement",
-    
-    "training": "Training",
-    "search": "Search...",
-    "login": "Login",
-    "welcome": "Welcome back 🖐",
-    "register": "Sign up",
+    "home":         "Home",
+    "publish-t":    "Publish training",
+    "publish-a":    "Publish announcement",
+    "search":       "Search...",
+    "training":     "Training",
 
-    "msg404-1": "Opps!",
-    "msg404-2": "Page not found.",
-    "msg404-3": "The page you’re looking for doesn’t exist."
+    "register":     "Sign up",
+    "email":        "Email Address",
+    "pw":           "Password",
+    "pw-again":     "Password again",
+    "first-name":   "First Name",
+    "last-name":    "Last Name",
+    "birth-date":   "Birth Date",
+    "address":      "Address",
+    "city":         "City",
+    "country":      "Country",
+    "zip-code":     "Zip Code",
+
+    "login":        "Log in",
+    "logoff":       "Log off",
+    "welcome":      "Welcome back 🖐",
+    "msg-login":    "Invalids Email address and/or Password",
+
+    "publish":      "Publish Training",
+    "category":     "Category",
+    "title":        "Title",
+    "description":  "Description",
+    "level":        "Level",
+    "junior":       "Junior",
+    "middle":       "Middle",
+    "senior":       "Senior",
+    "location":     "Location",
+    "duration":     "Total duration(hh)",
+    "thumbnail":    "Thumbnail",
+
+    "do-demand":    "Do a demand",
+
+    "chat":         "Chat",
+    "my-announces": "My announces",
+    "i-teach":      "I teach",
+    "i-learn":      "I learn",
+    "s-demands":    "Sended demands",
+    "r-demands":    "Received demands",
+    "s-estimates":  "Sended estimates",
+    "r-estimates":  "Received estimates",
+
+    "submit":       "Submit",
+
+    "free-register": "Register for free",
+
+    "copyright":    "© 2022 Copyright : ",
+
+    "msg404-1":     "Opps!",
+    "msg404-2":     "Page not found.",
+    "msg404-3":     "The page you’re looking for doesn’t exist."
 }
