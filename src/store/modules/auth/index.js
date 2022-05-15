@@ -52,14 +52,26 @@ const actions = {
                     Vue.prototype.$session.destroy();
                     resolve(response);
                 })
-                .catch((error) => {
-                    reject(error);
+                .catch((errors) => {
+                    reject(errors);
                 }).finally(()=>{
                     Vue.prototype.$session.destroy();
                     context.commit('REMOVE_AUTH_USER');
                 });
         });
     },
+    register(context, usager){
+        console.log(usager);
+        return new Promise((resolve, reject)=>{
+            Api.post(`${resource}/user/create`, usager)
+                .then((response) => {
+                    resolve(response);
+                })
+                .catch((error) => {
+                    reject(error);
+                })
+        })
+    }
 };
 
 // Mutations

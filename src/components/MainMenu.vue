@@ -64,7 +64,7 @@ export default {
         deconnexion(){
             this.logout().then(()=>{
                 router.push({
-                    name: 'home'
+                    name: 'login'
                 });
             });
         }
