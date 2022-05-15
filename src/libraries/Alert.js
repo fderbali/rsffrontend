@@ -46,6 +46,18 @@ export default {
         });
     },
 
+    confirmation(title,msg,yesMsg){
+        return Swal.fire({
+            title: title,
+            text: msg,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: yesMsg
+        });
+    },
+
     /**
      * Hide All alerts
      */
