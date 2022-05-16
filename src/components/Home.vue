@@ -17,8 +17,8 @@
         <div class="container d-flex align-items-center justify-content-center p-5">
             <nav aria-label="Page navigation example">
                 <ul class="pagination" v-if="trainingsLinks.length > 1">
-                    <li class="page-item" v-for="trainingsLink, index in trainingsLinks" :key="index">
-                        <a class="page-link" href="#">
+                    <li class="page-item" v-for="trainingsLink, index in trainingsLinks" :key="index" :class="{'active':trainingsLink.active}">
+                        <a class="page-link" href="#" @click.prevent="goToPage(trainingsLink.label)">
                             {{ trainingsLink.label }}
                         </a>
                     </li>
@@ -43,7 +43,8 @@ export default {
     },
     methods: {
         ...mapActions('core/training', {
-            getTrainings: 'getTrainings'
+            getTrainings: 'getTrainings',
+            getTrainingByPage: 'getTrainingByPage'
         }),
         ...mapActions('core/demand', {
             envoyerDemand: 'envoyerDemand'
@@ -67,6 +68,9 @@ export default {
                         })
                     }
                 });
+        },
+        goToPage(page){
+            this.getTrainingByPage(page);
         }
     },
     mounted(){
