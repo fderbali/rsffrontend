@@ -3,6 +3,7 @@ import Login from '@/components/auth/Login.vue';
 import Register from '@/components/auth/Register.vue';
 import NotFound from '@/components/NotFound.vue';
 import FormTraining from "@/components/form-training";
+import listDemands from "@/components/Lists/listDemands";
 
 export default [
     {
@@ -35,6 +36,14 @@ export default [
         component: FormTraining,
         meta: {
             title: "Form formations"
+        }
+    },
+    {
+        path: '/sent-demands',
+        name: 'sentDemands',
+        component: listDemands,
+        meta: {
+            title: "Liste des demandes"
         }
     },
     {

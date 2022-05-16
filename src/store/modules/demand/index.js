@@ -18,14 +18,27 @@ const actions = {
                     reject(error);
                 });
         });
+    },
+    getSentDemandsByUser(context, user_id) {
+        return new Promise((resolve, reject) => {
+            Api.get(`${resource}/user/${user_id}`).then((response) => {
+                context.commit('SET_DEMANDS', response);
+                resolve(response);
+            })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
     }
 };
 
 // Mutations
 const mutations = {
     ['ADD_DEMAND']: (state, payload) => {
-        console.log(payload.data);
         state.demands.push(payload.data);
+    },
+    ['SET_DEMANDS']: (state, payload) => {
+        state.demands = (payload.data);
         console.log(state.demands);
     }
 };
