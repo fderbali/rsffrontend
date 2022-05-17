@@ -40,7 +40,7 @@
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('i-teach') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('i-learn') }}</a></li>
                         <li><a class="dropdown-item" href="#" @click.prevent="getSentDemands()">{{ $i18n.t('s-demands') }}</a></li>
-                        <li><a class="dropdown-item" href="#">{{ $i18n.t('r-demands') }}</a></li>
+                        <li><a class="dropdown-item" href="#" @click.prevent="getListDemandsByProf()">{{ $i18n.t('r-demands') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('s-estimates') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('r-estimates') }}</a></li>
                         <li><hr class="dropdown-divider"></li>
@@ -76,7 +76,8 @@ export default {
             logout: "logout"
         }),
         ...mapActions("core/demand", {
-            getSentDemandsByUser:"getSentDemandsByUser"
+            getSentDemandsByUser:"getSentDemandsByUser",
+            getDemandsByTeacher:"getDemandsByTeacher"
         }),
         deconnexion(){
             this.logout().then(()=>{
@@ -98,6 +99,14 @@ export default {
                     name: 'sentDemands'
                 });
             })
+        },
+        getListDemandsByProf(){
+            console.log("je passe ici");
+            this.getDemandsByTeacher(this.user.id).then(()=>{
+                router.push({
+                    name: 'receivedDemands'
+                });
+            });
         }
     }
 
