@@ -39,7 +39,6 @@ const mutations = {
     },
     ['SET_DEMANDS']: (state, payload) => {
         state.demands = (payload.data);
-        console.log(state.demands);
     }
 };
 

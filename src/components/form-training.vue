@@ -1,5 +1,5 @@
 <template>
-    <div class="container d-flex align-items-center justify-content-center">
+    <div class="container d-flex align-items-center justify-content-center bg-warning">
         <div class="row w-50">
             <div class="col align-self-center">
                 <form class="p-5">
@@ -124,6 +124,7 @@ export default {
                 'thumbnail': this.$refs.file.files[0]
             };
             this.saveTraining(formTraining).then(()=>{
+                Alert.success(this.$i18n.t('msg-suc2')) //"Enregistrement effectué avec succès!",
                 router.push({
                     name: 'home'
                 });
@@ -132,7 +133,7 @@ export default {
     },
     mounted(){
         this.getCategories().catch(()=>{
-            Alert.fail("Une erreur s'est produite sur la page, veuillez actualiser la page SVP !");
+            Alert.fail(this.$i18n.t('msg-err1'));//"Une erreur s'est produite, veuillez actualiser la page SVP!"
         });
     }
 }
