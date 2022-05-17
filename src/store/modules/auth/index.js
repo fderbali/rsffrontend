@@ -61,7 +61,6 @@ const actions = {
         });
     },
     register(context, usager){
-        console.log(usager);
         return new Promise((resolve, reject)=>{
             Api.post(`${resource}/user/create`, usager)
                 .then((response) => {

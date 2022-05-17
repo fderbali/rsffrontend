@@ -1,9 +1,9 @@
 <template>
     <div class="container d-flex align-items-center justify-content-center">
         <div class="row w-50">
-            <div class="col align-self-center">
+            <div class="col align-self-center bg-warning">
                 <form class="p-5">
-                    <h2 class="pb-3 text-center titre-principal">{{ $i18n.t('register') }}</h2>
+                    <h2 class="pb-3 text-center text-danger titre-principal">{{ $i18n.t('register') }}</h2>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">{{ $i18n.t('first-name') }}</label>
                         <div class="col-sm-10">
@@ -76,7 +76,7 @@
 
 <script>
 import {mapActions} from "vuex";
-import Alert                    from '@/libraries/Alert.js';
+import Alert from '@/libraries/Alert.js';
 import router from "@/libraries/VueRouter";
 //import router from "@/libraries/VueRouter";
 export default {
@@ -113,7 +113,7 @@ export default {
                 password:this.password
             };
             this.register(user).then(()=>{
-                Alert.success("Enregistrement effectué avec succès !");
+                Alert.success(this.$i18n.t('msg-suc2')) //"Enregistrement effectué avec succès!"
                 router.push({
                     name: 'login'
                 });
