@@ -20,6 +20,17 @@ const actions = {
                 });
         });
     },
+    getTrainingByPage: (context, page) => {
+        return new Promise((resolve, reject) => {
+            Api.get(`${resource}?page=${page}`).then((response) => {
+                context.commit('SET_TRAININGS', response);
+                resolve(response);
+            })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
+    },
     saveTraining: (context, formTraining) => {
         const formData = new FormData();
         formData.append('thumbnail', formTraining.thumbnail);
