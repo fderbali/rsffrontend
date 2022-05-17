@@ -4,6 +4,7 @@ import Register from '@/components/auth/Register.vue';
 import NotFound from '@/components/NotFound.vue';
 import FormTraining from "@/components/form-training";
 import listDemands from "@/components/Lists/listDemands";
+import listReceivedDemands from "@/components/Lists/listReceivedDemands";
 
 export default [
     {
@@ -44,6 +45,14 @@ export default [
         component: listDemands,
         meta: {
             title: "Liste des demandes"
+        }
+    },
+    {
+        path: '/received-demands',
+        name: 'receivedDemands',
+        component: listReceivedDemands,
+        meta: {
+            title: "Liste des demandes reçus"
         }
     },
     {

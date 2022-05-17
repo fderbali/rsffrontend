@@ -2,7 +2,8 @@ import Api from '@/libraries/Api.js';
 const resource = '/api/demand';
 
 const state = () => ({
-    demands: null
+    demands: null,
+    received_demands: null
 });
 
 
@@ -29,6 +30,17 @@ const actions = {
                     reject(error);
                 });
         });
+    },
+    getDemandsByTeacher(context, user_id){
+        return new Promise((resolve, reject) => {
+            Api.get(`${resource}/recu/${user_id}`).then((response) => {
+                context.commit('SET_DEMANDS_RECEIVED', response);
+                resolve(response);
+            })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
     }
 };
 
@@ -38,8 +50,10 @@ const mutations = {
         state.demands.push(payload.data);
     },
     ['SET_DEMANDS']: (state, payload) => {
-        state.demands = (payload.data);
-        console.log(state.demands);
+        state.demands = payload.data;
+    },
+    ['SET_DEMANDS_RECEIVED']: (state, payload) => {
+        state.received_demands = payload;
     }
 };
 
