@@ -19,8 +19,6 @@
 
     "login":        "Connexion",
     "logoff":       "Déconnexion",
-    "welcome":      "Bienvenue 🖐",
-    "msg-login":    "Courriel et/ou Mot de passe invalides",
 
     "category":     "Catégorie",
     "title":        "Titre",
@@ -30,10 +28,11 @@
     "middle":       "Intermédiaire",
     "senior":       "Avancé",
     "location":     "Lieu",
-    "duration":     "Durée totale(hh)",
+    "duration":     "Durée totale",
     "thumbnail":    "Image",
 
     "do-demand":    "Faire une demande",
+    "by":           "Par",
 
     "chat":         "Chat",
     "my-announces": "Mes annonces",
@@ -50,9 +49,20 @@
 
     "copyright":    "© 2022 Droits d'auteur : ",
 
-    "msg404-1":     "Oups!",
-    "msg404-2":     "Page inexistante",
-    "msg404-3":     "La page que vous recherchée n'existe pas."
+    
+    "msg-con1": "Confirmez l'envoi de cette demande SVP!",
+    
+    "msg-suc1": "Bienvenue 🖐",
+    "msg-suc2": "Enregistrement effectué avec succès!",
+
+    "msg-err1": "Une erreur s'est produite, veuillez actualiser la page SVP!",
+    "msg-err2": "Courriel et/ou Mot de passe invalides!",
+
+    "msg404-1": "Oups!",
+    "msg404-2": "Page inexistante",
+    "msg404-3": "La page que vous recherchée n'existe pas."
+
+    
 
 
 }

@@ -1,8 +1,8 @@
 <template>
     <div id="login">
-        <main class="form-signin">
+        <main class="form-signin bg-warning">
             <form>
-                <h1 class="h3 mb-3 fw-normal">{{ $i18n.t('login') }}</h1>
+                <h2 class="pb-3 text-center text-danger titre-principal">{{ $i18n.t('login') }}</h2>
                 <div class="form-floating">
                     <input type="email" class="form-control" id="floatingInput" v-model="email">
                     <label for="floatingInput">{{ $i18n.t('email') }}</label>
@@ -58,14 +58,14 @@ export default {
             })
             .then(() => {
                 this.$session.start();
-                Alert.success(this.$i18n.t('welcome'))
+                Alert.success(this.$i18n.t('msg-suc1')) //"Bienvenue!"
                 router.push({
                     name: 'home'
                 });
             })
             .catch((error) => {
                 if (error.response.status === HttpStatus.UNPROCESSABLE_ENTITY) {
-                    Alert.fail(this.$i18n.t('msg-login')); //"Le nom d'utilisateur et/ou le mot de passe sont incorrects"
+                    Alert.fail(this.$i18n.t('msg-err2')); //"Le nom d'utilisateur et/ou le mot de passe sont incorrects"
                 }
             })
             .finally(() => {

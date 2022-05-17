@@ -1,7 +1,7 @@
 <template>
   <footer
-      class="text-center text-lg-start text-white"
-      style="background-color: rgb(0, 175, 0)"
+      class="text-center text-lg-start text-warning bg-success"
+      
   >
     <!-- Grid container -->
     <div class="container p-4 pb-0">
@@ -9,9 +9,7 @@
         <section class="" v-if="!user">
         <p class="d-flex justify-content-center align-items-center">
           <span class="me-3">{{ $i18n.t('free-register') }}</span>
-          <button type="button" class="btn btn-outline-light btn-rounded">
-            {{ $i18n.t('register') }}
-          </button>
+          <router-link to="inscription" class="btn btn-outline-light btn-rounded">{{ $i18n.t('register') }}</router-link>
         </p>
       </section>
       <!-- Section: CTA -->

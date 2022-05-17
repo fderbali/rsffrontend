@@ -19,8 +19,6 @@
 
     "login":        "Log in",
     "logoff":       "Log off",
-    "welcome":      "Welcome back 🖐",
-    "msg-login":    "Invalids Email address and/or Password",
 
     "publish":      "Publish Training",
     "category":     "Category",
@@ -31,10 +29,11 @@
     "middle":       "Middle",
     "senior":       "Senior",
     "location":     "Location",
-    "duration":     "Total duration(hh)",
+    "duration":     "Total duration",
     "thumbnail":    "Thumbnail",
 
     "do-demand":    "Do a demand",
+    "by":           "By",
 
     "chat":         "Chat",
     "my-announces": "My announces",
@@ -51,7 +50,22 @@
 
     "copyright":    "© 2022 Copyright : ",
 
-    "msg404-1":     "Opps!",
-    "msg404-2":     "Page not found.",
-    "msg404-3":     "The page you’re looking for doesn’t exist."
+    "msg-con1": "Please confirm the sending of this request!",
+
+
+    "msg-suc1": "Welcome back 🖐",
+    "msg-suc2": "Registration successful!",
+
+
+    
+
+
+    "msg-err1": "An error has occurred, please refresh the page!",
+    "msg-err2": "Invalids Email address and/or Password",
+
+    
+
+    "msg404-1": "Opps!",
+    "msg404-2": "Page not found.",
+    "msg404-3": "The page you’re looking for doesn’t exist."
 }
