@@ -16,10 +16,13 @@
                             <th scope="row">{{ index }}</th>
                             <td>{{received_demand.status}}</td>
                             <td>{{received_demand.training_id}}</td>
-                            <td>
-                                <button class="btn btn-success" @click.prevent="acceptDemand()">Accepter</button>
+                            <td v-if="received_demand.status == 'initiated'">
+                                <button class="btn btn-success" @click.prevent="updateDemandStatus(received_demand, true, )">Accepter</button>
                                 &nbsp;&nbsp;
-                                <button class="btn btn-danger">Refuser</button>
+                                <button class="btn btn-danger" @click.prevent="updateDemandStatus(received_demand, false)">Refuser</button>
+                            </td>
+                            <td v-else>
+                                &nbsp;--------
                             </td>
                         </tr>
                     </tbody>
@@ -30,13 +33,11 @@
 </template>
 
 <script>
-import {mapState} from "vuex";
-
+import {mapActions, mapState} from "vuex";
+import Alert from "@/libraries/Alert.js";
 export default {
-    data(){
-        return{
-
-        }
+    data() {
+        return {}
     },
     computed: {
         ...mapState('core/demand', [
@@ -44,9 +45,23 @@ export default {
         ]),
     },
     name: "listReceivedDemands",
-    methods:{
-        acceptDemand(){
-            
+    methods: {
+        ...mapActions('core/demand', [
+            'updateDemand'
+        ]),
+        updateDemandStatus(received_demand, decision) {
+            this.updateDemand({
+                id: received_demand.id,
+                training_id: received_demand.training_id,
+                user_id: received_demand.user_id,
+                decision: decision,
+            })
+                .then(() => {
+                    Alert.success('status de la demande mis à jour');
+                })
+                .catch(() => {
+                    Alert.fail('Problème avec la mise à jour');
+                });
         }
     }
 }

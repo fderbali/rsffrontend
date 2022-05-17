@@ -41,6 +41,21 @@ const actions = {
                     reject(error);
                 });
         });
+    },
+    updateDemand(context, {id, training_id, user_id, decision}){
+        return new Promise((resolve, reject) => {
+            Api.put(`${resource}/${id}`, {
+                'training_id': training_id,
+                'user_id': user_id,
+                'status':(decision ? 'confirmed' : 'cancelled')
+            }).then((response) => {
+                context.commit('SET_DEMANDS_STATUS', response);
+                resolve(response);
+            })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
     }
 };
 
@@ -53,8 +68,13 @@ const mutations = {
         state.demands = payload.data;
     },
     ['SET_DEMANDS_RECEIVED']: (state, payload) => {
-        state.received_demands = payload;
-    }
+        payload.data.forEach(element => {
+            state.received_demands[element.id] = element;
+        });
+    },
+    ['SET_DEMANDS_STATUS']: (state, payload) => {
+        state.received_demands[payload.data.id] = payload.data;
+    },
 };
 
 // Export module
