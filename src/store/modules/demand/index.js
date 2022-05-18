@@ -71,12 +71,6 @@ const mutations = {
         state.received_demands = payload.data;
     },
     ['SET_DEMANDS_STATUS']: (state, payload) => {
-        /*let demandUpdatedId = state.received_demands.findIndex(
-            (demand) => demand.id === payload.data.id
-        )
-        if (demandUpdatedId !== -1) {
-            state.received_demands[demandUpdatedId] = payload.data;
-        }*/
         state.received_demands = state.received_demands.map(obj => {
             if(obj.id === payload.data.id){
                 return payload.data
