@@ -1,70 +1,71 @@
 <template>
-    <div class="container d-flex align-items-center justify-content-center">
+    <div class="container d-flex align-items-center justify-content-center bg-opacity-50">
         <div class="row w-50">
-            <div class="col align-self-center bg-warning">
+            <div class="col align-self-center bg-warning bg-opacity-50 border border-danger rounded">
                 <form class="p-5">
                     <h2 class="pb-3 text-center text-danger titre-principal">{{ $i18n.t('register') }}</h2>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">{{ $i18n.t('first-name') }}</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="first_name" v-model="first_name">
+                            <input type="text" class="form-control border-danger" name="first_name" v-model="first_name">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">{{ $i18n.t('last-name') }}</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="last_name" v-model="last_name">
+                            <input type="text" class="form-control border-danger" name="last_name" v-model="last_name">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">{{ $i18n.t('birth-date') }}</label>
                         <div class="col-sm-10">
-                            <input type="date" class="form-control" name="birth_date" v-model="birth_date">
+                            <input type="date" class="form-control border-danger" name="birth_date" v-model="birth_date">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">{{ $i18n.t('email') }}</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" name="email" v-model="email">
+                            <input type="email" class="form-control border-danger" name="email" v-model="email">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">{{ $i18n.t('pw') }}</label>
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" name="password" v-model="password">
+                            <input type="password" class="form-control border-danger" name="password" v-model="password">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">{{ $i18n.t('pw-again') }}</label>
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" name="password">
+                            <input type="password" class="form-control border-danger" name="password">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">{{ $i18n.t('address') }}</label>
                         <div class="col-sm-10">
-                            <input type="text" name="location" class="form-control" v-model="address">
+                            <input type="text" name="location" class="form-control border-danger" v-model="address">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">{{ $i18n.t('city') }}</label>
                         <div class="col-sm-10">
-                            <input type="text" name="city" class="form-control" v-model="city">
+                            <input type="text" name="city" class="form-control border-danger" v-model="city">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">{{ $i18n.t('country') }}</label>
                         <div class="col-sm-10">
-                            <input type="text" name="country" class="form-control" v-model="country">
+                            <input type="text" name="country" class="form-control border-danger" v-model="country">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">{{ $i18n.t('zip-code') }}</label>
                         <div class="col-sm-10">
-                            <input type="text" name="zip_code" class="form-control" v-model="zip_code">
+                            <input type="text" name="zip_code" class="form-control border-danger" v-model="zip_code">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-success mb-5" @click.prevent="enregistrerUser()">
+                    
+                    <button type="submit" class="btn btn-success border-danger w-100 btn-lg opacity-75" @click.prevent="enregistrerUser()">
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" v-if="loading"></span>
                         {{ $i18n.t('submit') }}
                     </button>

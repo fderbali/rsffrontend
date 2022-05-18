@@ -1,17 +1,17 @@
 <template>
     <div id="login">
-        <main class="form-signin bg-warning">
+        <main class="form-signin bg-warning bg-opacity-50 border border-danger rounded">
             <form>
                 <h2 class="pb-3 text-center text-danger titre-principal">{{ $i18n.t('login') }}</h2>
                 <div class="form-floating">
-                    <input type="email" class="form-control" id="floatingInput" v-model="email">
+                    <input type="email" class="form-control border-danger" id="floatingInput" v-model="email">
                     <label for="floatingInput">{{ $i18n.t('email') }}</label>
                 </div>
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" v-model="password">
+                    <input type="password" class="form-control border-danger" id="floatingPassword" v-model="password">
                     <label for="floatingPassword">{{ $i18n.t('pw') }}</label>
                 </div>
-                <button class="w-100 btn btn-lg btn-success" type="submit" @click.prevent="login()">
+                <button class="w-100 btn btn-lg btn-success border-danger opacity-75" type="submit" @click.prevent="login()">
                     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" v-if="loading"></span>
                     {{ $i18n.t('submit') }}
                 </button>
