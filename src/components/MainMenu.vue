@@ -101,7 +101,6 @@ export default {
             })
         },
         getListDemandsByProf(){
-            console.log("je passe ici");
             this.getDemandsByTeacher(this.user.id).then(()=>{
                 router.push({
                     name: 'receivedDemands'
