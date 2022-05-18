@@ -1,5 +1,5 @@
 <template>
-    <header class="p-3 mb-3 border-bottom bg-white bg-opacity-75 fs-4 fw-bolder">
+    <header class="p-3 mb-3 border-bottom bg-success bg-opacity-25 fs-4 fw-bolder">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none me-5">

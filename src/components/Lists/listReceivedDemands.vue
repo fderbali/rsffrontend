@@ -4,6 +4,7 @@
             <div class="col align-self-center">
                 <table class="table">
                     <thead>
+                        <h2>Liste des demandes reçues</h2>
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Satut</th>

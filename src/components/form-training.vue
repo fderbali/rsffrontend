@@ -1,8 +1,8 @@
 <template>
-    <div class="container d-flex align-items-center justify-content-center bg-warning">
+    <div class="container d-flex align-items-center justify-content-center bg-warning bg-opacity-50">
         <div class="row w-50">
             <div class="col align-self-center">
-                <form class="p-5">
+                <form class="p-4 w-4">
                     <h2 class="pb-3 text-center titre-principal">{{ $i18n.t('publish-t') }}</h2>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">{{ $i18n.t('category') }}</label>
@@ -72,7 +72,7 @@
                             <input type="numeric" name="duree" class="form-control" v-model="duree">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-success mb-5" @click.prevent="enregistrerTraining()">{{ $i18n.t('submit') }}</button>
+                    <button type="submit" class="btn btn-success mb-5 opacity-75" @click.prevent="enregistrerTraining()">{{ $i18n.t('submit') }}</button>
                 </form>
             </div>
         </div>
