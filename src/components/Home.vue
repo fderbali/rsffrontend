@@ -1,18 +1,19 @@
+
 <template>
-    <div>
+    <body>
         <div class="container">
             <div class="row">
                 <div class="col" v-for="training, index in trainings" :key="index">
                     <div class="card bg-warning border-danger bg-opacity-50" style="width: 18rem;">
                         <img :src="`http://rsfbackend.test/images/${training.thumbnail}`" class="card-img-top" width="60" height="175" alt="">
                         <div class="card-body ">
-                            <h5 class="card-title text-danger text-center">{{ training.category_id }}</h5>
-                            <h5 class="card-title text-danger">{{ training.title }}</h5>
-                            <p class="card-text">{{ training.description }}</p>
+                            <h5 class="card-title text-danger text-center text-bolder">{{ training.category_id }}</h5>
+                            <h5 class="card-title text-danger text-bolder">{{ training.title }}</h5>
+                            <p class="card-text text-bolder">{{ training.description }}</p>
                             <p class="card-text">{{ $i18n.t('duration') }} {{ training.total_duration }} Heures</p>
                             <!-- ici on doit aller chercher le nom du formateur dans la table users à partir de training.user_id -->
                             <p class="card-text">{{ $i18n.t('by') }} {{ training.user_id }}</p>
-                            <a href="#" class="btn btn-success border-danger opacity-75" @click.prevent="sendDemand(training.id)">{{ $i18n.t('do-demand') }}</a>
+                            <a href="#" class="btn btn-success border-danger" @click.prevent="sendDemand(training.id)">{{ $i18n.t('do-demand') }}</a>
                         </div>
                     </div>
                 </div>
@@ -29,8 +30,15 @@
                 </ul>
             </nav>
         </div>
-    </div>
+    </body>
 </template>
+<style>
+/* body  {
+  background-image: url("texture2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+</style>
 
 <script>
 import { mapState, mapActions } from 'vuex';
