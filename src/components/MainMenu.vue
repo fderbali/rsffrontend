@@ -35,7 +35,7 @@
                         <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                     </a>
                     <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                        <li><a class="dropdown-item" href="#">{{ $i18n.t('chat') }}</a></li>
+                        <!--li><a class="dropdown-item" href="#">{{ $i18n.t('chat') }}</a></li-->
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('my-announces') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('i-teach') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('i-learn') }}</a></li>
