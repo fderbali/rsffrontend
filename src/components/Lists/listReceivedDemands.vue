@@ -1,26 +1,27 @@
 <template>
-    <div class="container d-flex align-items-center justify-content-center">
-        <div class="row w-50">
+    <div class="container d-flex align-items-center justify-content-center ">
+        <div class="row w-60">
             <div class="col align-self-center">
                 <table class="table">
                     <thead>
-                        <h2>Liste des demandes reçues</h2>
+                        <h4>Liste des demandes reçues</h4>
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">Titre de la formation</th>
+                            <th scope="col">Participant</th>
                             <th scope="col">Satut</th>
-                            <th scope="col">Formation id</th>
                             <th scope="col">Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="border-bottom border-success">
                         <tr v-for="received_demand, index in received_demands" :key="index">
-                            <th scope="row">{{ index }}</th>
-                            <td>{{received_demand.status}}</td>
+                            <td>{{received_demand.user_id}}</td>
                             <td>{{received_demand.training_id}}</td>
+                            <td>{{received_demand.status}}</td>
+                            
                             <td v-if="received_demand.status == 'initiated'">
-                                <button class="btn btn-success" @click.prevent="updateDemandStatus(received_demand, true, )">Accepter</button>
+                                <button class="btn btn-sm btn-outline-success fw-bolder" @click.prevent="updateDemandStatus(received_demand, true, )">Accepter</button>
                                 &nbsp;&nbsp;
-                                <button class="btn btn-danger" @click.prevent="updateDemandStatus(received_demand, false)">Refuser</button>
+                                <button class="btn btn-sm btn-outline-danger fw-bolder" @click.prevent="updateDemandStatus(received_demand, false)">Refuser</button>
                             </td>
                             <td v-else>
                                 &nbsp;--------
