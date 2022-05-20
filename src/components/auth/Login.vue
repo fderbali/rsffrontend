@@ -1,10 +1,10 @@
 <template>
     <div id="login">
-        <main class="form-signin bg-warning bg-opacity-50 border border-danger rounded">
+        <main class="form-signin fs-5 bg-warning bg-opacity-50 border border-danger rounded">
             <form>
-                <h2 class="pb-3 text-center text-danger titre-principal">{{ $i18n.t('login') }}</h2>
+                <h2 class="pb-3 text-center titre-principal fw-bold">{{ $i18n.t('login') }}</h2>
                 <div class="form-floating">
-                    <input type="email" class="form-control border-danger" id="floatingInput" v-model="email">
+                    <input type="email" class="form-control mb-2 border-danger" id="floatingInput" v-model="email">
                     <label for="floatingInput">{{ $i18n.t('email') }}</label>
                 </div>
                 <div class="form-floating">

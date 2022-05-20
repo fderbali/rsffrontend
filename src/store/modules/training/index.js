@@ -41,6 +41,7 @@ const actions = {
         formData.append('user_id', formTraining.user_id);
         formData.append('category_id', formTraining.categorie);
         formData.append('total_duration', formTraining.duree);
+        formData.append('price', formTraining.price);
         return new Promise((resolve, reject) => {
             Api.post(`${resource}/create`, formData, {
                 headers: {

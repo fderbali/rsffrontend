@@ -1,8 +1,8 @@
-<template class="container-lg">
-    <div>
-        <main class="form-signin p-4 mb-3 border border-danger rounded bg-warning bg-opacity-50">
+<template>
+    <div class="container d-flex align-items-center justify-content-center">
+        <main class="fs-5 fw-bold p-4 mb-3 border border-danger rounded bg-warning bg-opacity-50">
             <form>
-                <h2 class="pb-3 text-center text-danger titre-principal">{{ $i18n.t('register') }}</h2>
+                <h2 class="pb-3 text-center titre-principal fw-bold">{{ $i18n.t('register') }}</h2>
                 <div class="row">
                     <div class="col-6 form-floating ">
                         <div>
