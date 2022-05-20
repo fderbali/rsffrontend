@@ -15,31 +15,33 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('title') }}</label>
                         <div class="col-sm-10">
+                            <label class="col-sm-2 col-form-label">{{ $i18n.t('title') }}</label>
                             <input type="text" class="form-control" name="titre" v-model="titre">
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('description') }}</label>
                         <div class="col-sm-10">
+                            <label class="col-sm-2 col-form-label">{{ $i18n.t('description') }}</label>
                             <textarea class="form-control" v-model="description" name="description"></textarea>
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" name="thumbnail">{{ $i18n.t('thumbnail') }}</label>
                         <div class="col-sm-10">
+                            <label class="col-sm-2 col-form-label" name="thumbnail">{{ $i18n.t('thumbnail') }}</label>
                             <input type="file" name="tumbnail" accept="image/*" ref="file">
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('level') }}</label>
                         <div class="col-sm-10">
-                            <select class="form-select" v-model="niveau" name="niveau">
-                                <option value="junior">{{ $i18n.t('junior') }}</option>
-                                <option value="middle">{{ $i18n.t('middle') }}</option>
-                                <option value="senior">{{ $i18n.t('senior') }}</option>
-                            </select>
+                            <label class="col-sm-2 col-form-label">{{ $i18n.t('level') }}</label>
+                            <div class="col-sm-10">
+                                <select class="form-select" v-model="niveau" name="niveau">
+                                    <option value="junior">{{ $i18n.t('junior') }}</option>
+                                    <option value="middle">{{ $i18n.t('middle') }}</option>
+                                    <option value="senior">{{ $i18n.t('senior') }}</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="row mb-3">

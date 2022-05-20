@@ -4,11 +4,11 @@
             <div class="col align-self-center">
                 <table class="table">
                     <thead>
-                        <h4>Liste des demandes envoyées</h4>
+                        <h4> {{ $i18n.t('title-1') }}</h4>
                         <tr>
-                            <th scope="col">Titre de la formation</th>
-                            <th scope="col">Enseignant</th>
-                            <th scope="col">Satut</th>
+                            <th scope="col">{{ $i18n.t('ss-title-1') }}</th>
+                            <th scope="col">{{ $i18n.t('ss-title-2') }}</th>
+                            <th scope="col">{{ $i18n.t('ss-title-3') }}</th>
                         </tr>
                     </thead>
                     <tbody class="border-bottom border-success">
