@@ -39,10 +39,10 @@
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('my-announces') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('i-teach') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('i-learn') }}</a></li>
-                        <li><a class="dropdown-item" href="#" @click.prevent="getSentDemands()">{{ $i18n.t('s-demands') }}</a></li>
+                        <li><a class="dropdown-item" href="#" @click.prevent="getListDemands()">{{ $i18n.t('s-demands') }}</a></li>
                         <li><a class="dropdown-item" href="#" @click.prevent="getListDemandsByProf()">{{ $i18n.t('r-demands') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('s-estimates') }}</a></li>
-                        <li><a class="dropdown-item" href="#">{{ $i18n.t('r-estimates') }}</a></li>
+                        <li><a class="dropdown-item" href="#" @click.prevent="getListEstimates()">{{ $i18n.t('r-estimates') }}</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#" @click.prevent="deconnexion()">{{ $i18n.t('logoff') }}</a></li>
                     </ul>
@@ -79,6 +79,10 @@ export default {
             getSentDemandsByUser:"getSentDemandsByUser",
             getDemandsByTeacher:"getDemandsByTeacher"
         }),
+        ...mapActions("core/estimate", [
+                'getListEstimatesByUser'
+            ]
+        ),
         deconnexion(){
             this.logout().then(()=>{
                 router.push({
@@ -93,7 +97,7 @@ export default {
                 this.$i18n.locale = 'fr';
             }
         },
-        getSentDemands(){
+        getListDemands(){
             this.getSentDemandsByUser(this.user.id).then(()=>{
                 router.push({
                     name: 'sentDemands'
@@ -106,6 +110,16 @@ export default {
                     name: 'receivedDemands'
                 });
             });
+        },
+        getListEstimates(){
+            this.getListEstimatesByUser(this.user.id).then(()=>{
+                router.push({
+                    name: 'receivedEstimates'
+                });
+            });
+        },
+        getListEstimatesByProf(){
+
         }
     }
 
