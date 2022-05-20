@@ -4,27 +4,28 @@
             <div class="col align-self-center">
                 <table class="table">
                     <thead>
-                        <h4>Liste des demandes reçues</h4>
+                        <h4> {{ $i18n.t('title-2') }}</h4>
                         <tr>
-                            <th scope="col">Titre de la formation</th>
-                            <th scope="col">Participant</th>
-                            <th scope="col">Satut</th>
-                            <th scope="col">Actions</th>
+                            <th scope="col">{{ $i18n.t('ss-title-1') }}</th>
+                            <th scope="col">{{ $i18n.t('ss-title-4') }} </th>
+                            <th scope="col">{{ $i18n.t('ss-title-3') }}</th>
+                            <th scope="col">{{ $i18n.t('ss-title-5') }}</th>
                         </tr>
                     </thead>
                     <tbody class="border-bottom border-success">
                         <tr v-for="received_demand, index in received_demands" :key="index">
-                            <td>{{received_demand.user_id}}</td>
                             <td>{{received_demand.training_id}}</td>
+                            <td>{{received_demand.user_id}}</td>
                             <td>{{received_demand.status}}</td>
-                            
                             <td v-if="received_demand.status == 'initiated'">
-                                <button class="btn btn-sm btn-outline-success fw-bolder" @click.prevent="updateDemandStatus(received_demand, true, )">Accepter</button>
+                                <button class="btn btn-sm btn-outline-success fw-bolder" @click.prevent="updateDemandStatus(received_demand, true, )">
+                                {{ $i18n.t('ss-title-2') }}</button>
                                 &nbsp;&nbsp;
-                                <button class="btn btn-sm btn-outline-danger fw-bolder" @click.prevent="updateDemandStatus(received_demand, false)">Refuser</button>
+                                <button class="btn btn-sm btn-outline-danger fw-bolder" @click.prevent="updateDemandStatus(received_demand, false)">
+                                {{ $i18n.t('msg-conf-3') }}</button>
                             </td>
                             <td v-else>
-                                &nbsp;--------
+                                &nbsp;-------- --------
                             </td>
                         </tr>
                     </tbody>

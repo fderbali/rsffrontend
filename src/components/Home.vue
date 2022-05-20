@@ -4,16 +4,21 @@
         <div class="container">
             <div class="row">
                 <div class="col" v-for="training, index in trainings" :key="index">
-                    <div class="card bg-warning border-danger bg-opacity-50" style="width: 18rem;">
+                    <div class="card mb-3 bg-warning border-danger bg-opacity-50 h-90" style="width: 18rem;">
                         <img :src="`http://rsfbackend.test/images/${training.thumbnail}`" class="card-img-top" width="60" height="175" alt="">
-                        <div class="card-body ">
-                            <h5 class="card-title text-danger text-center text-bolder">{{ training.category_id }}</h5>
-                            <h5 class="card-title text-danger text-bolder">{{ training.title }}</h5>
-                            <p class="card-text text-bolder">{{ training.description }}</p>
-                            <p class="card-text">{{ $i18n.t('duration') }} {{ training.total_duration }} Heures</p>
-                            <!-- ici on doit aller chercher le nom du formateur dans la table users à partir de training.user_id -->
-                            <p class="card-text">{{ $i18n.t('by') }} {{ training.user_id }}</p>
+                        <div class="card-header text-center text-bolder">
+                            <h5 class="card-title text-danger">{{ training.title }}</h5>
+                        </div>
+                        <div class="card-body text-bolder text-center">
+                            <a class="btn text-danger text-bolder" data-bs-toggle="collapse" :href="'#collapseOne'+index"><h5>Informations </h5></a>
+                            <div :id="'collapseOne'+index" class="collapse text-left" data-bs-parent="#accordion" aria-haspopup="true">
+                                <p class="card-text text-bolder">{{ training.description }}</p>
+                                <div class="card-text">{{ $i18n.t('duration') }} : {{ training.total_duration }} Heures</div>
+                                <div class="card-text">{{ $i18n.t('price') }} : {{ training.price }}$</div>
+                            </div>
+                            <div class="card-footer text-center pt-4" v-if="user">
                             <a href="#" class="btn btn-success border-danger" @click.prevent="sendDemand(training.id)">{{ $i18n.t('do-demand') }}</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -62,8 +67,8 @@ export default {
             envoyerDemand: 'envoyerDemand'
         }),
         sendDemand(trainingId){
-            Alert.confirmation("Etes vous sûr !", "Vous allez envoyer une demande pour cette formation" ,"Oui")
-            // Alert.confirmation(this.$i18n.t('msg-con1'))//il manque le Oui ici  "Confirmez l'envoi de cette demande SVP!Oui"
+            //Alert.confirmation("Etes vous sûr !", "Vous allez envoyer une demande pour cette formation" ,"Oui")
+            Alert.confirmation(this.$i18n.t('msg-con1','msg-yes' ))//il manque le Oui ici  "Confirmez l'envoi de cette demande SVP!Oui"
                 .then((response) => {
                     if (response.isConfirmed) {
                         // Envoie de requête Ajax pour créer demande :

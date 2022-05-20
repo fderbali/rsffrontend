@@ -1,5 +1,5 @@
 <template>
-    <header class="p-3 mb-3 border-bottom bg-success bg-opacity-25 fs-4 fw-bolder">
+    <header class="p-3 mb-3 border-bottom bg-success bg-opacity-25 fs-4 fw-bold">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none me-5">
@@ -12,7 +12,7 @@
                     <li><a v-if="user" href="#" class="nav-link px-2 link-dark">{{ $i18n.t('publish-a') }}</a></li>
                 </ul>
 
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 d-flex flex-wrap align-items-center justify-content-center">
+                <form class="col-12 col-lg-auto me-lg-3 d-flex flex-wrap align-items-center justify-content-center">
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                         <li v-if="this.$i18n.locale=='fr'">
                             <a href="#" @click.prevent="changeLanguage()">
@@ -26,7 +26,7 @@
                         </li>
                     </ul>
                     <div class="ps-3">
-                        <input type="search" class="form-control" :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
+                        <input type="search" class="form-control-sm" :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
                     </div>
                 </form>
 
