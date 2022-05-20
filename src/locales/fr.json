@@ -8,9 +8,9 @@
     "register":     "Inscription",
     "email":        "Courriel",
     "pw":           "Mot de passe",
-    "pw-again":     "Confirmation mot de passe",
-    "first-name":   "Nom",
-    "last-name":    "Prénom",
+    "pw-again":     "Confirmation",
+    "first-name":   "Prénom",
+    "last-name":    "Nom",
     "birth-date":   "Date de naissance",
     "address":      "Adresse",
     "city":         "Ville",
@@ -30,6 +30,7 @@
     "location":     "Lieu",
     "duration":     "Durée totale",
     "thumbnail":    "Image",
+    "price":        "Prix",
 
     "do-demand":    "Faire une demande",
     "by":           "Par",
@@ -51,7 +52,10 @@
 
     
     "msg-con1": "Confirmez l'envoi de cette demande SVP!",
-    
+    "msg-con2": "Accepter",
+    "msg-con3": "Refuser",
+    "msg-yes":  "Oui",
+
     "msg-suc1": "Bienvenue 🖐",
     "msg-suc2": "Enregistrement effectué avec succès!",
 
@@ -60,9 +64,19 @@
 
     "msg404-1": "Oups!",
     "msg404-2": "Page inexistante",
-    "msg404-3": "La page que vous recherchée n'existe pas."
+    "msg404-3": "La page que vous recherchée n'existe pas.",
 
-    
+    "title-1": "Liste des demandes envoyées",
+    "title-2": "Liste des demandes reçues",
+    "title-3": "Liste des devis envoyées",
+    "title-4": "Liste des devis envoyées",
+
+    "ss-title-1": "Formation",
+    "ss-title-2": "Enseignant(e)",
+    "ss-title-3": "Statut",
+    "ss-title-4": "Participant(e)",
+    "ss-title-5": "Actions"
+
 
 
 }

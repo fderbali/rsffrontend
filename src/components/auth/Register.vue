@@ -1,77 +1,84 @@
-<template>
-    <div class="container d-flex align-items-center justify-content-center bg-opacity-50">
-        <div class="row w-50">
-            <div class="col align-self-center bg-warning bg-opacity-50 border border-danger rounded">
-                <form class="p-5">
-                    <h2 class="pb-3 text-center text-danger titre-principal">{{ $i18n.t('register') }}</h2>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('first-name') }}</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control border-danger" name="first_name" v-model="first_name">
+<template class="container-lg">
+    <div>
+        <main class="form-signin p-4 mb-3 border border-danger rounded bg-warning bg-opacity-50">
+            <form>
+                <h2 class="pb-3 text-center text-danger titre-principal">{{ $i18n.t('register') }}</h2>
+                <div class="row">
+                    <div class="col-6 form-floating ">
+                        <div>
+                            <label for="floatingInput">{{ $i18n.t('first-name') }}</label>
+                            <input type="text" class="form-control border-danger rounded"  name="first_name" v-model="first_name">
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('last-name') }}</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control border-danger" name="last_name" v-model="last_name">
+                    <div class="col-6 form-floating">
+                        <div>
+                            <label for="floatingInput">{{ $i18n.t('last-name') }}</label>
+                            <input type="text" class="form-control border-danger rounded" name="last_name" v-model="last_name"> 
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('birth-date') }}</label>
-                        <div class="col-sm-10">
-                            <input type="date" class="form-control border-danger" name="birth_date" v-model="birth_date">
+                </div>
+                <div class="form-floating">
+                    <div>
+                        <label for="floatingDate">{{ $i18n.t('birth-date') }}</label>
+                        <input type="date" class="form-control border-danger rounded" name="birth_date" v-model="birth_date">
+                    </div>
+                </div>
+                <div class="form-floating">
+                    <div>
+                        <label for="floatingInput">{{ $i18n.t('email') }}</label>
+                        <input type="email" class="form-control border-danger rounded" name="email" v-model="email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 form-floating">
+                        <div>
+                            <label for="floatingPassword">{{ $i18n.t('pw') }}</label>
+                            <input type="password" class="form-control border-danger rounded" name="password" v-model="password">
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('email') }}</label>
-                        <div class="col-sm-10">
-                            <input type="email" class="form-control border-danger" name="email" v-model="email">
+                    <div class="col-6 form-floating">
+                        <div>
+                            <label for="floatingPassword">{{ $i18n.t('pw-again') }}</label>
+                            <input type="password" class="form-control border-danger rounded" name="password">
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('pw') }}</label>
-                        <div class="col-sm-10">
-                            <input type="password" class="form-control border-danger" name="password" v-model="password">
+                </div>    
+                <div class="form-floating">
+                    <div>
+                        <label for="floatingInput">{{ $i18n.t('address') }}</label>
+                        <input type="text" name="location" class="form-control border-danger rounded" v-model="address">
+                    </div>
+                </div>
+                <div class="form-floating">
+                    <div>
+                        <label for="floatingInput">{{ $i18n.t('city') }}</label>
+                        <input type="text" name="city" class="form-control border-danger rounded" v-model="city">  
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 form-floating">
+                        <div>
+                            <label for="floatingInput">{{ $i18n.t('country') }}</label>
+                            <input type="text" name="country" class="form-control border-danger rounded" v-model="country">
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('pw-again') }}</label>
-                        <div class="col-sm-10">
-                            <input type="password" class="form-control border-danger" name="password">
+                    <div class="col-6 form-floating">
+                        <div>
+                            <label for="floatingInput">{{ $i18n.t('zip-code') }}</label>
+                            <input type="text" name="zip_code" class="form-control border-danger rounded" v-model="zip_code">
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('address') }}</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="location" class="form-control border-danger" v-model="address">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('city') }}</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="city" class="form-control border-danger" v-model="city">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('country') }}</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="country" class="form-control border-danger" v-model="country">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('zip-code') }}</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="zip_code" class="form-control border-danger" v-model="zip_code">
-                        </div>
-                    </div>
-                    
+                </div>
+
+                <div>
+                    <br>
                     <button type="submit" class="btn btn-success border-danger w-100 btn-lg opacity-75" @click.prevent="enregistrerUser()">
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" v-if="loading"></span>
                         {{ $i18n.t('submit') }}
                     </button>
-                </form>
-            </div>
-        </div>
+                </div>
+            </form>
+        </main>
     </div>
 </template>
 
