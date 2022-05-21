@@ -13,6 +13,7 @@
                             <a class="btn text-danger text-bolder" data-bs-toggle="collapse" :href="'#collapseOne'+index"><h5>Informations </h5></a>
                             <div :id="'collapseOne'+index" class="collapse text-left" data-bs-parent="#accordion" aria-haspopup="true">
                                 <p class="card-text text-bolder">{{ training.description }}</p>
+                                <p>{{ $i18n.t('by') }}: {{ training.user.first_name }} {{ training.user.last_name }}</p>
                                 <div class="card-text">{{ $i18n.t('duration') }} : {{ training.total_duration }} Heures</div>
                                 <div class="card-text">{{ $i18n.t('price') }} : {{ training.price }}$</div>
                             </div>
