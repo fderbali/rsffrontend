@@ -35,7 +35,7 @@ export default {
             position:           'top-end',
             icon:               'success',
             title:              'Succès',
-            text:               message,
+            html:               message,
             showCloseButton:    true,
             allowEscapeKey:     false,
             confirmButtonColor: '#0c5748',
