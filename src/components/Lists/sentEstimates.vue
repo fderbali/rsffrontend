@@ -1,16 +1,16 @@
 <template>
-    <h1>
-        Received estimates
+    <h1 class="text-center">
+        Sent estimates
     </h1>
 </template>
 
 <script>
 import { mapState } from 'vuex';
 export default {
-    name: "listReceivedEstimates",
-    computed:{
+    name: "sentEstimates",
+    computed: {
         ...mapState('core/estimate', [
-            'received_estimates'
+            'sent_estimates'
         ]),
     }
 }

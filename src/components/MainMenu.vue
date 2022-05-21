@@ -40,7 +40,7 @@
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('i-learn') }}</a></li>
                         <li><a class="dropdown-item" href="#" @click.prevent="getListDemands()">{{ $i18n.t('s-demands') }}</a></li>
                         <li><a class="dropdown-item" href="#" @click.prevent="getListDemandsByProf()">{{ $i18n.t('r-demands') }}</a></li>
-                        <li><a class="dropdown-item" href="#">{{ $i18n.t('s-estimates') }}</a></li>
+                        <li><a class="dropdown-item" href="#" @click.prevent="getListEstimatesByProf()">{{ $i18n.t('s-estimates') }}</a></li>
                         <li><a class="dropdown-item" href="#" @click.prevent="getListEstimates()">{{ $i18n.t('r-estimates') }}</a></li>
                         <li><hr class="dropdown-divider text-danger"></li>
                         <li><a class="dropdown-item" href="#" @click.prevent="deconnexion()">{{ $i18n.t('logoff') }}</a></li>
@@ -79,7 +79,7 @@ export default {
             getDemandsByTeacher:"getDemandsByTeacher"
         }),
         ...mapActions("core/estimate", [
-                'getListEstimatesByUser'
+                'getListEstimatesByUser', 'getListEstimatesProf'
             ]
         ),
         deconnexion(){
@@ -118,7 +118,11 @@ export default {
             });
         },
         getListEstimatesByProf(){
-
+            this.getListEstimatesProf(this.user.id).then(()=>{
+                router.push({
+                    name: 'sentEstimates'
+                });
+            });
         }
     }
 
