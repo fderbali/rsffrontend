@@ -68,7 +68,7 @@ export default {
         }),
         sendDemand(trainingId){
             //Alert.confirmation("Etes vous sûr !", "Vous allez envoyer une demande pour cette formation" ,"Oui")
-            Alert.confirmation(this.$i18n.t('msg-con1','msg-yes' ))//il manque le Oui ici  "Confirmez l'envoi de cette demande SVP!Oui"
+            Alert.confirmation(this.$i18n.t('msg-con1'),'', this.$i18n.t('msg-yes'))//il manque le Oui ici  "Confirmez l'envoi de cette demande SVP!Oui"
                 .then((response) => {
                     if (response.isConfirmed) {
                         // Envoie de requête Ajax pour créer demande :

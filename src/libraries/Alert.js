@@ -50,7 +50,7 @@ export default {
         return Swal.fire({
             title: title,
             text: msg,
-            icon: 'warning',
+            icon: 'success',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
