@@ -121,7 +121,14 @@ export default {
                 router.push({
                     name: 'home'
                 });
-            });
+            })
+            .catch((e)=>{
+                let errorMessage = '';
+                (Object.values(e.response.data.errors)).forEach((element)=>{
+                    errorMessage = element + '<br>';
+                });
+                Alert.fail(errorMessage);
+            })
         }
     },
     mounted(){
