@@ -19,10 +19,10 @@
                             <td>{{received_demand.status}}</td>
                             <td v-if="received_demand.status == 'initiated'">
                                 <button class="btn btn-sm btn-outline-success fw-bolder" @click.prevent="updateDemandStatus(received_demand, true, )">
-                                {{ $i18n.t('ss-title-2') }}</button>
+                                {{ $i18n.t('msg-con2') }}</button>
                                 &nbsp;&nbsp;
                                 <button class="btn btn-sm btn-outline-danger fw-bolder" @click.prevent="updateDemandStatus(received_demand, false)">
-                                {{ $i18n.t('msg-conf-3') }}</button>
+                                {{ $i18n.t('msg-con3') }}</button>
                             </td>
                             <td v-else>
                                 &nbsp;-------- --------

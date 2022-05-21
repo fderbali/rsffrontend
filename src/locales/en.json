@@ -1,7 +1,7 @@
 {
     "home":         "Home",
     
-    "publish-a":    "Publish announcement",
+    "publish-a":    "Announcements",
     "search":       "Search...",
     "training":     "Training",
 
@@ -20,7 +20,7 @@
     "login":        "Log in",
     "logoff":       "Log off",
 
-    "publish-t":     "Publish Training",
+    "publish-t":     "Trainings",
     "category":     "Category",
     "title":        "Title",
     "description":  "Description",
@@ -29,6 +29,8 @@
     "middle":       "Middle",
     "senior":       "Senior",
     "location":     "Location",
+    "loc-1":        "At home",
+    "loc-2":        "Other",
     "duration":     "Total duration",
     "thumbnail":    "Thumbnail",
     "price":        "Price",

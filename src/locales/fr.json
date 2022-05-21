@@ -1,7 +1,7 @@
 {
     "home":         "Accueil",
-    "publish-t":    "Publier formation",
-    "publish-a":    "Publier annonce",
+    "publish-t":    "Formations",
+    "publish-a":    "Annonces",
     "search":       "Recherche...",
     "training":     "Formation",
     
@@ -28,6 +28,8 @@
     "middle":       "Intermédiaire",
     "senior":       "Avancé",
     "location":     "Lieu",
+    "loc-1":        "Domicile",
+    "loc-2":        "Autre",
     "duration":     "Durée totale",
     "thumbnail":    "Image",
     "price":        "Prix",

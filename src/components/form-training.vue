@@ -1,83 +1,72 @@
 <template>
-    <div class="container d-flex align-items-center justify-content-center ">
-        <div class="row w-50">
-            <div class="col align-self-center border border-danger rounded bg-warning bg-opacity-50">
-                <form class="p-4 w-4">
-                    <h2 class="pb-3 text-center titre-principal">{{ $i18n.t('publish-t') }}</h2>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('category') }}</label>
-                        <div class="col-sm-10">
-                            <select class="form-select" name="categorie" v-model="categorie">
-                                <option v-for="category, index in categories" :key="index" :value="category.id">
-                                    {{category.title}}
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-sm-10">
-                            <label class="col-sm-2 col-form-label">{{ $i18n.t('title') }}</label>
-                            <input type="text" class="form-control" name="titre" v-model="titre">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-sm-10">
-                            <label class="col-sm-2 col-form-label">{{ $i18n.t('description') }}</label>
-                            <textarea class="form-control" v-model="description" name="description"></textarea>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-sm-10">
-                            <label class="col-sm-2 col-form-label" name="thumbnail">{{ $i18n.t('thumbnail') }}</label>
-                            <input type="file" name="tumbnail" accept="image/*" ref="file">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-sm-10">
-                            <label class="col-sm-2 col-form-label">{{ $i18n.t('level') }}</label>
-                            <div class="col-sm-10">
-                                <select class="form-select" v-model="niveau" name="niveau">
-                                    <option value="junior">{{ $i18n.t('junior') }}</option>
-                                    <option value="middle">{{ $i18n.t('middle') }}</option>
-                                    <option value="senior">{{ $i18n.t('senior') }}</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('location') }}</label>
-                        <div class="col-sm-10">
-                            <div>
-                                <input class="form-check-input" type="radio" name="location" value="true" v-model="domicile">
-                                <label class="form-check-label" for="domicile">
-                                    &nbsp;Domicile
-                                </label>
-                            </div>
-                            <div>
-                                <input class="form-check-input" type="radio" value="false" name="location" v-model="domicile">
-                                <label class="form-check-label" for="autre">
-                                    &nbsp;Autre
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('address') }}</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="location" class="form-control" v-model="adresse">
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">{{ $i18n.t('duration') }}</label>
-                        <div class="col-sm-10">
-                            <input type="numeric" name="duree" class="form-control" v-model="duree">
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-success border-danger w-100 btn-lg opacity-75" @click.prevent="enregistrerTraining()">{{ $i18n.t('submit') }}</button>
-                </form>
+    <div class="container d-flex align-items-center justify-content-center">
+        <form class="p-4 w-4 fs-5 fw-bold border border-danger rounded bg-warning bg-opacity-50">
+            <h1 class="pb-3 fw-bold text-center titre-principal">{{ $i18n.t('publish-t') }}</h1>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label class="col-sm-2 col-form-label">{{ $i18n.t('category') }}</label>
+                    <select class="form-select border-danger" name="categorie" v-model="categorie">
+                        <option v-for="category, index in categories" :key="index" :value="category.id">
+                            {{category.title}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                    <label class="col-sm-2 col-form-label">{{ $i18n.t('title') }}</label>
+                    <input type="text" class="form-control border-danger" name="titre" v-model="titre">
+                </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <label class="col-sm-2 col-form-label">{{ $i18n.t('description') }}</label>
+                    <textarea class="form-control border-danger" v-model="description" name="description"></textarea>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-12">
+                    <label class="col-form-label" name="thumbnail">{{ $i18n.t('thumbnail') }}</label>
+                    <input type="file" name="tumbnail" accept="image/*" ref="file">
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col-sm-4">
+                    <label class="col-sm-2 col-form-label">{{ $i18n.t('level') }}</label>
+                    <select class="form-select border-danger" v-model="niveau" name="niveau">
+                        <option value="junior">{{ $i18n.t('junior') }}</option>
+                        <option value="middle">{{ $i18n.t('middle') }}</option>
+                        <option value="senior">{{ $i18n.t('senior') }}</option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                    <label class="col-form-label">{{ $i18n.t('duration') }}</label>
+                    <input type="number" name="duree" class="form-control border-danger" v-model="duree">
+                </div>
+                <div class="col-sm-2">
+                    <label class="col-form-label">{{ $i18n.t('price') }}</label>
+                    <input type="number" name="price" class="form-control border-danger" v-model="price">
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div>
+                <label class="mt-1 col-2 col-form-label">{{ $i18n.t('location') }}</label>
+                    <input class="col-sm-3 mt-3 form-check-input border-danger" type="radio" name="location" value="true" v-model="domicile">
+                    <label class="col-sm-3 form-check-label border-danger" for="domicile">{{ $i18n.t('loc-1') }}
+                        &nbsp;&nbsp;&nbsp;
+                    </label>
+                    <input class="col-sm-2 mt-3 form-check-input border-danger" type="radio" value="false" name="location" v-model="domicile">
+                    <label class="col-sm-3 form-check-label border-danger" for="autre">{{ $i18n.t('loc-2') }}
+                    </label>
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col-sm-12">
+                    <label class="col-sm-2 col-form-label">{{ $i18n.t('address') }}</label>
+                    <input type="text" name="location" class="form-control border-danger" v-model="adresse">
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-success border-danger w-100 btn-lg opacity-75" @click.prevent="enregistrerTraining()">{{ $i18n.t('submit') }}</button>
+        </form>
     </div>
 </template>
 
@@ -95,7 +84,8 @@ export default {
             niveau: 'middle',
             domicile: true,
             adresse: '',
-            duree: 5
+            duree: 5,
+            price: 20
         }
     },
     computed:{
@@ -123,7 +113,8 @@ export default {
                 'adresse':this.adresse,
                 'duree':this.duree,
                 'user_id': this.user.id,
-                'thumbnail': this.$refs.file.files[0]
+                'thumbnail': this.$refs.file.files[0],
+                'price': this.price,
             };
             this.saveTraining(formTraining).then(()=>{
                 Alert.success(this.$i18n.t('msg-suc2')) //"Enregistrement effectué avec succès!",
