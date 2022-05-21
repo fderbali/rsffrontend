@@ -57,6 +57,7 @@
     "msg-con2": "Accept",
     "msg-con3": "Refuse",
     "msg-yes": "Yes",
+    "en-cours"  : "Demand in progress",
 
     "msg-suc1": "Welcome back 🖐",
     "msg-suc2": "Registration successful!",

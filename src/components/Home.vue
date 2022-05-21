@@ -16,8 +16,11 @@
                                 <div class="card-text">{{ $i18n.t('duration') }} : {{ training.total_duration }} Heures</div>
                                 <div class="card-text">{{ $i18n.t('price') }} : {{ training.price }}$</div>
                             </div>
-                            <div class="card-footer text-center pt-4" v-if="user">
-                            <a href="#" class="btn btn-success border-danger" @click.prevent="sendDemand(training.id)">{{ $i18n.t('do-demand') }}</a>
+                            <div class="card-footer text-center pt-4" v-if="user && !training.demands.length">
+                                <a href="#" class="btn btn-success border-danger" @click.prevent="sendDemand(training.id)">{{ $i18n.t('do-demand') }}</a>
+                            </div>
+                            <div class="card-footer text-center pt-4" v-else>
+                                <a href="#" class="btn btn-success border-danger opacity-25">{{ $i18n.t('en-cours') }}</a>
                             </div>
                         </div>
                     </div>
@@ -92,7 +95,7 @@ export default {
         }
     },
     mounted(){
-        this.getTrainings();
+        this.getTrainings(this.user.id);
     }
 }
 </script>

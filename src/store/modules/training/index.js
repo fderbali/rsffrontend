@@ -9,9 +9,9 @@ const state = () => ({
 
 // Actions
 const actions = {
-    getTrainings: (context) => {
+    getTrainings: (context, user_id) => {
         return new Promise((resolve, reject) => {
-            Api.get(resource).then((response) => {
+            Api.get(`${resource}/user/${user_id}`).then((response) => {
                 context.commit('SET_TRAININGS', response);
                 resolve(response);
             })
