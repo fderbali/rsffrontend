@@ -79,13 +79,13 @@ export default {
     data(){
         return{
             categorie: 1,
-            titre: 'jardinage',
-            description: 'desc',
-            niveau: 'middle',
-            domicile: true,
+            titre: '',
+            description: '',
+            niveau: '',
+            domicile: false,
             adresse: '',
             duree: 5,
-            price: 20
+            price: null
         }
     },
     computed:{
