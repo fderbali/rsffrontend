@@ -5,7 +5,8 @@ import NotFound from '@/components/NotFound.vue';
 import FormTraining from "@/components/form-training";
 import listDemands from "@/components/Lists/listDemands";
 import listReceivedDemands from "@/components/Lists/listReceivedDemands";
-import listReceivedEstimates from "@/components/Lists/listReceivedEstimates"
+import listReceivedEstimates from "@/components/Lists/listReceivedEstimates";
+import sentEstimates from "@/components/Lists/sentEstimates";
 
 export default [
     {
@@ -62,6 +63,14 @@ export default [
         component: listReceivedEstimates,
         meta: {
             title: "Liste des devis reçus"
+        }
+    },
+    {
+        path: '/sent-estimates',
+        name: 'sentEstimates',
+        component: sentEstimates,
+        meta: {
+            title: "Liste des devis envoyés"
         }
     },
     {
