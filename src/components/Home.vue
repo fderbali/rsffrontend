@@ -16,12 +16,25 @@
                                 <p>{{ $i18n.t('by') }}: {{ training.user.first_name }} {{ training.user.last_name }}</p>
                                 <div class="card-text">{{ $i18n.t('duration') }} : {{ training.total_duration }} Heures</div>
                                 <div class="card-text">{{ $i18n.t('price') }} : {{ training.price }}$</div>
+                                <div class="card-text">
+                                    {{ $i18n.t('location') }} :
+                                    <span v-if="training.location=='domicile'">{{ $i18n.t('home') }}</span>
+                                    <a v-else target="_blank" :href="`https://www.google.ca/maps/place/${training.location}`">
+                                        <font-awesome-icon :icon="['fas', 'map-marker']" class="icon alt"/>
+                                    </a>
+                                </div>
                             </div>
                             <div class="card-footer text-center pt-4" v-if="user && !training.demands.length">
                                 <a href="#" class="btn btn-success border-danger" @click.prevent="sendDemand(training.id)">{{ $i18n.t('do-demand') }}</a>
                             </div>
-                            <div class="card-footer text-center pt-4" v-else>
+                            <div class="card-footer text-center pt-4" v-else-if="user && training.demands[0].status === 'initiated'">
                                 <a href="#" class="btn btn-success border-danger opacity-25">{{ $i18n.t('en-cours') }}</a>
+                            </div>
+                            <div class="card-footer text-center pt-4" v-else-if="user && training.demands[0].status === 'confirmed'">
+                                <a href="#" class="btn btn-success border-danger opacity-25">{{ $i18n.t('confirmed') }}</a>
+                            </div>
+                            <div class="card-footer text-center pt-4" v-else-if="user && training.demands[0].status === 'cancelled'">
+                                <a href="#" class="btn btn-warning border-danger opacity-25">{{ $i18n.t('cancelled') }}</a>
                             </div>
                         </div>
                     </div>
@@ -39,21 +52,18 @@
                 </ul>
             </nav>
         </div>
+        <loader v-if="loading"></loader>
     </body>
 </template>
-<style>
-/* body  {
-  background-image: url("texture2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-</style>
-
 <script>
 import { mapState, mapActions } from 'vuex';
 import Alert from "@/libraries/Alert.js";
+import loader from "@/components/loader"
 export default {
     name: 'Home',
+    components:{
+        loader,
+    },
     computed: {
         ...mapState('core/training', [
             'trainings', 'trainingsLinks'
@@ -61,6 +71,12 @@ export default {
         ...mapState('core/auth', [
             'user'
         ])
+    },
+    data() {
+        return {
+            loading: false,
+            currentPage : 1
+        }
     },
     methods: {
         ...mapActions('core/training', {
@@ -75,6 +91,7 @@ export default {
             Alert.confirmation(this.$i18n.t('msg-con1'),'', this.$i18n.t('msg-yes'))//il manque le Oui ici  "Confirmez l'envoi de cette demande SVP!Oui"
                 .then((response) => {
                     if (response.isConfirmed) {
+                        this.loading = true;
                         // Envoie de requête Ajax pour créer demande :
                         let dataToSend = {
                             "status":"initiated",
@@ -83,16 +100,21 @@ export default {
                         }
                         this.envoyerDemand(dataToSend).then(()=>{
                             Alert.success(this.$i18n.t('msg-suc2'))//"Enregistrement effectué avec succès!"
+                            this.goToPage(this.currentPage);
                         })
                         .catch((e)=>{
                             let errorMessage = (Object.values(e.response.data.errors)).join('<br/>');
                             Alert.fail(errorMessage);
                         })
+                        .finally(()=>{
+                            this.loading = false;
+                        })
                     }
                 });
         },
         goToPage(page){
-            this.getTrainingByPage(page);
+            this.currentPage = page;
+            this.getTrainingByPage({user_id: this.user.id, page});
         }
     },
     mounted(){

@@ -1,6 +1,6 @@
 <template>
     <div class="container d-flex align-items-center justify-content-center">
-        <form class="p-4 w-4 fs-5 fw-bold border border-danger rounded bg-warning bg-opacity-50">
+        <form class="p-4 mb-3 w-4 fs-5 fw-bold border border-danger rounded bg-warning bg-opacity-50">
             <h1 class="pb-3 fw-bold text-center titre-principal">{{ $i18n.t('publish-t') }}</h1>
             <div class="row">
                 <div class="col-sm-6">
@@ -79,13 +79,13 @@ export default {
     data(){
         return{
             categorie: 1,
-            titre: 'jardinage',
-            description: 'desc',
-            niveau: 'middle',
-            domicile: true,
+            titre: '',
+            description: '',
+            niveau: '',
+            domicile: false,
             adresse: '',
             duree: 5,
-            price: 20
+            price: null
         }
     },
     computed:{

@@ -2,6 +2,7 @@
 import axios            from 'axios';
 import HttpErrorHandler from './HttpErrorHandler.js';
 
+
 // API link
 axios.defaults.baseURL = "http://rsfbackend.test";
 axios.defaults.withCredentials = true;
@@ -12,6 +13,14 @@ const axiosInstance = axios.create({
         'Accept':          'application/json',
         'Accept-Language': 'fr-CA'
     }
+});
+
+axiosInstance.interceptors.request.use((config) => {
+    let jwt = localStorage.getItem("jwt");
+    if(jwt !== null){
+        config['headers']['Authorization'] = 'Bearer '+jwt;
+    }
+    return config;
 });
 
 // Intercept the response in errors case, should be treated in httpErrorHandler first.

@@ -58,7 +58,11 @@
     "msg-con3": "Refuser",
     "msg-yes":  "Oui",
     "en-cours"  : "Demande en cours",
+    "confirmed"  : "Demande confirmée",
+    "cancelled"  : "Demande annulée",
     "by":         "Par",
+    "location":   "Lieu",
+    "home":       "Domicile",
 
     "msg-suc1": "Bienvenue 🖐",
     "msg-suc2": "Enregistrement effectué avec succès!",

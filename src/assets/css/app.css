@@ -11,3 +11,9 @@
     text-align: center;
     color: #F26723;
 }
+@media only screen and (min-width: 1550px) {
+    #wrapper {
+        min-height: 900px;
+    }
+}
+
