@@ -1,8 +1,5 @@
 <template>
-  <footer
-      class="text-center text-lg-start text-warning bg-success opacity-75"
-      
-  >
+  <footer class="text-center text-lg-start text-warning bg-success opacity-75">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
       <!-- Section: CTA -->
@@ -90,7 +87,3 @@
         },
     }
 </script>
-
-<style>
-
-</style>
