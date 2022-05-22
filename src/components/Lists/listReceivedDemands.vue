@@ -32,15 +32,22 @@
                 </table>
             </div>
         </div>
+        <loader v-if="loading"></loader>
     </div>
 </template>
 
 <script>
 import {mapActions, mapState} from "vuex";
 import Alert from "@/libraries/Alert.js";
+import loader from "@/components/loader"
 export default {
     data() {
-        return {}
+        return {
+            loading: false,
+        }
+    },
+    components: {
+        loader
     },
     computed: {
         ...mapState('core/demand', [
@@ -53,6 +60,7 @@ export default {
             'updateDemand'
         ]),
         updateDemandStatus(received_demand, decision) {
+            this.loading = true;
             this.updateDemand({
                 id: received_demand.id,
                 training_id: received_demand.training_id,
@@ -64,6 +72,9 @@ export default {
                 })
                 .catch(() => {
                     Alert.fail('Problème avec la mise à jour');
+                })
+                .finally(() => {
+                    this.loading = false;
                 });
         }
     }
