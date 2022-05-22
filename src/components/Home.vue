@@ -39,21 +39,18 @@
                 </ul>
             </nav>
         </div>
+        <loader v-if="loading"></loader>
     </body>
 </template>
-<style>
-/* body  {
-  background-image: url("texture2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-</style>
-
 <script>
 import { mapState, mapActions } from 'vuex';
 import Alert from "@/libraries/Alert.js";
+import loader from "@/components/loader"
 export default {
     name: 'Home',
+    components:{
+        loader
+    },
     computed: {
         ...mapState('core/training', [
             'trainings', 'trainingsLinks'
@@ -61,6 +58,11 @@ export default {
         ...mapState('core/auth', [
             'user'
         ])
+    },
+    data() {
+        return {
+            loading: false
+        }
     },
     methods: {
         ...mapActions('core/training', {
@@ -75,6 +77,7 @@ export default {
             Alert.confirmation(this.$i18n.t('msg-con1'),'', this.$i18n.t('msg-yes'))//il manque le Oui ici  "Confirmez l'envoi de cette demande SVP!Oui"
                 .then((response) => {
                     if (response.isConfirmed) {
+                        this.loading = true;
                         // Envoie de requête Ajax pour créer demande :
                         let dataToSend = {
                             "status":"initiated",
@@ -87,6 +90,9 @@ export default {
                         .catch((e)=>{
                             let errorMessage = (Object.values(e.response.data.errors)).join('<br/>');
                             Alert.fail(errorMessage);
+                        })
+                        .finally(()=>{
+                            this.loading = false;
                         })
                     }
                 });
