@@ -59,6 +59,8 @@
     "msg-yes": "Yes",
     "en-cours"  : "Demand in progress",
     "by":         "By",
+    "location":   "Lieu",
+    "home":       "Domicile",
 
     "msg-suc1": "Welcome back 🖐",
     "msg-suc2": "Registration successful!",

@@ -16,6 +16,13 @@
                                 <p>{{ $i18n.t('by') }}: {{ training.user.first_name }} {{ training.user.last_name }}</p>
                                 <div class="card-text">{{ $i18n.t('duration') }} : {{ training.total_duration }} Heures</div>
                                 <div class="card-text">{{ $i18n.t('price') }} : {{ training.price }}$</div>
+                                <div class="card-text">
+                                    {{ $i18n.t('location') }} :
+                                    <span v-if="training.location=='domicile'">{{ $i18n.t('home') }}</span>
+                                    <a v-else target="_blank" :href="`https://www.google.ca/maps/place/${training.location}`">
+                                        <font-awesome-icon :icon="['fas', 'map-marker']" class="icon alt"/>
+                                    </a>
+                                </div>
                             </div>
                             <div class="card-footer text-center pt-4" v-if="user && !training.demands.length">
                                 <a href="#" class="btn btn-success border-danger" @click.prevent="sendDemand(training.id)">{{ $i18n.t('do-demand') }}</a>
