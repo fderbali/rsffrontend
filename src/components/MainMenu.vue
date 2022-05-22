@@ -6,8 +6,8 @@
                     <img src="@/assets/images/logo.png" id="logo" alt="logo">
                 </a>
                 <ul class="nav col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="/" class="nav-link px-2 link-secondary">
-                    <img src="@/assets/images/home.png" id="logo" alt="home">
+                    <li><a href="/" class="nav-link px-2 pt-1 link-secondary">
+                    <img src="@/assets/images/home.png" id="home" alt="home">
                     </a> </li>
                     <li><a v-if="user" href="form-trainings" class="nav-link px-2 link-dark">{{ $i18n.t('publish-t') }}</a></li>
                     <li><a v-if="user" href="#" class="nav-link px-2 link-dark">{{ $i18n.t('publish-a') }}</a></li>
