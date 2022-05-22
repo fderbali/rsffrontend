@@ -77,9 +77,11 @@ const actions = {
 const mutations = {
     ['SET_AUTH_USER']: (state, payload) => {
         state.user = payload.data.user;
+        localStorage.setItem("jwt", payload.data.jwt);
     },
     ['REMOVE_AUTH_USER']: (state) => {
         state.user = null;
+        localStorage.removeItem("jwt");
     }
 };
 

@@ -1,6 +1,6 @@
 <template>
   <footer
-      class="text-center text-lg-start text-warning bg-success opacity-75 fixed-bottom"
+      class="text-center text-lg-start text-warning bg-success opacity-75"
       
   >
     <!-- Grid container -->
