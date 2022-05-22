@@ -58,6 +58,8 @@
     "msg-con3": "Refuse",
     "msg-yes": "Yes",
     "en-cours"  : "Demand in progress",
+    "confirmed"  : "Demand confirmed",
+    "cancelled"  : "Demand cancelled",
     "by":         "By",
     "location":   "Lieu",
     "home":       "Domicile",

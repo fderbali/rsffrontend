@@ -27,8 +27,14 @@
                             <div class="card-footer text-center pt-4" v-if="user && !training.demands.length">
                                 <a href="#" class="btn btn-success border-danger" @click.prevent="sendDemand(training.id)">{{ $i18n.t('do-demand') }}</a>
                             </div>
-                            <div class="card-footer text-center pt-4" v-else>
+                            <div class="card-footer text-center pt-4" v-else-if="user && training.demands[0].status === 'initiated'">
                                 <a href="#" class="btn btn-success border-danger opacity-25">{{ $i18n.t('en-cours') }}</a>
+                            </div>
+                            <div class="card-footer text-center pt-4" v-else-if="user && training.demands[0].status === 'confirmed'">
+                                <a href="#" class="btn btn-success border-danger opacity-25">{{ $i18n.t('confirmed') }}</a>
+                            </div>
+                            <div class="card-footer text-center pt-4" v-else-if="user && training.demands[0].status === 'cancelled'">
+                                <a href="#" class="btn btn-warning border-danger opacity-25">{{ $i18n.t('cancelled') }}</a>
                             </div>
                         </div>
                     </div>
