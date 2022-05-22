@@ -37,7 +37,7 @@ const actions = {
 // Mutations
 const mutations = {
     ['SET_ESTIMATES']: (state, payload) => {
-        state.estimates = payload.data;
+        state.received_estimates = payload.data;
     },
     ['SET_ESTIMATES_SENT']: (state, payload) => {
         state.sent_estimates = payload.data;
