@@ -49,7 +49,7 @@ import loader from "@/components/loader"
 export default {
     name: 'Home',
     components:{
-        loader
+        loader,
     },
     computed: {
         ...mapState('core/training', [
@@ -61,7 +61,8 @@ export default {
     },
     data() {
         return {
-            loading: false
+            loading: false,
+            currentPage : 1
         }
     },
     methods: {
@@ -86,6 +87,7 @@ export default {
                         }
                         this.envoyerDemand(dataToSend).then(()=>{
                             Alert.success(this.$i18n.t('msg-suc2'))//"Enregistrement effectué avec succès!"
+                            this.goToPage(this.currentPage);
                         })
                         .catch((e)=>{
                             let errorMessage = (Object.values(e.response.data.errors)).join('<br/>');
@@ -98,6 +100,7 @@ export default {
                 });
         },
         goToPage(page){
+            this.currentPage = page;
             this.getTrainingByPage({user_id: this.user.id, page});
         }
     },
