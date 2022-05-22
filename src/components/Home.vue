@@ -98,7 +98,7 @@ export default {
                 });
         },
         goToPage(page){
-            this.getTrainingByPage(page);
+            this.getTrainingByPage({user_id: this.user.id, page});
         }
     },
     mounted(){

@@ -20,9 +20,9 @@ const actions = {
                 });
         });
     },
-    getTrainingByPage: (context, page) => {
+    getTrainingByPage: (context, {user_id, page}) => {
         return new Promise((resolve, reject) => {
-            Api.get(`${resource}?page=${page}`).then((response) => {
+            Api.get(`${resource}/user/${user_id}?page=${page}`).then((response) => {
                 context.commit('SET_TRAININGS', response);
                 resolve(response);
             })
