@@ -2,21 +2,24 @@
     <div class="container mt-5 w-50">
         <h1 class="pb-3 text-center titre-principal">Paiement</h1>
         <div v-if="!paidFor">
-            <h3>{{ estimate.training.title }}</h3>
+            <p class="text-center"><img :src="`http://rsfbackend.test/images/${estimate.training.thumbnail}`" class="card-img-top img-thumbnail w-50" alt=""></p>
+            <h3 class="pb-2">{{ estimate.training.title }}</h3>
             <p>{{ estimate.training.description }}</p>
             <p>{{ estimate.training.total_duration }} heures</p>
             <p>Par : {{estimate.training.user.first_name}} {{estimate.training.user.last_name}}</p>
+            <p>Prix : <b>{{estimate.estimate.price}} CAD</b></p>
         </div>
 
         <div v-if="paidFor">
             <h3>Félicitations ! Bon choix de formation !!!</h3>
         </div>
-        <div ref="paypal"></div>
+        <div ref="paypal" v-if="!paidFor"></div>
     </div>
 </template>
 
 <script>
 import {mapState} from "vuex";
+import Alert from "@/libraries/Alert";
 
 export default {
     name: "checkout",
@@ -24,11 +27,6 @@ export default {
         return {
             loaded: false,
             paidFor: false,
-            product: {
-                price: 777.77,
-                description: "leg lamp from that one movie",
-                img: "./assets/lamp.jpg"
-            }
         }
     },
     computed: {
@@ -43,10 +41,10 @@ export default {
                         return actions.order.create({
                             purchase_units: [
                                 {
-                                    description: this.product.description,
+                                    description: this.estimate.training.description,
                                     amount: {
-                                        currency_code: "USD",
-                                        value: this.product.price
+                                        currency_code: "CAD",
+                                        value: this.estimate.estimate.price
                                     }
                                 }
                             ]
@@ -58,6 +56,7 @@ export default {
                         console.log(order);
                     },
                     onError: err => {
+                        Alert.fail(err);
                         console.log(err);
                     }
                 })
@@ -67,7 +66,7 @@ export default {
     mounted: function() {
         const script = document.createElement("script");
         script.src =
-            "https://www.paypal.com/sdk/js?client-id=AQHOpTIo7p5-lDXgz9S-bE81DQ76mfItl9yyOj1h-BXopRWjqFvYOk4zTgfepKBUfyqghIF4C_8UF72p";
+            "https://www.paypal.com/sdk/js?client-id=AQHOpTIo7p5-lDXgz9S-bE81DQ76mfItl9yyOj1h-BXopRWjqFvYOk4zTgfepKBUfyqghIF4C_8UF72p&currency=CAD";
         script.addEventListener("load", this.setLoaded);
         document.body.appendChild(script);
     }
