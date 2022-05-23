@@ -114,11 +114,11 @@ export default {
         },
         goToPage(page){
             this.currentPage = page;
-            this.getTrainingByPage({user_id: this.user.id, page});
+            this.getTrainingByPage({page});
         }
     },
     mounted(){
-        this.getTrainings(this.user.id);
+        this.getTrainings();
     }
 }
 </script>
