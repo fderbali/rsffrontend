@@ -14,14 +14,16 @@
                             <div :id="'collapseOne'+index" class="collapse text-left" data-bs-parent="#accordion" aria-haspopup="true">
                                 <p class="card-text text-bolder">{{ training.description }}</p>
                                 <p>{{ $i18n.t('by') }}: {{ training.user.first_name }} {{ training.user.last_name }}</p>
+                                <p>{{ $i18n.t('language') }}: {{ $i18n.t('french') }}</p>
                                 <div class="card-text">{{ $i18n.t('duration') }} : {{ training.total_duration }} Heures</div>
                                 <div class="card-text">{{ $i18n.t('price') }} : {{ training.price }}$</div>
                                 <div class="card-text">
                                     {{ $i18n.t('location') }} :
-                                    <span v-if="training.location=='domicile'">{{ $i18n.t('home') }}</span>
-                                    <a v-else target="_blank" :href="`https://www.google.ca/maps/place/${training.location}`">
+                                    <span v-if="training.location=='domicile'">{{ $i18n.t('loc-1') }}</span>
+                                    <a v-else-if="training.location=='autre'" target="_blank" :href="`https://www.google.ca/maps/place/${training.location}`">
                                         <font-awesome-icon :icon="['fas', 'map-marker']" class="icon alt"/>
                                     </a>
+                                    <span v-else-if="training.location=='distance'">{{ $i18n.t('loc-3') }}</span>
                                 </div>
                             </div>
                             <div class="card-footer text-center pt-4" v-if="user && !training.demands.length">

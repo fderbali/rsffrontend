@@ -14,9 +14,9 @@
                     </thead>
                     <tbody class="border-bottom border-success">
                         <tr v-for="received_demand, index in received_demands" :key="index">
-                            <td>{{received_demand.training_id}}</td>
-                            <td>{{received_demand.user_id}}</td>
-                            <td>{{received_demand.status}}</td>
+                            <!-- <td>{{received_demand.training.title}}</td>
+                            <td>{{received_demand.user.first_name}}{{received.demand.user.last_name}}</td>
+                            <td>{{received_demand.status}}</td> -->
                             <td v-if="received_demand.status == 'initiated'">
                                 <button class="btn btn-sm btn-outline-success fw-bolder" @click.prevent="updateDemandStatus(received_demand, true, )">
                                 {{ $i18n.t('msg-con2') }}</button>
