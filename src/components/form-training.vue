@@ -79,13 +79,13 @@ export default {
     name: "form-training",
     data(){
         return{
-            categorie: 1,
+            categorie: null,
             titre: '',
             description: '',
             niveau: '',
-            domicile: false,
+            domicile: '',
             adresse: '',
-            duree: 5,
+            duree: null,
             price: null
         }
     },

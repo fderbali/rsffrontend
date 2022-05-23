@@ -37,7 +37,7 @@ const actions = {
         formData.append('title', formTraining.titre);
         formData.append('description', formTraining.description);
         formData.append('level', formTraining.niveau);
-        formData.append('location', formTraining.domicile ? "domicile" : formTraining.adresse);
+        formData.append('location', formTraining.domicile == 'domicile' || formTraining.domicile == 'distance' ? formTraining.domicile :  formTraining.adresse);
         formData.append('user_id', formTraining.user_id);
         formData.append('category_id', formTraining.categorie);
         formData.append('total_duration', formTraining.duree);

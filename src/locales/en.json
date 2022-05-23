@@ -57,11 +57,14 @@
     "ss-title-2":   "Teacher",
     "ss-title-3":   "Status",
     "ss-title-4":   "Participant",
-    "ss-title-5":   "Actions",
+    "ss-title-5":   "Action",
 
     "language":     "Communication Language",
     "french":       "French",
     "english":      "English",
+
+    "pay":          "Pay",
+    "cancel":       "Cancel",
 
     "submit":       "Submit",
 

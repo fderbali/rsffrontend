@@ -4,7 +4,6 @@
         <div class="container">
             <div class="row">
                 <div class="col" v-for="training, index in trainings" :key="index">
-                {{ training.location }}
                     <div class="card mb-3 bg-warning border-danger bg-opacity-50 h-90" style="width: 18rem;">
                         <img :src="`http://rsfbackend.test/images/${training.thumbnail}`" class="card-img-top" width="60" height="175" alt="">
                         <div class="card-header text-center text-bolder">
