@@ -1,7 +1,7 @@
 {
     "home":         "Accueil",
-    "publish-t":    "Formations",
-    "publish-a":    "Annonces",
+    "publish-t":    "Formation",
+    "publish-a":    "Annonce",
     "search":       "Recherche...",
     "training":     "Formation",
     
@@ -30,6 +30,7 @@
     "location":     "Lieu",
     "loc-1":        "Domicile",
     "loc-2":        "Autre",
+    "loc-3":        "Distance",
     "duration":     "Durée totale",
     "thumbnail":    "Image",
     "price":        "Prix",
@@ -46,6 +47,23 @@
     "s-estimates":  "Devis envoyés",
     "r-estimates":  "Devis reçus",
 
+    "title-1":      "Liste des demandes envoyées",
+    "title-2":      "Liste des demandes reçues",
+    "title-3":      "Liste des devis envoyées",
+    "title-4":      "Liste des devis envoyées",
+
+    "ss-title-1":   "Formation",
+    "ss-title-2":   "Enseignant(e)",
+    "ss-title-3":   "Statut",
+    "ss-title-4":   "Participant(e)",
+    "ss-title-5":   "Actions",
+
+    "distance":     "Distance",
+
+    "language":     "Langue de communication",
+    "french":       "Français",
+    "english":      "Anglais",
+
     "submit":       "Soumettre",
 
     "free-register": "Inscription gratuite",
@@ -53,38 +71,23 @@
     "copyright":    "© 2022 Droits d'auteur : ",
 
     
-    "msg-con1": "Confirmez l'envoi de cette demande SVP!",
-    "msg-con2": "Accepter",
-    "msg-con3": "Refuser",
-    "msg-yes":  "Oui",
-    "en-cours"  : "Demande en cours",
-    "confirmed"  : "Demande confirmée",
-    "cancelled"  : "Demande annulée",
-    "by":         "Par",
-    "location":   "Lieu",
-    "home":       "Domicile",
+    "msg-con1":     "Confirmez l'envoi de cette demande SVP!",
+    "msg-con2":     "Accepter",
+    "msg-con3":     "Refuser",
+    "msg-yes":      "Oui",
+    "en-cours":     "Demande en cours",
+    "confirmed":    "Demande confirmée",
+    "cancelled":    "Demande annulée",
+    
+    "msg-suc1":     "Bienvenue 🖐",
+    "msg-suc2":     "Enregistrement effectué avec succès!",
 
-    "msg-suc1": "Bienvenue 🖐",
-    "msg-suc2": "Enregistrement effectué avec succès!",
+    "msg-err1":     "Une erreur s'est produite, veuillez actualiser la page SVP!",
+    "msg-err2":     "Courriel et/ou Mot de passe invalides!",
 
-    "msg-err1": "Une erreur s'est produite, veuillez actualiser la page SVP!",
-    "msg-err2": "Courriel et/ou Mot de passe invalides!",
-
-    "msg404-1": "Oups!",
-    "msg404-2": "Page inexistante",
-    "msg404-3": "La page que vous recherchée n'existe pas.",
-
-    "title-1": "Liste des demandes envoyées",
-    "title-2": "Liste des demandes reçues",
-    "title-3": "Liste des devis envoyées",
-    "title-4": "Liste des devis envoyées",
-
-    "ss-title-1": "Formation",
-    "ss-title-2": "Enseignant(e)",
-    "ss-title-3": "Statut",
-    "ss-title-4": "Participant(e)",
-    "ss-title-5": "Actions"
-
+    "msg404-1":     "Oups!",
+    "msg404-2":     "Page inexistante",
+    "msg404-3":     "La page que vous recherchée n'existe pas."
 
 
 }

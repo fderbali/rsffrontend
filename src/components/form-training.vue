@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <label class="col-sm-2 col-form-label">{{ $i18n.t('category') }}</label>
-                    <select class="form-select border-danger" name="categorie" v-model="categorie">
+                    <select class="form-select border-danger fs-5" name="categorie" v-model="categorie">
                         <option v-for="category, index in categories" :key="index" :value="category.id">
                             {{category.title}}
                         </option>
@@ -13,13 +13,13 @@
                 </div>
                 <div class="col-sm-6">
                     <label class="col-sm-2 col-form-label">{{ $i18n.t('title') }}</label>
-                    <input type="text" class="form-control border-danger" name="titre" v-model="titre">
+                    <input type="text" class="form-control border-danger fs-5" name="titre" v-model="titre">
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
                     <label class="col-sm-2 col-form-label">{{ $i18n.t('description') }}</label>
-                    <textarea class="form-control border-danger" v-model="description" name="description"></textarea>
+                    <textarea class="form-control border-danger fs-5" v-model="description" name="description"></textarea>
                 </div>
             </div>
             <div class="row mt-3">
@@ -29,39 +29,40 @@
                 </div>
             </div>
             <div class="row mt-1">
-                <div class="col-sm-4">
+                <div class="col-sm-5">
                     <label class="col-sm-2 col-form-label">{{ $i18n.t('level') }}</label>
-                    <select class="form-select border-danger" v-model="niveau" name="niveau">
+                    <select class="form-select border-danger fs-5" v-model="niveau" name="niveau">
                         <option value="junior">{{ $i18n.t('junior') }}</option>
                         <option value="middle">{{ $i18n.t('middle') }}</option>
                         <option value="senior">{{ $i18n.t('senior') }}</option>
                     </select>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <label class="col-form-label">{{ $i18n.t('duration') }}</label>
-                    <input type="number" name="duree" class="form-control border-danger" v-model="duree">
+                    <input type="number" name="duree" class="form-control border-danger fs-5" v-model="duree">
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                     <label class="col-form-label">{{ $i18n.t('price') }}</label>
-                    <input type="number" name="price" class="form-control border-danger" v-model="price">
+                    <input type="number" name="price" class="form-control border-danger fs-5" v-model="price">
                 </div>
             </div>
-            <div class="row mt-1">
+            <div class="row mt-4">
                 <div>
-                <label class="mt-1 col-2 col-form-label">{{ $i18n.t('location') }}</label>
-                    <input class="col-sm-3 mt-3 form-check-input border-danger" type="radio" name="location" value="true" v-model="domicile">
-                    <label class="col-sm-3 form-check-label border-danger" for="domicile">{{ $i18n.t('loc-1') }}
-                        &nbsp;&nbsp;&nbsp;
-                    </label>
-                    <input class="col-sm-2 mt-3 form-check-input border-danger" type="radio" value="false" name="location" v-model="domicile">
-                    <label class="col-sm-3 form-check-label border-danger" for="autre">{{ $i18n.t('loc-2') }}
-                    </label>
+                    <!-- <label class="mt-1 col-2 col-form-label">{{ $i18n.t('location') }}</label> -->
+                    <input class="col-sm-2 form-check-input border-danger" type="radio" name="location" value="domicile" v-model="domicile">
+                    <label class="col-sm-3 form-check-label border-danger" for="domicile">{{ $i18n.t('loc-1') }}&nbsp;&nbsp;&nbsp;</label>
+                    
+                    <input class="col-sm-2 form-check-input border-danger" type="radio" name="location" value="autre" v-model="domicile">
+                    <label class="col-sm-3 form-check-label border-danger" for="autre">{{ $i18n.t('loc-2') }}</label>
+
+                    <input class="col-sm-2 form-check-input border-danger" type="radio" name="location" value="distance" v-model="domicile">
+                    <label class="col-sm-4 form-check-label border-danger" for="distance">{{ $i18n.t('loc-3') }}</label>
                 </div>
             </div>
-            <div class="row mt-1">
+            <div class="row mt-2">
                 <div class="col-sm-12">
                     <label class="col-sm-2 col-form-label">{{ $i18n.t('address') }}</label>
-                    <input type="text" name="location" class="form-control border-danger" v-model="adresse">
+                    <input type="text" placeholder="Seulement pour l'option Autre" name="location" class="form-control border-danger fs-5" v-model="adresse">
                 </div>
             </div>
             <br>

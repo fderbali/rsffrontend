@@ -5,8 +5,10 @@
         </h1>
         <ul class="list-group">
             <li v-for="received_estimate, index in received_estimates" :key="index" class="list-group-item">
+            {{received_estimate}}
                 <p>Prix : {{received_estimate.estimate.price}}</p>
                 <p>Formation : {{received_estimate.training.title}}</p>
+                <p>Usager : {{received_estimate.training.user_id}}</p>
                 <p><a href="" class="btn btn-success" @click.prevent="payEstimate(received_estimate)">Payer</a></p>
             </li>
         </ul>

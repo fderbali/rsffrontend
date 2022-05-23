@@ -13,6 +13,7 @@
                     </thead>
                     <tbody class="border-bottom border-success">
                         <tr v-for="demand, index in demands" :key="index">
+                        {{demand}}
                             <td>{{demand.training_id}}</td>
                             <td></td>
                             <!-- <td>{{training.user_id}}</td> -->

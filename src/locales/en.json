@@ -1,10 +1,10 @@
 {
     "home":         "Home",
-    
-    "publish-a":    "Announcements",
-    "search":       "Search...",
-    "training":     "Training",
 
+    "publish-t":    "Training",
+    "publish-a":    "Announce",
+    "search":       "Search...",
+    
     "register":     "Sign up",
     "email":        "Email Address",
     "pw":           "Password",
@@ -20,7 +20,7 @@
     "login":        "Log in",
     "logoff":       "Log off",
 
-    "publish-t":     "Trainings",
+    
     "category":     "Category",
     "title":        "Title",
     "description":  "Description",
@@ -31,6 +31,7 @@
     "location":     "Location",
     "loc-1":        "At home",
     "loc-2":        "Other",
+    "loc-3":        "Distance",
     "duration":     "Total duration",
     "thumbnail":    "Thumbnail",
     "price":        "Price",
@@ -47,42 +48,44 @@
     "s-estimates":  "Sended estimates",
     "r-estimates":  "Received estimates",
 
+    "title-1":      "List of sented requests",
+    "title-2":      "List of received requests ",
+    "title-3":      "List of sented estimates",
+    "title-4":      "List of received estimates",
+
+    "ss-title-1":   "Training",
+    "ss-title-2":   "Teacher",
+    "ss-title-3":   "Status",
+    "ss-title-4":   "Participant",
+    "ss-title-5":   "Actions",
+
+    "language":     "Communication Language",
+    "french":       "French",
+    "english":      "English",
+
     "submit":       "Submit",
 
     "free-register": "Register for free",
 
     "copyright":    "© 2022 Copyright : ",
 
-    "msg-con1": "Please confirm the sending of this request!",
-    "msg-con2": "Accept",
-    "msg-con3": "Refuse",
-    "msg-yes": "Yes",
-    "en-cours"  : "Demand in progress",
-    "confirmed"  : "Demand confirmed",
-    "cancelled"  : "Demand cancelled",
-    "by":         "By",
-    "location":   "Lieu",
-    "home":       "Domicile",
+    "msg-con1":     "Please confirm the sending of this request!",
+    "msg-con2":     "Accept",
+    "msg-con3":     "Refuse",
+    "msg-yes":      "Yes",
+    "en-cours":     "Demand in progress",
+    "confirmed":    "Demand confirmed",
+    "cancelled":    "Demand cancelled",
+    
+    "msg-suc1":     "Welcome back 🖐",
+    "msg-suc2":     "Registration successful!",
 
-    "msg-suc1": "Welcome back 🖐",
-    "msg-suc2": "Registration successful!",
+    "msg-err1":     "An error has occurred, please refresh the page!",
+    "msg-err2":     "Invalids Email address and/or Password",
 
-    "msg-err1": "An error has occurred, please refresh the page!",
-    "msg-err2": "Invalids Email address and/or Password",
+    "msg404-1":     "Opps!",
+    "msg404-2":     "Page not found.",
+    "msg404-3":     "The page you’re looking for doesn’t exist."
 
-    "msg404-1": "Opps!",
-    "msg404-2": "Page not found.",
-    "msg404-3": "The page you’re looking for doesn’t exist.",
-
-    "title-1": "List of sented requests",
-    "title-2": "List of received requests ",
-    "title-3": "List of sented estimates",
-    "title-4": "List of received estimates",
-
-    "ss-title-1": "Training",
-    "ss-title-2": "Teacher",
-    "ss-title-3": "Status",
-    "ss-title-4": "Participant",
-    "ss-title-5": "Actions"
 
 }

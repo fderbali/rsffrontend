@@ -1,22 +1,24 @@
 <template>
-    <div id="login">
-        <main class="form-signin fs-5 bg-warning bg-opacity-50 border border-danger rounded">
-            <form>
-                <h2 class="pb-3 text-center titre-principal fw-bold">{{ $i18n.t('login') }}</h2>
-                <div class="form-floating">
-                    <input type="email" class="form-control mb-2 border-danger" id="floatingInput" v-model="email">
-                    <label for="floatingInput">{{ $i18n.t('email') }}</label>
+    <div id="login" class="container d-flex align-items-center justify-content-center">
+        <form class="p-4 mb-3 w-4 fs-5 fw-bold border border-danger rounded bg-warning bg-opacity-50">
+            <h1 class="pb-3 fw-bold text-center titre-principal">{{ $i18n.t('login') }}</h1>
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="email" class="col-form-label">{{ $i18n.t('email') }}</label>
+                    <input type="email" class="form-control mb-2 border-danger fs-5" id="floatingInput" v-model="email">
                 </div>
-                <div class="form-floating">
-                    <input type="password" class="form-control border-danger" id="floatingPassword" v-model="password">
-                    <label for="floatingPassword">{{ $i18n.t('pw') }}</label>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="password" class="col-form-label">{{ $i18n.t('pw') }}</label>
+                    <input type="password" class="form-control border-danger fs-5" id="floatingPassword" v-model="password">
                 </div>
-                <button class="w-100 btn btn-lg btn-success border-danger opacity-75" type="submit" @click.prevent="login()">
-                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" v-if="loading"></span>
-                    {{ $i18n.t('submit') }}
-                </button>
-            </form>
-        </main>
+            </div>
+            <button class="w-100 btn btn-lg btn-success border-danger opacity-75 mt-4" type="submit" @click.prevent="login()">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" v-if="loading"></span>
+                {{ $i18n.t('submit') }}
+            </button>
+        </form>
     </div>
 </template>
 
