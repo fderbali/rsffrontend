@@ -1,7 +1,7 @@
 <template>
     <div class="container mt-5 w-50">
-        <h1 class="pb-3 text-center titre-principal">Paiement</h1>
         <div v-if="!paidFor">
+            <h1 class="pb-3 text-center titre-principal">Paiement</h1>
             <p class="text-center"><img :src="`http://rsfbackend.test/images/${estimate.training.thumbnail}`" class="card-img-top img-thumbnail w-50" alt=""></p>
             <h3 class="pb-2">{{ estimate.training.title }}</h3>
             <p>{{ estimate.training.description }}</p>
@@ -11,14 +11,14 @@
         </div>
 
         <div v-if="paidFor">
-            <h3>Félicitations ! Bon choix de formation !!!</h3>
+            <h3 class="text-center mt-5 pt-5"> 🎉✨Félicitations ! Bon choix de formation 🎉✨</h3>
         </div>
         <div ref="paypal" v-if="!paidFor"></div>
     </div>
 </template>
 
 <script>
-import {mapState} from "vuex";
+import {mapState, mapActions} from "vuex";
 import Alert from "@/libraries/Alert";
 
 export default {
@@ -33,6 +33,7 @@ export default {
         ...mapState('core/estimate', ['estimate']),
     },
     methods: {
+        ...mapActions('core/order', ['saveOrder']),
         setLoaded: function() {
             this.loaded = true;
             window.paypal
@@ -52,8 +53,23 @@ export default {
                     },
                     onApprove: async (data, actions) => {
                         const order = await actions.order.capture();
-                        this.paidFor = true;
-                        console.log(order);
+                        if(order) {
+                            this.paidFor = true;
+                            // Save order on the backend side :
+                            let dataToSend = {
+                                "training_id": this.estimate.training.id,
+                                "estimate_id": this.estimate.estimate.id,
+                                "price": this.estimate.estimate.price
+                            }
+                            this.saveOrder(dataToSend)
+                                .then(() => {
+                                    Alert.success("Votre achat a bien été enregistré !")
+                                })
+                                .catch((e) => {
+                                    let errorMessage = (Object.values(e.response.data.errors)).join('<br/>');
+                                    Alert.fail(errorMessage);
+                                })
+                        }
                     },
                     onError: err => {
                         Alert.fail(err);
