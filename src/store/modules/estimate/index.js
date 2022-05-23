@@ -4,7 +4,8 @@ const resource = '/api/estimate';
 const state = () => ({
     estimates: null,
     received_estimates: null,
-    sent_estimates: null
+    sent_estimates: null,
+    estimate: null
 });
 
 
@@ -31,6 +32,17 @@ const actions = {
                     reject(error);
                 });
         });
+    },
+    getEstimate(context, estimate_id) {
+        return new Promise((resolve, reject) => {
+            Api.get(`${resource}/${estimate_id}`).then((response) => {
+                context.commit('SET_ESTIMATE', response);
+                resolve(response);
+            })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
     }
 };
 
@@ -41,6 +53,9 @@ const mutations = {
     },
     ['SET_ESTIMATES_SENT']: (state, payload) => {
         state.sent_estimates = payload.data;
+    },
+    ['SET_ESTIMATE']: (state, payload) => {
+        state.estimate = payload.data;
     },
 };
 

@@ -1,13 +1,10 @@
 <template>
-$END$
+    <h1>Checkout</h1>
 </template>
 
 <script>
+
 export default {
-name: "checkout"
+    name: "checkout"
 }
 </script>
-
-<style scoped>
-
-</style>

@@ -7,6 +7,7 @@ import listDemands from "@/components/Lists/listDemands";
 import listReceivedDemands from "@/components/Lists/listReceivedDemands";
 import listReceivedEstimates from "@/components/Lists/listReceivedEstimates";
 import sentEstimates from "@/components/Lists/sentEstimates";
+import checkout from "@/components/checkout";
 
 export default [
     {
@@ -71,6 +72,14 @@ export default [
         component: sentEstimates,
         meta: {
             title: "Liste des devis envoyés"
+        }
+    },
+    {
+        path: '/checkout',
+        name: 'checkout',
+        component: checkout,
+        meta: {
+            title: "Paiement"
         }
     },
     {
