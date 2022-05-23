@@ -11,7 +11,7 @@ const state = () => ({
 const actions = {
     getTrainings: (context, user_id) => {
         return new Promise((resolve, reject) => {
-            Api.get(`${resource}/user/${user_id}`).then((response) => {
+            Api.get(`${resource}`).then((response) => {
                 context.commit('SET_TRAININGS', response);
                 resolve(response);
             })
@@ -20,9 +20,9 @@ const actions = {
                 });
         });
     },
-    getTrainingByPage: (context, {user_id, page}) => {
+    getTrainingByPage: (context, {page}) => {
         return new Promise((resolve, reject) => {
-            Api.get(`${resource}/user/${user_id}?page=${page}`).then((response) => {
+            Api.get(`${resource}?page=${page}`).then((response) => {
                 context.commit('SET_TRAININGS', response);
                 resolve(response);
             })
@@ -37,7 +37,7 @@ const actions = {
         formData.append('title', formTraining.titre);
         formData.append('description', formTraining.description);
         formData.append('level', formTraining.niveau);
-        formData.append('location', formTraining.domicile ? "domicile" : formTraining.adresse);
+        formData.append('location', formTraining.domicile == 'domicile' || formTraining.domicile == 'distance' ? formTraining.domicile :  formTraining.adresse);
         formData.append('user_id', formTraining.user_id);
         formData.append('category_id', formTraining.categorie);
         formData.append('total_duration', formTraining.duree);
