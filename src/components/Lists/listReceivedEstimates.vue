@@ -33,7 +33,8 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
+import router from "@/libraries/VueRouter";
 export default {
     name: "listReceivedEstimates",
     computed:{
@@ -42,8 +43,15 @@ export default {
         ]),
     },
     methods:{
+        ...mapActions('core/estimate', [
+            'getEstimate']
+        ),
         payEstimate(received_estimate){
-            console.log(received_estimate);
+            this.getEstimate(received_estimate.id).then(()=>{
+                router.push({
+                    name: 'checkout'
+                });
+            });
         }
     }
 }
