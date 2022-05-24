@@ -2,9 +2,9 @@
     <div class="container d-flex align-items-center justify-content-center">
         <div class="row w-30">
             <div class="col align-self-center">
-                <table class="table">
+                <table class="table mt-5">
                     <thead>
-                        <h4> {{ $i18n.t('title-1') }}</h4>
+                        <h2 classe="titre-principale">{{ $i18n.t('title-1') }}</h2>
                         <tr>
                             <th scope="col">{{ $i18n.t('ss-title-1') }}</th>
                             <th scope="col">{{ $i18n.t('ss-title-2') }}</th>

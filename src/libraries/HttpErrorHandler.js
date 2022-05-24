@@ -18,7 +18,7 @@ export default {
                 // IF we are in login page
                 if (router.currentRoute.name === 'login') {
                     if (error.response.config.method === 'post') {
-                        Alert.fail("Ces identifiants ne correspondent pas à nos enregistrements.");
+                        Alert.fail(this.$i18n.t('msg-err3'));   //Ces identifiants ne correspondent pas à nos enregistrements.
                     }
                     break;
                 }

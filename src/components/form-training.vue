@@ -48,7 +48,6 @@
             </div>
             <div class="row mt-4">
                 <div>
-                    <!-- <label class="mt-1 col-2 col-form-label">{{ $i18n.t('location') }}</label> -->
                     <input class="col-sm-2 form-check-input border-danger" type="radio" name="location" value="domicile" v-model="domicile">
                     <label class="col-sm-3 form-check-label border-danger" for="domicile">{{ $i18n.t('loc-1') }}&nbsp;&nbsp;&nbsp;</label>
                     
@@ -62,7 +61,7 @@
             <div class="row mt-2">
                 <div class="col-sm-12">
                     <label class="col-sm-2 col-form-label">{{ $i18n.t('address') }}</label>
-                    <input type="text" placeholder="Seulement pour l'option Autre" name="location" class="form-control border-danger fs-5" v-model="adresse">
+                    <input type="text" placeholder="Pour option Autre - For option Other" name="location" class="form-control border-danger fs-5" v-model="adresse">
                 </div>
             </div>
             <br>

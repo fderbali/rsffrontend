@@ -32,7 +32,7 @@
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                     </a>
-                    <ul class="dropdown-menu mt-5 fs-4 bg-warning bg-opacity-50  border border-danger" aria-labelledby="dropdownUser1">
+                    <ul class="dropdown-menu mt-5 fs-4 bg-success bg-opacity-80 border border-danger" aria-labelledby="dropdownUser1">
                         <!--li><a class="dropdown-item" href="#">{{ $i18n.t('chat') }}</a></li-->
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('my-announces') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('i-teach') }}</a></li>
