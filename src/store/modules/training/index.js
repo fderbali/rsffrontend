@@ -9,7 +9,7 @@ const state = () => ({
 
 // Actions
 const actions = {
-    getTrainings: (context, user_id) => {
+    getTrainings: (context) => {
         return new Promise((resolve, reject) => {
             Api.get(`${resource}`).then((response) => {
                 context.commit('SET_TRAININGS', response);
