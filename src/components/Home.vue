@@ -20,10 +20,10 @@
                                 <div class="card-text">
                                     {{ $i18n.t('location') }} :
                                     <span v-if="training.location=='domicile'">{{ $i18n.t('loc-1') }}</span>
-                                    <a v-else-if="training.location=='autre'" target="_blank" :href="`https://www.google.ca/maps/place/${training.location}`">
+                                    <span v-else-if="training.location=='distance'">{{ $i18n.t('loc-3') }}</span>
+                                    <a v-else target="_blank" :href="`https://www.google.ca/maps/place/${training.location}`">
                                         <font-awesome-icon :icon="['fas', 'map-marker']" class="icon alt"/>
                                     </a>
-                                    <span v-else-if="training.location=='distance'">{{ $i18n.t('loc-3') }}</span>
                                 </div>
                             </div>
                             <div class="card-footer text-center pt-4" v-if="user && !training.demands.length">
