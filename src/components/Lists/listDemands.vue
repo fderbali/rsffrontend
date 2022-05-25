@@ -4,7 +4,7 @@
             <div class="col align-self-center">
                 <table class="table mt-5">
                     <thead>
-                        <h2 classe="titre-principal">{{ $i18n.t('title-1') }}</h2>
+                        <h2 class="titre-principal mb-5">{{ $i18n.t('title-1') }}</h2>
                         <tr>
                             <th scope="col">{{ $i18n.t('ss-title-1') }}</th>
                             <th scope="col">{{ $i18n.t('ss-title-2') }}</th>
