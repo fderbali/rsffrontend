@@ -35,6 +35,7 @@
                     <ul class="dropdown-menu mt-5 fs-4 bg-success bg-opacity-80 border border-danger" aria-labelledby="dropdownUser1">
                         <!--li><a class="dropdown-item" href="#">{{ $i18n.t('chat') }}</a></li-->
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('my-announces') }}</a></li>
+                        <li><a class="dropdown-item" href="#">{{ $i18n.t('my-trainings') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('i-teach') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('i-learn') }}</a></li>
                         <li><a class="dropdown-item" href="#" @click.prevent="getListDemands()">{{ $i18n.t('s-demands') }}</a></li>
