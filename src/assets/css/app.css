@@ -1,4 +1,8 @@
-
+/* body{
+    background-image: url("../images/bois2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
 #logo{
     height: 50px;
 }
@@ -9,11 +13,12 @@
 
 .titre-principal{
     text-align: center;
-    color: #F26723;
+    color:orange;
+    margin-bottom: 5em;
 }
 @media only screen and (min-width: 1550px) {
     #wrapper {
-        min-height: 950px;
+        min-height: 750px;
     }
 }
 

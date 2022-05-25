@@ -46,9 +46,20 @@
                     <input type="number" name="price" class="form-control border-danger fs-5" v-model="price">
                 </div>
             </div>
+            <div class="col-6 form-floating pt-3">
+                <div>
+                    <label class="pb-2">{{ $i18n.t('language') }}</label>
+                    <div>
+                        <input class="col-4 form-check-input border-danger pdl-5" type="radio" name="language" value="french" v-model="language">
+                        <label class="col-4 form-check-label border-danger" for="french">{{ $i18n.t('french') }}</label>
+
+                        <input class="col-4 form-check-input border-danger" type="radio" name="language" value="english" v-model="language">
+                        <label class="col-4 form-check-label border-danger" for="english">{{ $i18n.t('english') }}</label>
+                    </div>
+                </div>
+            </div>
             <div class="row mt-4">
                 <div>
-                    <!-- <label class="mt-1 col-2 col-form-label">{{ $i18n.t('location') }}</label> -->
                     <input class="col-sm-2 form-check-input border-danger" type="radio" name="location" value="domicile" v-model="domicile">
                     <label class="col-sm-3 form-check-label border-danger" for="domicile">{{ $i18n.t('loc-1') }}&nbsp;&nbsp;&nbsp;</label>
                     
@@ -62,7 +73,7 @@
             <div class="row mt-2">
                 <div class="col-sm-12">
                     <label class="col-sm-2 col-form-label">{{ $i18n.t('address') }}</label>
-                    <input type="text" placeholder="Seulement pour l'option Autre" name="location" class="form-control border-danger fs-5" v-model="adresse">
+                    <input type="text" :placeholder="$i18n.t('address')+'Pour option Autre - For option Other'" name="location" class="form-control border-danger fs-5" v-model="adresse">
                 </div>
             </div>
             <br>
@@ -86,7 +97,8 @@ export default {
             domicile: '',
             adresse: '',
             duree: null,
-            price: null
+            price: null,
+            language: 'french'
         }
     },
     computed:{
@@ -116,6 +128,7 @@ export default {
                 'user_id': this.user.id,
                 'thumbnail': this.$refs.file.files[0],
                 'price': this.price,
+                'language': this.language,
             };
             this.saveTraining(formTraining).then(()=>{
                 Alert.success(this.$i18n.t('msg-suc2')) //"Enregistrement effectué avec succès!",

@@ -16,8 +16,8 @@
                         <tr v-for="sent_estimate, index in sent_estimates" :key="index">
                             <td>{{sent_estimate.demands[0].training.title}}</td>
                             <td>{{sent_estimate.demands[0].user.first_name}} {{sent_estimate.demands[0].user.last_name}}</td>
-                            <td>{{sent_estimate.price}}$</td>
-                            <td>xxxxx</td>
+                            <td>${{sent_estimate.price}}</td>
+                            <td>{{ $i18n.t(sent_estimate.demands[0].estimate.status) }}</td>
                         </tr>
                     </tbody>
                 </table>

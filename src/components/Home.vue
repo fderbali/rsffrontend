@@ -89,8 +89,7 @@ export default {
             envoyerDemand: 'envoyerDemand'
         }),
         sendDemand(trainingId){
-            //Alert.confirmation("Etes vous sûr !", "Vous allez envoyer une demande pour cette formation" ,"Oui")
-            Alert.confirmation(this.$i18n.t('msg-con1'),'', this.$i18n.t('msg-yes'))//il manque le Oui ici  "Confirmez l'envoi de cette demande SVP!Oui"
+            Alert.confirmation(this.$i18n.t('msg-con1'),'', this.$i18n.t('msg-yes'))    //"Confirmez l'envoi de cette demande SVP! Oui"
                 .then((response) => {
                     if (response.isConfirmed) {
                         this.loading = true;
@@ -101,7 +100,7 @@ export default {
                             "user_id":this.user.id
                         }
                         this.envoyerDemand(dataToSend).then(()=>{
-                            Alert.success(this.$i18n.t('msg-suc2'))//"Enregistrement effectué avec succès!"
+                            Alert.success(this.$i18n.t('msg-suc2')) //"Enregistrement effectué avec succès!"
                             this.goToPage(this.currentPage);
                         })
                         .catch((e)=>{

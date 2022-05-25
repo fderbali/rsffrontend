@@ -8,12 +8,13 @@ const state = () => ({
 
 // Actions
 const actions = {
-    saveOrder(context, {training_id, estimate_id, price}){
+    saveOrder(context, {training_id, estimate_id, price, status}){
         return new Promise((resolve, reject) => {
             Api.post(resource, {
                 'training_id': training_id,
                 'estimate_id': estimate_id,
-                'price': price
+                'price': price,
+                'status': status
             }).then((response) => {
                 context.commit('SET_ORDER', response);
                 resolve(response);

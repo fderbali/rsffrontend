@@ -28,7 +28,7 @@
     "middle":       "Intermédiaire",
     "senior":       "Avancé",
     "location":     "Lieu",
-    "loc-1":        "Domicile",
+    "loc-1":        "À domicile",
     "loc-2":        "Autre",
     "loc-3":        "Distance",
     "duration":     "Durée totale",
@@ -59,15 +59,22 @@
     "ss-title-5":   "Action",
 
     "distance":     "Distance",
+    "hour":         "heure",
 
-    "language":     "Langue de communication",
+    "language":     "Communication",
     "french":       "Français",
     "english":      "Anglais",
 
     "pay":          "Payer",
-    "cancel":       "Canceller",
+    "payment":      "Paiement",
+    "cad":          "CAD",
+    "congrat":      "Félicitations ! Bon choix de formation",
 
+    "cancel":       "Canceller",
     "submit":       "Soumettre",
+    "en-cours":     "Demande en cours",
+    "confirmed":    "Demande confirmée",
+    "cancelled":    "Demande annulée",
 
     "free-register": "Inscription gratuite",
 
@@ -78,19 +85,22 @@
     "msg-con2":     "Accepter",
     "msg-con3":     "Refuser",
     "msg-yes":      "Oui",
-    "en-cours":     "Demande en cours",
-    "confirmed":    "Demande confirmée",
-    "cancelled":    "Demande annulée",
+    
+    "msc-inf1":     "",
     
     "msg-suc1":     "Bienvenue 🖐",
     "msg-suc2":     "Enregistrement effectué avec succès!",
 
     "msg-err1":     "Une erreur s'est produite, veuillez actualiser la page SVP!",
     "msg-err2":     "Courriel et/ou Mot de passe invalides!",
+    "msg-err3":     "Ces identifiants ne correspondent pas à nos enregistrements.",
 
     "msg404-1":     "Oups!",
     "msg404-2":     "Page inexistante",
-    "msg404-3":     "La page que vous recherchée n'existe pas."
-
+    "msg404-3":     "La page que vous recherchée n'existe pas.",
+    "my-trainings": "Mes formations",
+    "paid":         "Payé",
+    "pending":      "En attente",
+    "cancelled":    "Annulé"
 
 }
