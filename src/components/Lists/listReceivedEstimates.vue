@@ -19,8 +19,14 @@
                             <td>{{received_estimate.training.user.first_name}} {{received_estimate.training.user.last_name}}</td>
                             <td>${{received_estimate.estimate.price}}</td>
                             <td>{{ $i18n.t(received_estimate.estimate.status) }}</td>
-                            <td><a href="" class="btn btn-outline-success" @click.prevent="payEstimate(received_estimate)">{{ $i18n.t('pay') }}</a></td>
-                            <td><a href="" class="btn btn-outline-danger">{{ $i18n.t('cancel') }}</a></td>
+                            <template v-if="received_estimate.estimate.status == 'pending'">
+                                <td><a href="" class="btn btn-outline-success" @click.prevent="payEstimate(received_estimate)">{{ $i18n.t('pay') }}</a></td>
+                                <td><a href="" class="btn btn-outline-danger" @click.prevent="cancelTheEstimate(received_estimate)">{{ $i18n.t('cancel') }}</a></td>
+                            </template>
+                            <template v-else>
+                                <td>------</td>
+                                <td>------</td>
+                            </template>
                         </tr>
                     </tbody>
                 </table>
@@ -39,10 +45,13 @@ export default {
         ...mapState('core/estimate', [
             'received_estimates'
         ]),
+        ...mapState('core/auth', [
+            'user'
+        ])
     },
     methods:{
         ...mapActions('core/estimate', [
-            'getEstimate'
+            'getEstimate','cancelEstimate','getListEstimatesByUser'
         ]),
         payEstimate(received_estimate){
             this.getEstimate(received_estimate.id).then(()=>{
@@ -51,16 +60,17 @@ export default {
                 });
             });
         },
-        cancelEstimate(received_estimate){
+        cancelTheEstimate(received_estimate){
             Alert.confirmation("Etes vous sûr !", "Vous allez annuler le devis" ,"Oui")
                 .then((response) => {
-                    console.log(response);
-                    if(response) {
-                        this.getEstimate(received_estimate.id).then(() => {
-                            router.push({
-                                name: 'checkout'
-                            });
-                        });
+                    if(response.isConfirmed) {
+                        this.cancelEstimate(received_estimate.id).then(() => {
+                            Alert.success("Devis annulé avec succès");
+                            this.getListEstimatesByUser(this.user.id);
+                        })
+                        .catch(()=>{
+                            Alert.fail("Une erreur s'est produite lors de l'annulation du devis");
+                        })
                     }
                 });
         }

@@ -49,7 +49,7 @@ const actions = {
                 'user_id': user_id,
                 'status':(decision ? 'confirmed' : 'cancelled')
             }).then((response) => {
-                context.commit('SET_DEMANDS_STATUS', response);
+                //context.commit('SET_DEMANDS_STATUS', response);
                 resolve(response);
             })
                 .catch((error) => {
