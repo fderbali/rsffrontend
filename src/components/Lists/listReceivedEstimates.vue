@@ -22,7 +22,7 @@
                                 <td>{{received_estimate.estimate.price}}$</td>
                                 <td>xxxxxx</td>
                                 <td><a href="" class="btn btn-outline-success" @click.prevent="payEstimate(received_estimate)">{{ $i18n.t('pay') }}</a></td>
-                                <td><a href="" class="btn btn-outline-danger">{{ $i18n.t('cancel') }}</a></td>
+                                <td><a href="" class="btn btn-outline-danger" @click.prevent="cancelEstimate(received_estimate)">{{ $i18n.t('cancel') }}</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -35,6 +35,7 @@
 <script>
 import { mapState, mapActions } from 'vuex';
 import router from "@/libraries/VueRouter";
+import Alert from "@/libraries/Alert";
 export default {
     name: "listReceivedEstimates",
     computed:{
@@ -44,14 +45,27 @@ export default {
     },
     methods:{
         ...mapActions('core/estimate', [
-            'getEstimate']
-        ),
+            'getEstimate'
+        ]),
         payEstimate(received_estimate){
             this.getEstimate(received_estimate.id).then(()=>{
                 router.push({
                     name: 'checkout'
                 });
             });
+        },
+        cancelEstimate(received_estimate){
+            Alert.confirmation("Etes vous sûr !", "Vous allez annuler le devis" ,"Oui")
+                .then((response) => {
+                    console.log(response);
+                    if(response) {
+                        this.getEstimate(received_estimate.id).then(() => {
+                            router.push({
+                                name: 'checkout'
+                            });
+                        });
+                    }
+                });
         }
     }
 }
