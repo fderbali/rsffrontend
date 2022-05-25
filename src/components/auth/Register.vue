@@ -28,10 +28,10 @@
                         <div>
                             <label class="pb-2">{{ $i18n.t('language') }}</label>
                             <div>
-                                <input class="col-4 form-check-input border-danger pdl-5" type="radio" name="communication" value="french">
+                                <input class="col-4 form-check-input border-danger pdl-5" type="radio" name="communication" value="french" v-model="communication">
                                 <label class="col-4 form-check-label border-danger" for="french">{{ $i18n.t('french') }}</label>
                         
-                                <input class="col-4 form-check-input border-danger" type="radio" name="communication" value="anglais">
+                                <input class="col-4 form-check-input border-danger" type="radio" name="communication" value="english" v-model="communication">
                                 <label class="col-4 form-check-label border-danger" for="english">{{ $i18n.t('english') }}</label>
                             </div>
                         </div>
@@ -115,7 +115,8 @@ export default {
             zip_code:null,
             country:null,
             password:null,
-            loading: false
+            loading: false,
+            communication: 'french'
         }
     },
     methods:{
@@ -134,7 +135,8 @@ export default {
                 city:this.city,
                 zip_code:this.zip_code,
                 country:this.country,
-                password:this.password
+                password:this.password,
+                communication:this.communication
             };
             this.register(user).then(()=>{
                 Alert.success(this.$i18n.t('msg-suc2')) //"Enregistrement effectué avec succès!"

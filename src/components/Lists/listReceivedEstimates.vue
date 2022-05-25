@@ -18,7 +18,7 @@
                             <td>{{received_estimate.training.title}}</td>
                             <td>{{received_estimate.training.user.first_name}} {{received_estimate.training.user.last_name}}</td>
                             <td>${{received_estimate.estimate.price}}</td>
-                            <td>xxxxxx</td>
+                            <td>{{ $i18n.t(received_estimate.estimate.status) }}</td>
                             <td><a href="" class="btn btn-outline-success" @click.prevent="payEstimate(received_estimate)">{{ $i18n.t('pay') }}</a></td>
                             <td><a href="" class="btn btn-outline-danger">{{ $i18n.t('cancel') }}</a></td>
                         </tr>

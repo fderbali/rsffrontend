@@ -59,7 +59,8 @@ export default {
                             let dataToSend = {
                                 "training_id": this.estimate.training.id,
                                 "estimate_id": this.estimate.estimate.id,
-                                "price": this.estimate.estimate.price
+                                "price": this.estimate.estimate.price,
+                                "status": 'paid'
                             }
                             this.saveOrder(dataToSend)
                                 .then(() => {
