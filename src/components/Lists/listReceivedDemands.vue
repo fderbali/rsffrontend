@@ -1,10 +1,10 @@
 <template>
-    <div class="container d-flex align-items-center justify-content-center ">
-        <div class="row w-60">
+    <div class="container d-flex align-items-center justify-content-center fs-5">
+        <div class="row w-30">
             <div class="col align-self-center">
-                <table class="table">
+                <table class="table mt-5">
                     <thead>
-                        <h4> {{ $i18n.t('title-2') }}</h4>
+                        <h2 class="titre-principal mb-5">{{ $i18n.t('title-2') }}</h2>
                         <tr>
                             <th scope="col">{{ $i18n.t('ss-title-1') }}</th>
                             <th scope="col">{{ $i18n.t('ss-title-4') }} </th>
@@ -14,10 +14,11 @@
                     </thead>
                     <tbody class="border-bottom border-success">
                         <tr v-for="received_demand, index in received_demands" :key="index">
-                            <!-- <td>{{received_demand.training.title}}</td>
-                            <td>{{received_demand.user.first_name}}{{received.demand.user.last_name}}</td>
-                            <td>{{received_demand.status}}</td> -->
-                            <td v-if="received_demand.status == 'initiated'">
+                        <!-- {{received_demand}} -->
+                            <td>{{received_demand.title}}</td>
+                            <td>{{received_demand.demands[0].user.first_name}} {{received_demand.demands[0].user.last_name}}</td>
+                            <td>{{received_demand.demands[0].status}}</td>
+                            <td v-if="received_demand.demands[0].status == 'initiated'">
                                 <button class="btn btn-sm btn-outline-success fw-bolder" @click.prevent="updateDemandStatus(received_demand, true, )">
                                 {{ $i18n.t('msg-con2') }}</button>
                                 &nbsp;&nbsp;
@@ -25,7 +26,7 @@
                                 {{ $i18n.t('msg-con3') }}</button>
                             </td>
                             <td v-else>
-                                &nbsp;-------- --------
+                                &nbsp;--------
                             </td>
                         </tr>
                     </tbody>

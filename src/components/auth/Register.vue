@@ -18,20 +18,20 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-5 form-floating pt-3">
+                    <div class="col-6 form-floating pt-3">
                         <div>
                             <label for="floatingDate">{{ $i18n.t('birth-date') }}</label>
                             <input type="date" class="form-control border-danger rounded fs-5" name="birth_date" v-model="birth_date">
                         </div>
                     </div>
-                    <div class="col-7 form-floating pt-3">
+                    <div class="col-6 form-floating pt-3">
                         <div>
-                            <label class="col-10 pb-2">{{ $i18n.t('language') }}</label>
+                            <label class="pb-2">{{ $i18n.t('language') }}</label>
                             <div>
-                                <input class="col-4 form-check-input border-danger" type="radio" name="langue" value="french" v-model="langue">
+                                <input class="col-4 form-check-input border-danger pdl-5" type="radio" name="communication" value="french">
                                 <label class="col-4 form-check-label border-danger" for="french">{{ $i18n.t('french') }}</label>
                         
-                                <input class="col-4 form-check-input border-danger" type="radio" name="langue" value="anglais" v-model="langue">
+                                <input class="col-4 form-check-input border-danger" type="radio" name="communication" value="anglais">
                                 <label class="col-4 form-check-label border-danger" for="english">{{ $i18n.t('english') }}</label>
                             </div>
                         </div>
@@ -109,6 +109,7 @@ export default {
             last_name:null,
             email:null,
             birth_date:null,
+            langue:null,
             address:null,
             city:null,
             zip_code:null,
@@ -128,6 +129,7 @@ export default {
                 last_name:this.last_name,
                 email:this.email,
                 birth_date:this.birth_date,
+                langue:this.langue,
                 address:this.address,
                 city:this.city,
                 zip_code:this.zip_code,

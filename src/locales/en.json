@@ -58,14 +58,21 @@
     "ss-title-3":   "Status",
     "ss-title-4":   "Participant",
     "ss-title-5":   "Action",
+    
+    "distance":     "Distance",
+    "hour":         "hour",
 
-    "language":     "Communication Language",
+
+    "language":     "Communication",
     "french":       "French",
     "english":      "English",
 
     "pay":          "Pay",
-    "cancel":       "Cancel",
+    "payment":      "Payment",
+    "cad":          "CAD",
+    "congrat":      "Congratulation ! Good choice of training",
 
+    "cancel":       "Cancel",
     "submit":       "Submit",
 
     "free-register": "Register for free",
@@ -85,6 +92,7 @@
 
     "msg-err1":     "An error has occurred, please refresh the page!",
     "msg-err2":     "Invalids Email address and/or Password",
+    "msg-err3":     "These identifiers do not match our records.",
 
     "msg404-1":     "Opps!",
     "msg404-2":     "Page not found.",

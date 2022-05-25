@@ -4,11 +4,17 @@
     <div class="container p-4 pb-0">
       <!-- Section: CTA -->
         <section class="" v-if="!user">
-        <p class="d-flex justify-content-center align-items-center">
-          <span class="me-3">{{ $i18n.t('free-register') }}</span>
-          <router-link to="inscription" class="btn btn-outline-light btn-rounded">{{ $i18n.t('register') }}</router-link>
-        </p>
-      </section>
+            <p class="d-flex justify-content-center align-items-center">
+              <span class="me-3">{{ $i18n.t('free-register') }}</span>
+              <router-link to="inscription" class="btn btn-outline-light btn-rounded">{{ $i18n.t('register') }}</router-link>
+            </p>
+         <!-- <section class="" v-else>
+           <p class="d-flex justify-content-center align-items-center">
+              <span class="me-3">Nous assurons le paiement sécurisé PayPal</span>
+            </p> -->
+
+              
+        </section>
       <!-- Section: CTA -->
 
       <hr class="mb-4"/>

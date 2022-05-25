@@ -1,17 +1,17 @@
 <template>
     <div class="container mt-5 w-50">
         <div v-if="!paidFor">
-            <h1 class="pb-3 text-center titre-principal">Paiement</h1>
+            <h1 class="pb-3 text-center titre-principal">{{ $i18n.t('payment') }}</h1>
             <p class="text-center"><img :src="`http://rsfbackend.test/images/${estimate.training.thumbnail}`" class="card-img-top img-thumbnail w-50" alt=""></p>
             <h3 class="pb-2">{{ estimate.training.title }}</h3>
             <p>{{ estimate.training.description }}</p>
-            <p>{{ estimate.training.total_duration }} heures</p>
-            <p>Par : {{estimate.training.user.first_name}} {{estimate.training.user.last_name}}</p>
-            <p>Prix : <b>{{estimate.estimate.price}} CAD</b></p>
+            <p>{{ estimate.training.total_duration }} {{ $i18n.t('hour') }}</p>
+            <p>{{ $i18n.t('by') }} : {{estimate.training.user.first_name}} {{estimate.training.user.last_name}}</p>
+            <p>{{ $i18n.t('price') }} : <b>{{estimate.estimate.price}} {{ $i18n.t('cad') }}</b></p>
         </div>
 
         <div v-if="paidFor">
-            <h3 class="text-center mt-5 pt-5"> 🎉✨Félicitations ! Bon choix de formation 🎉✨</h3>
+            <h3 class="text-center mt-5 pt-5"> 🎉✨{{ $i18n.t('congrat') }} ✨🎉</h3>
         </div>
         <div ref="paypal" v-if="!paidFor"></div>
     </div>
