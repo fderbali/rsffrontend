@@ -1,43 +1,33 @@
 <template>
-    <div class="container w-50">
-
-        <form class="p-4 mb-3 w-4 fs-5 fw-bold border border-danger rounded bg-warning bg-opacity-50">
-            <h1 class="pb-3 fw-bold text-center titre-principal">Ajouter session</h1>
-
+    <div class="container">
+        <form>
+            <div class="titre-principal">Ajouter session</div>
             <ul>
-                <li>
-                    Formation : {{ order.training.title }}
-                </li>
-                <li>
-                    Elève : {{ order.estimate.demand.user.first_name }} {{ order.estimate.demand.user.last_name }}
-                </li>
-                <li>
-                    Email de l'élève : {{ order.estimate.demand.user.email }}
-                </li>
+                <li>Formation : {{ order.training.title }}</li>
+                <li>Elève : {{ order.estimate.demand.user.first_name }} {{ order.estimate.demand.user.last_name }}</li>
+                <li>Email de l'élève : {{ order.estimate.demand.user.email }}</li>
                 <img :src="`http://rsfbackend.test/images/${order.training.thumbnail}`" class="card-img-top img-thumbnail w-50" alt="">
-
             </ul>
-
             <div class="row">
                 <div class="col-sm-12">
                     <label class="col-form-label">Date</label>
-                    <input type="date" class="form-control mb-2 border-danger fs-5" v-model="date">
+                    <input type="date" class="form-control" v-model="date">
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
                     <label class="col-form-label">Heure de début</label>
-                    <input type="time" class="form-control mb-2 border-danger fs-5" v-model="heureDebut">
+                    <input type="time" class="form-control" v-model="heureDebut">
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
                     <label class="col-form-label">Heure de fin</label>
-                    <input type="time" class="form-control mb-2 border-danger fs-5" v-model="heureFin">
+                    <input type="time" class="form-control" v-model="heureFin">
                 </div>
             </div>
 
-            <button class="w-100 btn btn-lg btn-success border-danger opacity-75 mt-4" type="submit" @click.prevent="saveSession()">
+            <button class="btn" type="submit" @click.prevent="saveSession()">
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" v-if="loading"></span>
                 {{ $i18n.t('submit') }}
             </button>

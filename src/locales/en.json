@@ -31,7 +31,7 @@
     "location":     "Location",
     "loc-1":        "At home",
     "loc-2":        "Other",
-    "loc-3":        "Distance",
+    "loc-3":        "At Distance",
     "duration":     "Total duration",
     "thumbnail":    "Thumbnail",
     "price":        "Price",
@@ -63,7 +63,7 @@
     "hour":         "hour",
 
     "language":     "Language",
-    "communication": "Communication Language",
+    "communication": "Communication",
     
     "french":       "French",
     "english":      "English",

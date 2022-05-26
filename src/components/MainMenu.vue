@@ -1,5 +1,5 @@
 <template>
-    <header class="p-3 mb-3 fs-4 border-bottom bg-success bg-opacity-25">
+    <header class="p-3 mb-3 fs-4 border-bottom" id="nav-rsf">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none me-5">
@@ -33,7 +33,7 @@
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                     </a>
-                    <ul class="dropdown-menu mt-5 fs-4 bg-warning bg-opacity-80 border border-danger" aria-labelledby="dropdownUser1">
+                    <ul class="dropdown-menu" id="dd-menu-rsf" aria-labelledby="dropdownUser1">
                         <!--li><a class="dropdown-item" href="#">{{ $i18n.t('chat') }}</a></li-->
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('my-announces') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('my-trainings') }}</a></li>

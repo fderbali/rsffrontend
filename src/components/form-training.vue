@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <label class="col-sm-2">{{ $i18n.t('category') }}</label>
-                    <select class="form-select form-select-rsf" name="categorie" v-model="categorie">
+                    <select class="form-select" id="form-select-rsf" name="categorie" v-model="categorie">
                         <option v-for="category, index in categories" :key="index" :value="category.id">
                             {{category.title}}
                         </option>
@@ -19,19 +19,19 @@
             <div class="row">
                 <div class="col-sm-12">
                     <label class="col-sm-2">{{ $i18n.t('description') }}</label>
-                    <textarea class="form-control" v-model="description" name="description"></textarea>
+                    <textarea class="form-control" style="border: 2px solid orange;" name="description" v-model="description"></textarea>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mt-4">
                 <div class="col-sm-12">
                     <label class="me-2" name="thumbnail">{{ $i18n.t('thumbnail') }}</label>
                     <input type="file" name="tumbnail" accept="image/*" ref="file">
                 </div>
             </div>
-            <div class="row">
+            <div class="row mt-3">
                 <div class="col-sm-5">
                     <label class="col-sm-2">{{ $i18n.t('level') }}</label>
-                    <select class="form-select form-select-rsf" v-model="niveau" name="niveau">
+                    <select class="form-select" id="form-select-rsf" name="niveau" v-model="niveau" >
                         <option value="junior">{{ $i18n.t('junior') }}</option>
                         <option value="middle">{{ $i18n.t('middle') }}</option>
                         <option value="senior">{{ $i18n.t('senior') }}</option>
@@ -39,38 +39,37 @@
                 </div>
                 <div class="col-sm-4">
                     <label class="">{{ $i18n.t('duration') }}</label>
-                    <input type="number" name="duree" class="form-control" v-model="duree">
+                    <input type="number" name="duree" class="form-control" id="form-select-rsf" v-model="duree">
                 </div>
                 <div class="col-sm-3">
                     <label class="">{{ $i18n.t('price') }}</label>
-                    <input type="number" name="price" class="form-control" v-model="price">
+                    <input type="number" name="price" class="form-control" id="form-select-rsf" v-model="price">
                 </div>
             </div>
-            <div class="row form-floating">
+            <div class="row mt-2">
                 <div>
-                    <label class="col-3">{{ $i18n.t('language') }}</label>
-                    <div>
-                        <input class="col-3 form-check-input" type="radio" name="language" value="french" v-model="language">
-                        <label class="col-3 form-check-label" for="french">{{ $i18n.t('french') }}</label>
+                    <label class="col-3">{{ $i18n.t('language') }}:</label>
+                    <input class="col-2 form-check-input" type="radio" name="language" value="french" v-model="language">
+                    <label class="col-3 form-check-label" for="french">{{ $i18n.t('french') }}</label>
 
-                        <input class="col-3 form-check-input" type="radio" name="language" value="english" v-model="language">
-                        <label class="col-3 form-check-label" for="english">{{ $i18n.t('english') }}</label>
-                    </div>
+                    <input class="col-2 form-check-input" type="radio" name="language" value="english" v-model="language">
+                    <label class="col-2 form-check-label" for="english">{{ $i18n.t('english') }}</label>
                 </div>
             </div>
-            <div class="row mt-4">
+            <div class="row mt-3">
                 <div>
-                    <input class="col-sm-2 form-check-input" type="radio" name="location" value="domicile" v-model="domicile">
+                    <label class="col-3">{{ $i18n.t('location') }}:</label>
+                    <input class="col-sm-2 form-check-input" id="form-check-rsf" type="radio" name="location" value="domicile" v-model="domicile">
                     <label class="col-sm-3 form-check-label" for="domicile">{{ $i18n.t('loc-1') }}</label>
-                    
-                    <input class="col-sm-2 form-check-input" type="radio" name="location" value="autre" v-model="domicile">
-                    <label class="col-sm-3 form-check-label" for="autre">{{ $i18n.t('loc-2') }}</label>
 
-                    <input class="col-sm-2 form-check-input" type="radio" name="location" value="distance" v-model="domicile">
-                    <label class="col-sm-4 form-check-label" for="distance">{{ $i18n.t('loc-3') }}</label>
+                    <input class="col-sm-2 form-check-input" id="form-check-rsf" type="radio" name="location" value="distance" v-model="domicile">
+                    <label class="col-sm-2 form-check-label" for="distance">{{ $i18n.t('loc-3') }}</label>
+
+                    <input class="col-sm-2 form-check-input" id="form-check-rsf" type="radio" name="location" value="autre" v-model="domicile">
+                    <label class="col-sm-2 form-check-label" for="autre">{{ $i18n.t('loc-2') }}</label>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mt-3">
                 <div class="col-sm-12">
                     <label class="col-sm-2">{{ $i18n.t('address') }}</label>
                     <input type="text" :placeholder="$i18n.t('address')+'Pour option Autre - For option Other'" name="location" class="form-control" v-model="adresse">

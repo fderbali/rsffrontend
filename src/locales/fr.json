@@ -28,9 +28,9 @@
     "middle":       "Intermédiaire",
     "senior":       "Avancé",
     "location":     "Lieu",
-    "loc-1":        "À domicile",
+    "loc-1":        "À Domicile",
     "loc-2":        "Autre",
-    "loc-3":        "Distance",
+    "loc-3":        "À Distance",
     "duration":     "Durée totale",
     "thumbnail":    "Image",
     "price":        "Prix",
@@ -62,7 +62,7 @@
     "hour":         "heure",
 
     "language":     "Langue",
-    "communication": "Langue de communication",
+    "communication": "Communication",
     "french":       "Français",
     "english":      "Anglais",
 

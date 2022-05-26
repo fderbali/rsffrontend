@@ -3,6 +3,45 @@
     background-repeat: no-repeat;
     background-size: cover;
 } */
+#logo{
+    height: 50px;
+}
+#wrapper{
+    min-height: 500px;
+}
+table{
+    margin-bottom: 2em;
+    font-size: x-large;
+}
+tbody{
+    font-size: large;
+}
+@media only screen and (min-width: 1550px) {
+    #wrapper {
+        min-height: 750px;
+    }
+}
+#nav-rsf{
+    background-color: rgb(172, 230, 201);
+    color: rgb(59, 99, 87);
+    
+}
+#dd-menu-rsf{
+    background-color: rgb(247, 228, 125);
+    border-color: darkorange;
+    font-size: 1em;
+    margin-top: 1em;
+}
+#form-select-rsf{
+    border: 2px solid orange;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+#form-check-rsf{
+    /* background-color: rgb(128, 189, 158); */
+    color: rgb(128, 189, 158);
+    text-decoration: green;
+}
 .container{
     display:flex;
     align-items: center;
@@ -12,18 +51,19 @@
     font-size:xx-large;
     text-align: center;
     color:orange;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: .5em;
+    margin-bottom: .5em;
     font-weight: bold;
 }
 form{
     font-size: large;
-    /* font-weight: bold; */
+    font-weight: bold;
     background-color:rgb(247, 228, 125);
-    border: orangered;
+    border-color: orangered;
     border-radius: .5em;
     padding: 1.5em;
     margin-bottom: 1em;
+    color: rgb(59, 99, 87);
 }
 input[type=text] {
     border: 2px solid orange;
@@ -44,12 +84,8 @@ input[type=date] {
 input[type=radio] {
     border: 2px solid orange;
     border-radius: 4px;
-}
-input[type=file] {
-    /* border: 2px solid orange; */
-    border-radius: 4px;
-    margin-top: 1.5em;
-    margin-bottom: 1em;
+    margin-right: .3em;
+
 }
 textarea {
     border: 2px solid orange;
@@ -59,53 +95,30 @@ select {
     border: 2px solid orange;
     border-radius: 4px;
 }
-.form-select-rsf{
+
+input[type=option]{
     border: 2px solid orange;
     border-radius: 4px;
-}
-option{
-    border: 2px solid orange;
-    border-radius: 4px;
-}
-label{
-    margin-top: .5em;
 }
 button[type=submit]{
     background-color: mediumseagreen;
     border: 2px solid orange;
     border-radius: 4px;
-    size: 3em;
+    /* size: 3em; */
     width: 100%;
     font-size: 1em;
     margin-top: 1em;
     font-weight: bold;
     color: white;
 }
-
-
-/* .btn-success{
-    border: 2px solid orange;
-    border-radius: 4px;
-    width: 100%;
-    font-size: 5em;
-    padding-top: 5em;
-} */
-
-#logo{
-    height: 50px;
+.btn-rsf{
+    /* outline-color: mediumseagreen; */
+    border:mediumseagreen;
+    font-size: large;
+    color:mediumseagreen;
 }
+.footer{
+    background-color: mediumseagreen;
+    /* color: rgb(59, 99, 87); */
 
-#wrapper{
-    min-height: 500px;
 }
-.table{
-    margin-bottom: 2em;
-}
-
-
-@media only screen and (min-width: 1550px) {
-    #wrapper {
-        min-height: 750px;
-    }
-}
-
