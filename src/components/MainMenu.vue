@@ -1,5 +1,5 @@
 <template>
-    <header class="p-3 mb-3 fs-3 fw-bold border-bottom bg-success bg-opacity-25">
+    <header class="p-3 mb-3 fs-4 border-bottom bg-success bg-opacity-25">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none me-5">
@@ -12,7 +12,7 @@
                     <li><a v-if="user" href="#" class="nav-link px-2 link-dark">{{ $i18n.t('publish-a') }}</a></li>
                     <li><a v-if="user" href="/orders-per-prof" class="nav-link px-2 link-dark">Sessions</a></li>
                 </ul>
-                <form class="col-lg-auto me-lg-2 d-flex flex-wrap align-items-center justify-content-center">
+                <div class="col-lg-auto me-lg-2 d-flex flex-wrap align-items-center justify-content-center">
                     <ul class="nav col-1 col-lg-auto me-lg-auto pb-2 justify-content-center mb-md-0">
                         <li v-if="this.$i18n.locale=='fr'">
                             <a href="#" @click.prevent="changeLanguage()">
@@ -25,7 +25,7 @@
                             </a>
                         </li>
                     </ul>
-                </form>
+                </div>
                 <div class="col-2 ps-3">
                     <input type="search" class="form-control" :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
                 </div>
@@ -33,7 +33,7 @@
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                     </a>
-                    <ul class="dropdown-menu mt-5 fs-4 bg-success bg-opacity-80 border border-danger" aria-labelledby="dropdownUser1">
+                    <ul class="dropdown-menu mt-5 fs-4 bg-warning bg-opacity-80 border border-danger" aria-labelledby="dropdownUser1">
                         <!--li><a class="dropdown-item" href="#">{{ $i18n.t('chat') }}</a></li-->
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('my-announces') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('my-trainings') }}</a></li>

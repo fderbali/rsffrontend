@@ -3,6 +3,94 @@
     background-repeat: no-repeat;
     background-size: cover;
 } */
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.titre-principal{
+    font-size:xx-large;
+    text-align: center;
+    color:orange;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+form{
+    font-size: large;
+    /* font-weight: bold; */
+    background-color:rgb(247, 228, 125);
+    border: orangered;
+    border-radius: .5em;
+    padding: 1.5em;
+    margin-bottom: 1em;
+}
+input[type=text] {
+    border: 2px solid orange;
+    border-radius: 4px;
+} 
+input[type=email] {
+    border: 2px solid orange;
+    border-radius: 4px;
+} 
+input[type=password] {
+    border: 2px solid orange;
+    border-radius: 4px;
+}
+input[type=date] {
+    border: 2px solid orange;
+    border-radius: 4px;
+}
+input[type=radio] {
+    border: 2px solid orange;
+    border-radius: 4px;
+}
+input[type=file] {
+    /* border: 2px solid orange; */
+    border-radius: 4px;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+textarea {
+    border: 2px solid orange;
+    border-radius: 4px;
+}
+select {
+    border: 2px solid orange;
+    border-radius: 4px;
+}
+.form-select-rsf{
+    border: 2px solid orange;
+    border-radius: 4px;
+}
+option{
+    border: 2px solid orange;
+    border-radius: 4px;
+}
+label{
+    margin-top: .5em;
+}
+button[type=submit]{
+    background-color: mediumseagreen;
+    border: 2px solid orange;
+    border-radius: 4px;
+    size: 3em;
+    width: 100%;
+    font-size: 1em;
+    margin-top: 1em;
+    font-weight: bold;
+    color: white;
+}
+
+
+/* .btn-success{
+    border: 2px solid orange;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 5em;
+    padding-top: 5em;
+} */
+
 #logo{
     height: 50px;
 }
@@ -10,10 +98,14 @@
 #wrapper{
     min-height: 500px;
 }
+.table{
+    margin-bottom: 2em;
+}
 
 .titre-principal{
     text-align: center;
     color:orange;
+    margin-bottom: 5em;
 }
 @media only screen and (min-width: 1550px) {
     #wrapper {

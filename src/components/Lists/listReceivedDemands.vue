@@ -2,9 +2,9 @@
     <div class="container d-flex align-items-center justify-content-center fs-5">
         <div class="row w-30">
             <div class="col align-self-center">
-                <table class="table mt-5">
+                <table class="table">
                     <thead>
-                        <h2 class="titre-principal mb-5">{{ $i18n.t('title-2') }}</h2>
+                        <h2 class="titre-principal">{{ $i18n.t('title-2') }}</h2>
                         <tr>
                             <th scope="col">{{ $i18n.t('ss-title-1') }}</th>
                             <th scope="col">{{ $i18n.t('ss-title-4') }} </th>
@@ -14,7 +14,6 @@
                     </thead>
                     <tbody class="border-bottom border-success">
                         <tr v-for="received_demand, index in received_demands" :key="index">
-                        <!-- {{received_demand}} -->
                             <td>{{received_demand.title}}</td>
                             <td>{{received_demand.demands[0].user.first_name}} {{received_demand.demands[0].user.last_name}}</td>
                             <td>{{received_demand.demands[0].status}}</td>

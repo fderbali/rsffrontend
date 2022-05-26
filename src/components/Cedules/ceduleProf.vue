@@ -4,7 +4,7 @@
            - on va cherher les sessions de ce training(id_training dans la table session)
                 - pour chaque participant (et on a pas le id participant)
                 -   je propose donc qu'on ajoute le id du participant dans la table session
-                        on tri la table session par trainig_id, user-id et la date de début date pour cédule prof
+                        on tri la table session par trainig_id, user-id et la date de début pour cédule prof
                         on tri la table session par user-id, trainig_id  et la date de début pour cédule participant
                         (regarder la possibilité d'ajouter le id du prof dans la table session pour facilité les requêtes) -->
 
