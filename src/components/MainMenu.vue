@@ -32,7 +32,7 @@
                 </div>
                 <div class="col-1 pb-1 dropdown text-end" v-if="user">
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                        <span class="rounded-circle text-center text-white" id="initials" >{{initials}}</span>
                     </a>
                     <ul class="dropdown-menu mt-5 fs-4 bg-warning bg-opacity-80 border border-danger" aria-labelledby="dropdownUser1">
                         <!--li><a class="dropdown-item" href="#">{{ $i18n.t('chat') }}</a></li-->
@@ -71,6 +71,9 @@ export default {
         ...mapState('core/auth', [
             'user'
         ]),
+        initials(){
+            return this.user.first_name.charAt(0) + this.user.last_name.charAt(0);
+        }
     },
     methods:{
         ...mapActions("core/auth", {
