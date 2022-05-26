@@ -10,6 +10,7 @@
                         <img src="@/assets/images/home.png" id="home" alt="home"></a> </li>
                     <li><a v-if="user" href="form-trainings" class="nav-link px-2 link-dark">{{ $i18n.t('publish-t') }}</a></li>
                     <li><a v-if="user" href="#" class="nav-link px-2 link-dark">{{ $i18n.t('publish-a') }}</a></li>
+                    <li><a v-if="user" href="/orders-per-prof" class="nav-link px-2 link-dark">Sessions</a></li>
                 </ul>
                 <form class="col-lg-auto me-lg-2 d-flex flex-wrap align-items-center justify-content-center">
                     <ul class="nav col-1 col-lg-auto me-lg-auto pb-2 justify-content-center mb-md-0">
@@ -129,7 +130,3 @@ export default {
 
 }
 </script>
-
-<style>
-
-</style>
