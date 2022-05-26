@@ -9,6 +9,7 @@ import listReceivedDemands from "@/components/Lists/listReceivedDemands";
 import listReceivedEstimates from "@/components/Lists/listReceivedEstimates";
 import sentEstimates from "@/components/Lists/sentEstimates";
 import checkout from "@/components/checkout";
+import ListOrderPerProf from "@/components/Lists/ListOrderPerProf";
 
 export default [
     {
@@ -89,6 +90,14 @@ export default [
         component: formSession,
         meta: {
             title: "Form sessions"
+        }
+    },
+    {
+        path: '/orders-per-prof',
+        name: 'orders-per-prof',
+        component: ListOrderPerProf,
+        meta: {
+            title: "Orders per prof"
         }
     },
     {
