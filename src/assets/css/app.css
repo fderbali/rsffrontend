@@ -102,11 +102,7 @@ button[type=submit]{
     margin-bottom: 2em;
 }
 
-.titre-principal{
-    text-align: center;
-    color:orange;
-    margin-bottom: 5em;
-}
+
 @media only screen and (min-width: 1550px) {
     #wrapper {
         min-height: 750px;
