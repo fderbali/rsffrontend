@@ -3,11 +3,13 @@ import Login from '@/components/auth/Login.vue';
 import Register from '@/components/auth/Register.vue';
 import NotFound from '@/components/NotFound.vue';
 import FormTraining from "@/components/form-training";
+import formSession from "@/components/forms/form-session";
 import listDemands from "@/components/Lists/listDemands";
 import listReceivedDemands from "@/components/Lists/listReceivedDemands";
 import listReceivedEstimates from "@/components/Lists/listReceivedEstimates";
 import sentEstimates from "@/components/Lists/sentEstimates";
 import checkout from "@/components/checkout";
+import ListOrderPerProf from "@/components/Lists/ListOrderPerProf";
 
 export default [
     {
@@ -80,6 +82,22 @@ export default [
         component: checkout,
         meta: {
             title: "Paiement"
+        }
+    },
+    {
+        path: '/form-session',
+        name: 'form-session',
+        component: formSession,
+        meta: {
+            title: "Form sessions"
+        }
+    },
+    {
+        path: '/orders-per-prof',
+        name: 'orders-per-prof',
+        component: ListOrderPerProf,
+        meta: {
+            title: "Orders per prof"
         }
     },
     {

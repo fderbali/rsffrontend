@@ -62,8 +62,9 @@
     "distance":     "Distance",
     "hour":         "hour",
 
-
-    "language":     "Communication",
+    "language":     "Language",
+    "communication": "Communication Language",
+    
     "french":       "French",
     "english":      "English",
 
