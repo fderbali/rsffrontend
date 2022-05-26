@@ -27,7 +27,7 @@
                     </ul>
                 </div>
                 <div class="col-2 ps-3 d-flex">
-                    <input type="search" class="form-control" :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
+                    <input v-model="search" @keyup="updateSearchString()" type="text" class="form-control" :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
                     <button class="btn btn-success btn-sm">Go</button>
                 </div>
                 <div class="col-1 pb-1 dropdown text-end" v-if="user">
@@ -60,11 +60,12 @@
 <script>
 import { mapState, mapActions } from 'vuex';
 import router from "@/libraries/VueRouter";
+import { EventBus } from "@/libraries/EventBus.js";
 export default {
     name:'MainMenu',
     data(){
         return{
-
+            search: ''
         }
     },
     computed: {
@@ -128,6 +129,9 @@ export default {
                     name: 'sentEstimates'
                 });
             });
+        },
+        updateSearchString(){
+            EventBus.$emit('recherche', this.search);
         }
     }
 

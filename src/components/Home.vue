@@ -60,7 +60,8 @@
 <script>
 import { mapState, mapActions } from 'vuex';
 import Alert from "@/libraries/Alert.js";
-import loader from "@/components/loader"
+import loader from "@/components/loader";
+import { EventBus } from "@/libraries/EventBus.js";
 export default {
     name: 'Home',
     components:{
@@ -77,13 +78,15 @@ export default {
     data() {
         return {
             loading: false,
-            currentPage : 1
+            currentPage : 1,
+            searchString: ''
         }
     },
     methods: {
         ...mapActions('core/training', {
             getTrainings: 'getTrainings',
-            getTrainingByPage: 'getTrainingByPage'
+            getTrainingByPage: 'getTrainingByPage',
+            searchTrainings: 'searchTrainings'
         }),
         ...mapActions('core/demand', {
             envoyerDemand: 'envoyerDemand'
@@ -116,10 +119,21 @@ export default {
         goToPage(page){
             this.currentPage = page;
             this.getTrainingByPage({page});
+        },
+        serach(){
+            this.searchTrainings(this.searchString).then(()=>{
+                this.loading = true;
+            });
         }
     },
     mounted(){
         this.getTrainings();
+    },
+    created(){
+        EventBus.$on('recherche', (payload) => {
+            this.searchString = payload;
+            this.serach();
+        });
     }
 }
 </script>

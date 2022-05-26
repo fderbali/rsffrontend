@@ -55,6 +55,19 @@ const actions = {
                     reject(error);
                 });
         });
+    },
+    searchTrainings: (context, searchString) => {
+        return new Promise((resolve, reject) => {
+            Api.post(`${resource}/search`, {
+                searchString
+            }).then((response) => {
+                context.commit('SET_TRAININGS', response);
+                resolve(response);
+            })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
     }
 };
 
