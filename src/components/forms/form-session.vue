@@ -1,28 +1,28 @@
 <template>
     <div class="container">
         <form>
-            <div class="titre-principal">Ajouter session</div>
+            <div class="titre-principal">{{ $i18n.t('title-7') }}</div>
             <ul>
-                <li>Formation : {{ order.training.title }}</li>
-                <li>Elève : {{ order.estimate.demand.user.first_name }} {{ order.estimate.demand.user.last_name }}</li>
-                <li>Email de l'élève : {{ order.estimate.demand.user.email }}</li>
+                <li>{{ $i18n.t('training') }}:{{ order.training.title }}</li>
+                <li>{{ $i18n.t('ss-title-4') }}:{{ order.estimate.demand.user.first_name }} {{ order.estimate.demand.user.last_name }}</li>
+                <li>{{ $i18n.t('email') }}:{{ order.estimate.demand.user.email }}</li>
                 <img :src="`http://rsfbackend.test/images/${order.training.thumbnail}`" class="card-img-top img-thumbnail w-50" alt="">
             </ul>
             <div class="row">
                 <div class="col-sm-12">
-                    <label class="col-form-label">Date</label>
+                    <label class="col-form-label">{{ $i18n.t('date') }}</label>
                     <input type="date" class="form-control" v-model="date">
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <label class="col-form-label">Heure de début</label>
+                    <label class="col-form-label">{{ $i18n.t('start-hh') }}</label>
                     <input type="time" class="form-control" v-model="heureDebut">
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <label class="col-form-label">Heure de fin</label>
+                    <label class="col-form-label">{{ $i18n.t('end-hh') }}</label>
                     <input type="time" class="form-control" v-model="heureFin">
                 </div>
             </div>
@@ -39,7 +39,7 @@
 import {mapActions, mapState} from "vuex";
 import Alert from "@/libraries/Alert";
 export default {
-    name: "formSession",
+    name: "form-session",
     data(){
         return{
             heureDebut: null,
@@ -69,13 +69,13 @@ export default {
                 user_id: this.order.estimate.demand.user.id,
             };
             this.saveSeance(dataToSend).then(()=>{
-                Alert.success("Session enregistrée avec succès ! Vous pouvez enregistrer une autre séance.");
+                Alert.success(this.$i18n.t('msg-suc3'));//Session enregistrée avec succès ! Vous pouvez enregistrer une autre séance.
                 this.heureDebut = null,
                 this.heureFin = null,
                 this.date = null
             })
             .catch(()=>{
-                Alert.fail("Une erreur s'est produite ! veuillez re-essayer plus tard !");
+                Alert.fail(this.$i18n.t('msg-err4'));//Une erreur s'est produite! veuillez re-essayer plus tard!
             })
             .finally(()=>{
                 this.loading = false;
@@ -87,7 +87,7 @@ export default {
         this.getOrder({order_id})
             .then(()=>{})
             .catch(()=>{
-                Alert.fail("Erreur de récupération de la commande, veuillez essayer plus tard");
+                Alert.fail(this.$i18n.t('msg-err5'));//Erreur de récupération de la commande, veuillez essayer plus tard
             });
     }
 }
