@@ -26,8 +26,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-2 ps-3">
+                <div class="col-2 ps-3 d-flex">
                     <input type="search" class="form-control" :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
+                    <button class="btn btn-success btn-sm">Go</button>
                 </div>
                 <div class="col-1 pb-1 dropdown text-end" v-if="user">
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
