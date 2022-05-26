@@ -23,6 +23,17 @@ const actions = {
                     reject(error);
                 });
         });
+    },
+    getOrder(context, {order_id}){
+        return new Promise((resolve, reject) => {
+            Api.get(`${resource}/${order_id}`).then((response) => {
+                context.commit('SET_ORDER', response);
+                resolve(response);
+            })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
     }
 };
 
