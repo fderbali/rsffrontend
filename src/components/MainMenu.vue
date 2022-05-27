@@ -36,9 +36,9 @@
                     <ul class="dropdown-menu" id="dd-menu-rsf" aria-labelledby="dropdownUser1">
                         <!--li><a class="dropdown-item" href="#">{{ $i18n.t('chat') }}</a></li-->
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('my-announces') }}</a></li>
-                        <li><a class="dropdown-item" href="#">{{ $i18n.t('my-trainings') }}</a></li>
-                        <li><a class="dropdown-item" href="#">{{ $i18n.t('i-teach') }}</a></li>
-                        <li><a class="dropdown-item" href="#">{{ $i18n.t('i-learn') }}</a></li>
+                        <li><a class="dropdown-item" href="#" @click.prevent="getCeduleByProf()">{{ $i18n.t('my-trainings') }}</a></li>
+                        <li><a class="dropdown-item" href="#" @click.prevent="getCeduleByProf()">{{ $i18n.t('i-teach') }}</a></li>
+                        <li><a class="dropdown-item" href="#" @click.prevent="getCeduleByUser()">{{ $i18n.t('i-learn') }}</a></li>
                         <li><a class="dropdown-item" href="#" @click.prevent="getListDemands()">{{ $i18n.t('s-demands') }}</a></li>
                         <li><a class="dropdown-item" href="#" @click.prevent="getListDemandsByProf()">{{ $i18n.t('r-demands') }}</a></li>
                         <li><a class="dropdown-item" href="#" @click.prevent="getListEstimatesByProf()">{{ $i18n.t('s-estimates') }}</a></li>

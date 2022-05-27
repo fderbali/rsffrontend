@@ -1,7 +1,7 @@
 
 <template>
     <div class="container">
-        <div class="titre-principal">{{ $i18n.t('title-5') }}</div>
+        <div class="titre-principal">{{ $i18n.t('title-6') }}</div>
         <div class="row">
             <div class="col-md">
                 <h5 class="">{{ $i18n.t('title') }}:</h5>
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-    name: "ceduleProf"
+    name: "ceduleUser"
 }
 
 </script>
