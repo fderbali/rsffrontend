@@ -19,8 +19,8 @@
                         <td>${{received_estimate.estimate.price}}</td>
                         <td>{{ $i18n.t(received_estimate.estimate.status) }}</td>
                         <template v-if="received_estimate.estimate.status == 'pending'">
-                            <td><a href="" class="btn btn-sm btn-outline-success" @click.prevent="payEstimate(received_estimate)">{{ $i18n.t('pay') }}</a></td>
-                            <td><a href="" class="btn btn-sm btn-outline-danger">{{ $i18n.t('cancel') }}</a></td>
+                            <td><a href="" class="btn btn-outline-success" @click.prevent="payEstimate(received_estimate)">{{ $i18n.t('pay') }}</a></td>
+                            <td><a href="" class="btn btn-outline-danger" @click.prevent="cancelTheEstimate(received_estimate)">{{ $i18n.t('cancel') }}</a></td>
                         </template>
                         <template v-else>
                             <td>-----</td>
