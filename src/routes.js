@@ -10,6 +10,8 @@ import listReceivedEstimates from "@/components/Lists/listReceivedEstimates";
 import sentEstimates from "@/components/Lists/sentEstimates";
 import checkout from "@/components/checkout";
 import ListOrderPerProf from "@/components/Lists/ListOrderPerProf";
+import ceduleProf from "@/components/Cedules/ceduleProf";
+import ceduleUser from "@/components/Cedules/ceduleUser";
 
 export default [
     {
@@ -98,6 +100,22 @@ export default [
         component: ListOrderPerProf,
         meta: {
             title: "Orders per prof"
+        }
+    },
+    {
+        path: '/cedule-per-prof',
+        name: 'cedule-per-prof',
+        component: ceduleProf,
+        meta: {
+            title: "Cedule per prof"
+        }
+    },
+    {
+        path: '/cedule-per-user',
+        name: 'cedule-per-user',
+        component: ceduleUser,
+        meta: {
+            title: "Cedule per user"
         }
     },
     {

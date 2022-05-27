@@ -28,9 +28,9 @@
     "middle":       "Intermédiaire",
     "senior":       "Avancé",
     "location":     "Lieu",
-    "loc-1":        "À domicile",
+    "loc-1":        "À Domicile",
     "loc-2":        "Autre",
-    "loc-3":        "Distance",
+    "loc-3":        "À Distance",
     "duration":     "Durée totale",
     "thumbnail":    "Image",
     "price":        "Prix",
@@ -51,6 +51,9 @@
     "title-2":      "Liste des demandes reçues",
     "title-3":      "Liste des devis envoyés",
     "title-4":      "Liste des devis reçus",
+    "title-5":      "Cédule de formation de l'enseignant",
+    "title-6":      "Cédule de formation du participant",
+    "title-7":      "Ajouter une séance",
 
     "ss-title-1":   "Formation",
     "ss-title-2":   "Enseignant(e)",
@@ -58,11 +61,15 @@
     "ss-title-4":   "Participant(e)",
     "ss-title-5":   "Action",
 
+    "name":         "Nom",
+    "date":         "Date",
     "distance":     "Distance",
     "hour":         "heure",
+    "start-hh":     "Heure de début",
+    "end-hh":       "Heure de fin",
 
     "language":     "Langue",
-    "communication": "Langue de communication",
+    "communication": "Communication",
     "french":       "Français",
     "english":      "Anglais",
 
@@ -91,10 +98,14 @@
     
     "msg-suc1":     "Bienvenue 🖐",
     "msg-suc2":     "Enregistrement effectué avec succès!",
+    "msg-suc3":     "Session enregistrée avec succès ! Vous pouvez ajouter une autre séance.",
 
     "msg-err1":     "Une erreur s'est produite, veuillez actualiser la page SVP!",
     "msg-err2":     "Courriel et/ou Mot de passe invalides!",
     "msg-err3":     "Ces identifiants ne correspondent pas à nos enregistrements.",
+    "msg-err4":     "Une erreur s'est produite ! veuillez re-essayer plus tard !",
+    "msg-err5":     "Erreur de récupération de la commande, veuillez essayer plus tard",
+    
 
     "msg404-1":     "Oups!",
     "msg404-2":     "Page inexistante",
@@ -103,6 +114,7 @@
     "my-trainings": "Mes formations",
     "paid":         "Payé",
     "pending":      "En attente",
-    "cancelled":    "Annulé"
+    "cancelled":    "Annulé",
+    "my-orders":    "Mes commandes"
 
 }

@@ -4,17 +4,17 @@
             <div class="titre-principal">{{ $i18n.t('login') }}</div>
             <div class="row">
                 <div class="col-sm-12">
-                    <label for="email" class="col-form-label">{{ $i18n.t('email') }}</label>
-                    <input type="email" class="form-control" id="floatingInput" v-model="email">
+                    <label for="email">{{ $i18n.t('email') }}</label>
+                    <input type="email" class="form-control" v-model="email">
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <label for="password" class="col-form-label">{{ $i18n.t('pw') }}</label>
-                    <input type="password" class="form-control" id="floatingPassword" v-model="password">
+                    <label for="password">{{ $i18n.t('pw') }}</label>
+                    <input type="password" class="form-control" v-model="password">
                 </div>
             </div>
-            <button class="btn btn-success opacity-75" type="submit" @click.prevent="login()">
+            <button class="btn" type="submit" @click.prevent="login()">
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" v-if="loading"></span>
                 {{ $i18n.t('submit') }}
             </button>
