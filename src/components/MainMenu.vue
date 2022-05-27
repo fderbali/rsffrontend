@@ -86,6 +86,10 @@ export default {
                 'getListEstimatesByUser', 'getListEstimatesProf'
             ]
         ),
+        ...mapActions("core/cedule", [
+                'getSessionsByProf', 'getSessionsByProf'
+            ]
+        ),
         deconnexion(){
             this.logout().then(()=>{
                 router.push({
@@ -127,6 +131,9 @@ export default {
                     name: 'sentEstimates'
                 });
             });
+        },
+        getCeduleByProf(){
+            this.getSessionsByProf()
         }
     }
 
