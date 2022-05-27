@@ -29,7 +29,6 @@
                     </tr>
                 </tbody>
             </table>
-                    <tbody class="border-bottom border-success">
         </div>
     </div> 
 </template>
