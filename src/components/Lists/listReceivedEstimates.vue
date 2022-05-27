@@ -22,7 +22,7 @@
                             <td><a href="" class="btn btn-sm btn-outline-success" @click.prevent="payEstimate(received_estimate)">{{ $i18n.t('pay') }}</a></td>
                             <td><a href="" class="btn btn-sm btn-outline-danger">{{ $i18n.t('cancel') }}</a></td>
                         </template>
-                        <template>
+                        <template v-else>
                             <td>-----</td>
                             <td>-----</td>
                         </template>
