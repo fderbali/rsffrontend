@@ -121,8 +121,12 @@ export default {
             this.getTrainingByPage({page});
         },
         serach(){
+            this.loading = true;
             this.searchTrainings(this.searchString).then(()=>{
-                this.loading = true;
+
+            })
+            .finally(()=>{
+                this.loading = false;
             });
         }
     },
