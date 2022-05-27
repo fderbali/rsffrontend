@@ -71,7 +71,7 @@ export default {
             'user'
         ]),
         initials(){
-            return this.user.first_name.charAt(0) + this.user.last_name.charAt(0);
+            return this.user.first_name.charAt(0).toUpperCase() + this.user.last_name.charAt(0).toUpperCase();
         }
     },
     methods:{
