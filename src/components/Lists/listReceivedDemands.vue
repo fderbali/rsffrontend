@@ -51,11 +51,14 @@ export default {
         ...mapState('core/demand', [
             'received_demands'
         ]),
+        ...mapState('core/auth', [
+            'user'
+        ])
     },
     name: "listReceivedDemands",
     methods: {
         ...mapActions('core/demand', [
-            'updateDemand'
+            'updateDemand','getDemandsByTeacher'
         ]),
         updateDemandStatus(received_demand, decision) {
             this.loading = true;
@@ -67,6 +70,7 @@ export default {
             })
                 .then(() => {
                     Alert.success('status de la demande mis à jour');
+                    this.getDemandsByTeacher(this.user.id);
                 })
                 .catch(() => {
                     Alert.fail('Problème avec la mise à jour');

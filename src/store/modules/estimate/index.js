@@ -43,6 +43,19 @@ const actions = {
                     reject(error);
                 });
         });
+    },
+    cancelEstimate(context, estimate_id) {
+        return new Promise((resolve, reject) => {
+            Api.put(`${resource}/${estimate_id}`, {
+                'status':'cancelled'
+            }).then((response) => {
+                //context.commit('SET_ESTIMATE_STATUS', response);
+                resolve(response);
+            })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
     }
 };
 
@@ -56,6 +69,14 @@ const mutations = {
     },
     ['SET_ESTIMATE']: (state, payload) => {
         state.estimate = payload.data;
+    },
+    ['SET_ESTIMATE_STATUS']: (state, payload) => {
+        state.received_estimates = state.received_estimates.map(obj => {
+            if(obj.id === payload.data.id){
+                return payload.data
+            }
+            return obj
+        });
     },
 };
 

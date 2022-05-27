@@ -122,3 +122,10 @@ button[type=submit]{
     /* color: rgb(59, 99, 87); */
 
 }
+
+#initials {
+    background: orange;
+    height: 38px;
+    width: 38px;
+    display: inline-block;
+}
