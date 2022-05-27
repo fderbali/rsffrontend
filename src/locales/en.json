@@ -31,7 +31,7 @@
     "location":     "Location",
     "loc-1":        "At home",
     "loc-2":        "Other",
-    "loc-3":        "Distance",
+    "loc-3":        "At Distance",
     "duration":     "Total duration",
     "thumbnail":    "Thumbnail",
     "price":        "Price",
@@ -52,6 +52,9 @@
     "title-2":      "List of received requests ",
     "title-3":      "List of sented estimates",
     "title-4":      "List of received estimates",
+    "title-5":      "Teacher training schedule",
+    "title-6":      "Participant training schedule",
+    "title-7":      "Add a session",
 
     "ss-title-1":   "Training",
     "ss-title-2":   "Teacher",
@@ -59,11 +62,14 @@
     "ss-title-4":   "Participant",
     "ss-title-5":   "Action",
     
+    "name":         "Name",
     "distance":     "Distance",
     "hour":         "hour",
+    "start-hh":     "Start hour",
+    "end-hh":       "End hour",
 
     "language":     "Language",
-    "communication": "Communication Language",
+    "communication": "Communication",
     
     "french":       "French",
     "english":      "English",
@@ -84,16 +90,20 @@
     "msg-con2":     "Accept",
     "msg-con3":     "Refuse",
     "msg-yes":      "Yes",
+
     "en-cours":     "Demand in progress",
     "confirmed":    "Demand confirmed",
     "cancelled":    "Demand cancelled",
     
     "msg-suc1":     "Welcome back 🖐",
     "msg-suc2":     "Registration successful!",
+    "msg-suc3":     "Session saved successfully! You can add another session.",
 
     "msg-err1":     "An error has occurred, please refresh the page!",
     "msg-err2":     "Invalids Email address and/or Password",
     "msg-err3":     "These identifiers do not match our records.",
+    "msg-err4":     "An error has occurred! Please try again later!",
+    "msg-err5":     "Error retrieving command, please try later",
 
     "msg404-1":     "Opps!",
     "msg404-2":     "Page not found.",
