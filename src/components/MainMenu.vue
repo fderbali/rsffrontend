@@ -29,12 +29,11 @@
                 <div class="col-2 ps-3">
                     <input type="search" class="form-control" :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
                 </div>
-                <div class="col-1 pb-1 dropdown text-end" v-if="user">
+                <div v-if="user" class="col-1 pb-1 dropdown text-end" >
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="rounded-circle text-center text-white" id="initials" >{{initials}}</span>
                     </a>
                     <ul class="dropdown-menu" id="dd-menu-rsf" aria-labelledby="dropdownUser1">
-                        <!--li><a class="dropdown-item" href="#">{{ $i18n.t('chat') }}</a></li-->
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('my-announces') }}</a></li>
                         <li><a class="dropdown-item" href="#" @click.prevent="">{{ $i18n.t('my-orders') }}</a></li>
                         <li><a class="dropdown-item" href="#" @click.prevent="getCeduleByProf()">{{ $i18n.t('i-teach') }}</a></li>
