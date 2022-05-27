@@ -114,6 +114,7 @@
     "my-trainings": "Mes formations",
     "paid":         "Payé",
     "pending":      "En attente",
-    "cancelled":    "Annulé"
+    "cancelled":    "Annulé",
+    "my-orders":    "Mes commandes"
 
 }
