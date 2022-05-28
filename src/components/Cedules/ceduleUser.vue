@@ -3,21 +3,36 @@
     <div class="container">
         <div class="titre-principal">{{ $i18n.t('title-6') }}</div>
         <div class="row">
-            <div class="col-md">
-                <h5 class="">{{ $i18n.t('title') }}:</h5>
-                <h5 class="">{{ $i18n.t('name') }}:</h5>   
-            </div>
-            <div>
-                <h5 class="">{{ $i18n.t('date') }}:Date:</h5>
-                <h5 class="">{{ $i18n.t('start-hh') }}Heure début:</h5>
-                <h5 class="">{{ $i18n.t('end-hh') }}Heure fin:</h5>
+            <div class="list-group">
+                <table class="table table-striped">
+                    <tr>
+                        <th>{{ $i18n.t('title') }}</th>
+                        <th>{{ $i18n.t('start-hh') }}</th>
+                        <th>{{ $i18n.t('end-hh') }}</th>
+                        <th>{{ $i18n.t('name') }}</th>
+                    </tr>
+                    <tr v-for="session, index in sessionsByUser" :key="index">
+                        <td>{{session.training.title}}</td>
+                        <td>{{session.start}}</td>
+                        <td>{{session.end}}</td>
+                        <td>{{session.training.user.first_name}} {{session.training.user.last_name}} </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+
+import {mapState} from "vuex";
+// Ajouter moment !
 export default {
+    computed: {
+        ...mapState('core/cedule', [
+            'sessionsByUser'
+        ])
+    },
     name: "ceduleUser"
 }
 
