@@ -38,7 +38,7 @@ const actions = {
     },
     getOrders(context){
         return new Promise((resolve, reject) => {
-            Api.get(`${resource}/prof`).then((response) => {
+            Api.get(`${resource}s/prof`).then((response) => {
                 context.commit('SET_ORDERS', response);
                 resolve(response);
             })
