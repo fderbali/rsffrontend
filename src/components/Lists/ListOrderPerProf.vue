@@ -4,7 +4,7 @@
             <table class="table table-success table-striped">
                 <tr>
                     <th>Formation</th>
-                    <th>Prix TTC</th>
+                    <th>Prix</th>
                     <th>Élève</th>
                     <th>&nbsp;</th>
                 </tr>
