@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container w-50 d-block">
         <div v-if="!paidFor">
             <h1 class="titre-principal">{{ $i18n.t('payment') }}</h1>
             <p class="text-center"><img :src="`http://rsfbackend.test/images/${estimate.training.thumbnail}`" class="card-img-top img-thumbnail w-50" alt=""></p>
