@@ -121,13 +121,17 @@ export default {
             this.getTrainingByPage({page});
         },
         serach(){
-            this.loading = true;
-            this.searchTrainings(this.searchString).then(()=>{
+            if(this.searchString.length) {
+                this.loading = true;
+                this.searchTrainings(this.searchString).then(() => {
 
-            })
-            .finally(()=>{
-                this.loading = false;
-            });
+                })
+                    .finally(() => {
+                        this.loading = false;
+                    });
+            } else {
+                Alert.fail('Veuillez saisir au moins un mot pour la recherche !');
+            }
         }
     },
     mounted(){
