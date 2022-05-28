@@ -86,7 +86,8 @@ export default {
             ]
         ),
         ...mapActions("core/cedule", [
-                'getSessionsByProf', 'getSessionsByProf'
+                'getSessionsByProf',
+                'getSessionsByUser'
             ]
         ),
         deconnexion(){
@@ -132,7 +133,18 @@ export default {
             });
         },
         getCeduleByProf(){
-            this.getSessionsByProf()
+            this.getSessionsByProf().then(()=>{
+                router.push({
+                    name: 'cedule-per-prof'
+                });
+            });
+        },
+        getCeduleByUser(){
+            this.getSessionsByUser().then(()=>{
+                router.push({
+                    name: 'cedule-per-user'
+                });
+            });
         }
     }
 

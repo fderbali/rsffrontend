@@ -17,9 +17,9 @@
                                 <th>{{ $i18n.t('name') }}</th>
                             </tr>
                             <tr v-for="session, indice in training.sessions" :key="index + indice">
-                                <td></td>
-                                <td>{{session.start}}</td>
-                                <td>{{session.end}}</td>
+                                <td> {{ moment(session.start).format('YYYY-MM-DD') }}</td>
+                                <td>{{ moment(session.start).format('HH:mm')}}</td>
+                                <td>{{ moment(session.end).format('HH:mm') }}</td>
                                 <td>{{session.user.first_name}} {{session.user.last_name}} </td>
                             </tr>
                         </table>
@@ -33,14 +33,20 @@
 <script>
 
 import {mapState} from "vuex";
-
+import moment     from 'moment';
 export default {
     computed: {
         ...mapState('core/cedule', [
             'sessionsByProf'
         ])
     },
-    name: "ceduleProf"
+    name: "ceduleProf",
+    methods:{
+        /**
+         * Define moment to use it in template
+         */
+        moment,
+    }
 }
 
 </script>
