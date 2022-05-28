@@ -26,8 +26,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-2 ps-3">
-                    <input type="search" class="form-control" :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
+                <div class="col-2 ps-3 d-flex">
+                    <input v-model="search" @keyup.enter="updateSearchString()" type="text" class="form-control" :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
                 </div>
                 <div v-if="user" class="col-1 pb-1 dropdown text-end" >
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -58,11 +58,12 @@
 <script>
 import { mapState, mapActions } from 'vuex';
 import router from "@/libraries/VueRouter";
+import { EventBus } from "@/libraries/EventBus.js";
 export default {
     name:'MainMenu',
     data(){
         return{
-
+            search: ''
         }
     },
     computed: {
@@ -145,7 +146,11 @@ export default {
                     name: 'cedule-per-user'
                 });
             });
+        },
+        updateSearchString(){
+            EventBus.$emit('recherche', this.search);
         }
+        
     }
 
 
