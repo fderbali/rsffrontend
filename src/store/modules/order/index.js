@@ -3,6 +3,7 @@ const resource = '/api/order';
 
 const state = () => ({
     order: null,
+    orders: null
 });
 
 
@@ -34,13 +35,27 @@ const actions = {
                     reject(error);
                 });
         });
-    }
+    },
+    getOrders(context){
+        return new Promise((resolve, reject) => {
+            Api.get(`${resource}/prof`).then((response) => {
+                context.commit('SET_ORDERS', response);
+                resolve(response);
+            })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
+    },
 };
 
 // Mutations
 const mutations = {
     ['SET_ORDER']: (state, payload) => {
         state.order = payload.data;
+    },
+    ['SET_ORDERS']: (state, payload) => {
+        state.orders = payload.data;
     },
 };
 
