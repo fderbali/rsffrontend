@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container w-50">
         <form>
             <div class="titre-principal">{{ $i18n.t('title-7') }}</div>
             <div class="row">
