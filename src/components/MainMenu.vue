@@ -27,8 +27,7 @@
                     </ul>
                 </div>
                 <div class="col-2 ps-3 d-flex">
-                    <input v-model="search" @keyup="updateSearchString()" type="text" class="form-control" :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
-                    <button class="btn btn-success btn-sm">Go</button>
+                    <input v-model="search" @keyup.enter="updateSearchString()" type="text" class="form-control" :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
                 </div>
                 <div class="col-1 pb-1 dropdown text-end" v-if="user">
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
