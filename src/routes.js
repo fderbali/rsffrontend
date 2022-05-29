@@ -12,6 +12,7 @@ import checkout from "@/components/checkout";
 import ListOrderPerProf from "@/components/Lists/ListOrderPerProf";
 import ceduleProf from "@/components/Cedules/ceduleProf";
 import ceduleUser from "@/components/Cedules/ceduleUser";
+import turnover from "@/components/admin/statistiques/turnover";
 
 export default [
     {
@@ -116,6 +117,14 @@ export default [
         component: ceduleUser,
         meta: {
             title: "Cedule per user"
+        }
+    },
+    {
+        path: '/stats/turnover',
+        name: 'turnover',
+        component: turnover,
+        meta: {
+            title: "Chiffre d'affaires"
         }
     },
     {

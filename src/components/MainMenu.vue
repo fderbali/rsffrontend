@@ -33,7 +33,10 @@
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="rounded-circle text-center text-white" id="initials" >{{initials}}</span>
                     </a>
-                    <ul class="dropdown-menu" id="dd-menu-rsf" aria-labelledby="dropdownUser1">
+                    <ul class="dropdown-menu" id="dd-menu-rsf" aria-labelledby="dropdownUser1" v-if="isAdmin">
+                        <li><a class="dropdown-item" href="/stats/turnover">Chiffre d'affaire</a></li>
+                    </ul>
+                    <ul class="dropdown-menu" id="dd-menu-rsf" aria-labelledby="dropdownUser1" v-else>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('my-announces') }}</a></li>
                         <li><a class="dropdown-item" href="#" @click.prevent="getCommandes()">{{ $i18n.t('my-orders') }}</a></li>
                         <li><a class="dropdown-item" href="#" @click.prevent="getCeduleByProf()">{{ $i18n.t('i-teach') }}</a></li>
@@ -69,6 +72,9 @@ export default {
     computed: {
         ...mapState('core/auth', [
             'user'
+        ]),
+        ...mapState('core/auth', [
+            'isAdmin'
         ]),
         initials(){
             return this.user.first_name.charAt(0).toUpperCase() + this.user.last_name.charAt(0).toUpperCase();
