@@ -18,10 +18,10 @@
                             <td>{{demand.user.first_name}} {{demand.user.last_name}}</td>
                             <td>{{demand.status}}</td>
                             <td v-if="demand.status == 'initiated'">
-                                <button class="btn btn-sm btn-outline-success" @click.prevent="updateDemandStatus(received_demand, true, )">
+                                <button class="btn btn-sm btn-outline-success" @click.prevent="updateDemandStatus(received_demand, demand, true, )">
                                 {{ $i18n.t('msg-con2') }}</button>
                                 &nbsp;&nbsp;
-                                <button class="btn btn-sm btn-outline-danger" @click.prevent="updateDemandStatus(received_demand, false)">
+                                <button class="btn btn-sm btn-outline-danger" @click.prevent="updateDemandStatus(received_demand, demand, false)">
                                 {{ $i18n.t('msg-con3') }}</button>
                             </td>
                             <td v-else>
@@ -62,10 +62,10 @@ export default {
         ...mapActions('core/demand', [
             'updateDemand','getDemandsByTeacher'
         ]),
-        updateDemandStatus(received_demand, decision) {
+        updateDemandStatus(received_demand, demand, decision) {
             this.loading = true;
             this.updateDemand({
-                id: received_demand.id,
+                id: demand.id,
                 training_id: received_demand.training_id,
                 user_id: received_demand.user_id,
                 decision: decision,

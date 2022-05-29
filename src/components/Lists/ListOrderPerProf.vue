@@ -8,12 +8,14 @@
                     <th>Élève</th>
                     <th>&nbsp;</th>
                 </tr>
-                <tr v-for="order, index in orders" :key="index">
-                    <td>{{order.title}}</td>
-                    <td>{{order.price}}</td>
-                    <td>{{order.orders[0].estimate.demand.user.first_name}} {{order.orders[0].estimate.demand.user.last_name}} </td>
-                    <td><a :href="`/form-session?order=${order.orders[0].id}`" class="btn btn-success border-danger">Céduler les sessions</a></td>
-                </tr>
+                <template v-for="orders_by_training in orders">
+                    <tr v-for="order in orders_by_training" :key="order.id">
+                        <td>{{orders_by_training.title}}</td>
+                        <td>{{orders_by_training.price}}</td>
+                        <td>{{order.estimate.demand.user.first_name}} {{order.estimate.demand.user.last_name}} </td>
+                        <td><a :href="`/form-session?order=${order.id}`" class="btn btn-success border-danger">Céduler les sessions</a></td>
+                    </tr>
+                </template>
             </table>
         </div>
     </div>
