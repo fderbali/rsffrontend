@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-        <div class="row w-30">
+        <div class="row">
+            <div class="titre-principal">{{ $i18n.t('title-3') }}</div>
             <table class="table">
                 <thead>
-                    <h2 class="titre-principal">{{ $i18n.t('title-3') }}</h2>
                     <tr>
                         <th scope="col">{{ $i18n.t('ss-title-1') }}</th>
                         <th scope="col">{{ $i18n.t('ss-title-4') }}</th>

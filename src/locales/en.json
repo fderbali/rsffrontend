@@ -68,6 +68,7 @@
     "start-hh":     "Start hour",
     "end-hh":       "End hour",
 
+    "informations": "Informations",
     "language":     "Language",
     "communication": "Communication",
     
@@ -91,9 +92,9 @@
     "msg-con3":     "Refuse",
     "msg-yes":      "Yes",
 
-    "en-cours":     "Demand in progress",
-    "confirmed":    "Demand confirmed",
-    "cancelled":    "Demand cancelled",
+    "en-cours":     "In progress",
+    "confirmed":    "Confirmed",
+    "cancelled":    "Cancelled",
     
     "msg-suc1":     "Welcome back 🖐",
     "msg-suc2":     "Registration successful!",

@@ -1,9 +1,10 @@
 {
     "home":         "Accueil",
-    "publish-t":    "Formation",
-    "publish-a":    "Annonce",
-    "search":       "Recherche...",
+    "publish":      "Publier",
     "training":     "Formation",
+    "announce":     "Annonce",
+    "search":       "Recherche...",
+    
     
     "register":     "Inscription",
     "email":        "Courriel",
@@ -68,6 +69,7 @@
     "start-hh":     "Heure de début",
     "end-hh":       "Heure de fin",
 
+    "informations": "Informations",
     "language":     "Langue",
     "communication": "Communication",
     "french":       "Français",
@@ -80,9 +82,9 @@
 
     "cancel":       "Canceller",
     "submit":       "Soumettre",
-    "en-cours":     "Demande en cours",
-    "confirmed":    "Demande confirmée",
-    "cancelled":    "Demande annulée",
+    "en-cours":     "En cours",
+    "confirmed":    "Confirmé",
+    "cancelled":    "Annulé",
 
     "free-register": "Inscription gratuite",
 
@@ -114,7 +116,7 @@
     "my-trainings": "Mes formations",
     "paid":         "Payé",
     "pending":      "En attente",
-    "cancelled":    "Annulé",
+    
     "my-orders":    "Mes commandes"
 
 }

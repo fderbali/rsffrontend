@@ -4,21 +4,22 @@
         <div class="container">
             <div class="row">
                 <div class="col" v-for="training, index in trainings" :key="index+currentPage">
-                    <div class="card mb-3 bg-warning border-danger bg-opacity-50 h-90" style="width: 18rem;">
-                        <img :src="`http://rsfbackend.test/images/${training.thumbnail}`" class="card-img-top" width="60" height="175" alt="">
-                        <div class="card-header text-center text-bolder">
-                            <h5 class="card-title text-danger">{{ training.title }}</h5>
+                    <div class="card">
+                        <img :src="`http://rsfbackend.test/images/${training.thumbnail}`" class="card-img-top" alt="image">
+                        <div class="card-header">
+                            <h5>{{ training.title }}</h5>
                         </div>
-                        <div class="card-body text-bolder text-center">
-                            <a class="btn text-danger text-bolder" data-bs-toggle="collapse" :href="'#collapseOne'+index+currentPage"><h5>Informations </h5></a>
-                            <div :id="'collapseOne'+index+currentPage" class="collapse text-left" data-bs-parent="#accordion" aria-haspopup="true">
-                                <p class="card-text text-bolder">{{ training.description }}</p>
-                                <p>{{ $i18n.t('by') }}: {{ training.user.first_name }} {{ training.user.last_name }}</p>
-                                <p>{{ $i18n.t('language') }}: {{ $i18n.t('french') }}</p>
-                                <div class="card-text">{{ $i18n.t('duration') }} : {{ training.total_duration }} Heures</div>
-                                <div class="card-text">{{ $i18n.t('price') }} : {{ training.price }}$</div>
-                                <div class="card-text">
-                                    {{ $i18n.t('location') }} :
+                        <div class="card-title">
+                            <a class="btn" data-bs-toggle="collapse" :href="'#collapseOne'+index+currentPage">
+                            <h5>{{ $i18n.t('informations') }}</h5></a>
+                            <div :id="'collapseOne'+index+currentPage" class="collapse card-body" data-bs-parent="#accordion" aria-haspopup="true">
+            
+                                <div>{{ training.description }}</div>
+                                <div>{{ $i18n.t('by') }} : {{ training.user.first_name }} {{ training.user.last_name }}</div>
+                                <div>{{ $i18n.t('language') }} : {{ $i18n.t('french') }}</div>
+                                <div>{{ $i18n.t('duration') }} : {{ training.total_duration }} Heures</div>
+                                <div>{{ $i18n.t('price') }} : {{ training.price }}$</div>
+                                <div>{{ $i18n.t('location') }} :
                                     <span v-if="training.location=='domicile'">{{ $i18n.t('loc-1') }}</span>
                                     <span v-else-if="training.location=='distance'">{{ $i18n.t('loc-3') }}</span>
                                     <a v-else target="_blank" :href="`https://www.google.ca/maps/place/${training.location}`">
@@ -26,17 +27,17 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="card-footer text-center pt-4" v-if="user && !training.demands.length">
-                                <a href="#" class="btn btn-success border-danger" @click.prevent="sendDemand(training.id)">{{ $i18n.t('do-demand') }}</a>
+                            <div class="card-footer" v-if="user && !training.demands.length">
+                                <a class="btn-rsf" @click.prevent="sendDemand(training.id)">{{ $i18n.t('do-demand') }}</a>
                             </div>
-                            <div class="card-footer text-center pt-4" v-else-if="user && training.demands[0].status === 'initiated'">
-                                <a href="#" class="btn btn-success border-danger opacity-25">{{ $i18n.t('en-cours') }}</a>
+                            <div class="card-footer" v-else-if="user && training.demands[0].status === 'initiated'">
+                                <a class="btn-rsf">{{ $i18n.t('en-cours') }}</a>
                             </div>
-                            <div class="card-footer text-center pt-4" v-else-if="user && training.demands[0].status === 'confirmed'">
-                                <a href="#" class="btn btn-success border-danger opacity-25">{{ $i18n.t('confirmed') }}</a>
+                            <div class="card-footer" v-else-if="user && training.demands[0].status === 'confirmed'">
+                                <a class="btn-rsf">{{ $i18n.t('confirmed') }}</a>
                             </div>
-                            <div class="card-footer text-center pt-4" v-else-if="user && training.demands[0].status === 'cancelled'">
-                                <a href="#" class="btn btn-warning border-danger opacity-25">{{ $i18n.t('cancelled') }}</a>
+                            <div class="card-footer" v-else-if="user && training.demands[0].status === 'cancelled'">
+                                <a class="btn-rsf">{{ $i18n.t('cancelled') }}</a>
                             </div>
                         </div>
                     </div>
