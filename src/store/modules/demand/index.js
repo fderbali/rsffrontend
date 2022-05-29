@@ -2,7 +2,7 @@ import Api from '@/libraries/Api.js';
 const resource = '/api/demand';
 
 const state = () => ({
-    demands: null,
+    demands: [],
     received_demands: null
 });
 
