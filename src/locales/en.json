@@ -1,7 +1,7 @@
 {
     "home":         "Home",
 
-    "publish-t":    "Training",
+    "publish-t":    "Training publish",
     "publish-a":    "Announce",
     "search":       "Search...",
     
@@ -65,8 +65,8 @@
     "name":         "Name",
     "distance":     "Distance",
     "hour":         "hour",
-    "start-hh":     "Start hour",
-    "end-hh":       "End hour",
+    "start-hh":     "Start",
+    "end-hh":       "End",
 
     "informations": "Informations",
     "language":     "Language",

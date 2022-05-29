@@ -1,11 +1,20 @@
-/* body{
-    background-image: url("../images/bois2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
 
+.bg-rsf{
+    background-color: rgb(172, 230, 201);
+}
 #logo{
     height: 50px;
+}
+#initials {
+    background: orange;
+    height: 38px;
+    width: 38px;
+    display: inline-block;
+    font-size: 1em; 
+    text-align: center;
+    color: white;
+    border-radius: 100%;
+
 }
 #wrapper{
     min-height: 500px;
@@ -117,16 +126,8 @@ button[type=submit]{
 }
 .footer{
     background-color: mediumseagreen;
-    /* color: rgb(59, 99, 87); */
+}
 
-}
-#initials {
-    background: orange;
-    height: 38px;
-    width: 38px;
-    display: inline-block;
-    font-size: .9em; 
-}
 .card{
     color:green;
     font-size: medium;
@@ -140,7 +141,7 @@ button[type=submit]{
 }
 .card-img-top{
     height: 150px;
-    width: 50px;
+    width: 45px;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -164,7 +165,38 @@ button[type=submit]{
     text-align: center;
 
 }
-form:after{
-    display: inline-block;
-    content: "\00d7"; /* This will render the 'X' */
+.topnav {
+    overflow: hidden;
+    background-color: rgb(172, 230, 201);
+    margin-bottom: 1em;
+    
   }
+  .topnav a {
+    float: left;
+    color: rgb(59, 99, 87);
+    padding: .4em;
+    padding-top: .6em;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+  
+  .topnav a:hover {
+    background-color: rgb(172, 230, 201);
+    color: white;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  .topnav-right {
+    float: right;
+  }
+  .topnav-none {
+    float: none;
+  }
+  .topnav-left {
+    float: left;
+  }
+  

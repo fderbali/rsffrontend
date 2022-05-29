@@ -1,7 +1,7 @@
 
 <template>
     <div class="container">
-        <div class="row">
+        <div class="row-30">
             <div class="titre-principal">{{ $i18n.t('title-6') }}</div>
             <div class="list-group">
                 <table class="table table-striped">
@@ -11,7 +11,8 @@
                             <th>{{ $i18n.t('date') }}</th>
                             <th>{{ $i18n.t('start-hh') }}</th>
                             <th>{{ $i18n.t('end-hh') }}</th>
-                            <th>{{ $i18n.t('name') }}</th>
+                            <th>{{ $i18n.t('first-name') }}</th>
+                            <th>{{ $i18n.t('last-name') }}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -20,7 +21,8 @@
                             <td>{{ moment(session.start).format('YYYY-MM-DD') }}</td>
                             <td>{{ moment(session.start).format('HH:mm')}}</td>
                             <td>{{ moment(session.end).format('HH:mm') }}</td>
-                            <td>{{session.user.first_name}} {{session.user.last_name}} </td>
+                            <td>{{session.training.user.first_name}}</td>
+                            <td>{{session.training.user.last_name}} </td>
                         </tr>
                     </tbody>
                 </table>
@@ -32,6 +34,7 @@
 <script>
 
 import {mapState} from "vuex";
+import moment     from 'moment';
 // Ajouter moment !
 export default {
     computed: {
@@ -39,7 +42,13 @@ export default {
             'sessionsByUser'
         ])
     },
-    name: "ceduleUser"
+    name: "ceduleUser",
+    methods:{
+        /**
+         * Define moment to use it in template
+         */
+        moment,
+    }
 }
 
 </script>

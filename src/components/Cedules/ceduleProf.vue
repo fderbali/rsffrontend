@@ -5,11 +5,11 @@
             <div class="titre-principal">{{ $i18n.t('title-5') }}</div>
             <div class="list-group">
                 <a v-for="training, index in sessionsByProf" :key="index" href="#" class="list-group-item list-group-item-action" aria-current="true">
-                    <div class="d-flex w-100 justify-content-between">
+                    <div class="bg-rsf">
                         <h3 class="mb-1 text-center">{{training.title}}</h3>
                     </div>
                     <div>
-                        <table class="table">
+                        <table class="table table-striped">
                             <tr>
                                 <th>{{ $i18n.t('date') }}</th>
                                 <th>{{ $i18n.t('start-hh') }}</th>

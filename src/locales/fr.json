@@ -1,6 +1,6 @@
 {
     "home":         "Accueil",
-    "publish":      "Publier",
+    "publish-t":    "Publier une formation",
     "training":     "Formation",
     "announce":     "Annonce",
     "search":       "Recherche...",
@@ -66,8 +66,8 @@
     "date":         "Date",
     "distance":     "Distance",
     "hour":         "heure",
-    "start-hh":     "Heure de début",
-    "end-hh":       "Heure de fin",
+    "start-hh":     "Début",
+    "end-hh":       "Fin",
 
     "informations": "Informations",
     "language":     "Langue",
