@@ -9,7 +9,7 @@
                     <th>&nbsp;</th>
                 </tr>
                 <template v-for="orders_by_training in orders">
-                    <tr v-for="order in orders_by_training" :key="order.id">
+                    <tr v-for="order in orders_by_training.orders" :key="order.id">
                         <td>{{orders_by_training.title}}</td>
                         <td>{{orders_by_training.price}}</td>
                         <td>{{order.estimate.demand.user.first_name}} {{order.estimate.demand.user.last_name}} </td>
