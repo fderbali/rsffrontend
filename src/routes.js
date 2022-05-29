@@ -13,6 +13,7 @@ import ListOrderPerProf from "@/components/Lists/ListOrderPerProf";
 import ceduleProf from "@/components/Cedules/ceduleProf";
 import ceduleUser from "@/components/Cedules/ceduleUser";
 import turnover from "@/components/admin/statistiques/turnover";
+import statsCategories from "@/components/admin/statistiques/statsCategories";
 
 export default [
     {
@@ -125,6 +126,14 @@ export default [
         component: turnover,
         meta: {
             title: "Chiffre d'affaires"
+        }
+    },
+    {
+        path: '/stats/stats-categories',
+        name: 'statsCategories',
+        component: statsCategories,
+        meta: {
+            title: "stats catégories"
         }
     },
     {

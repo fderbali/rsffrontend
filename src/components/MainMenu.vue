@@ -35,6 +35,7 @@
                     </a>
                     <ul class="dropdown-menu" id="dd-menu-rsf" aria-labelledby="dropdownUser1" v-if="isAdmin">
                         <li><a class="dropdown-item" href="/stats/turnover">Chiffre d'affaire</a></li>
+                        <li><a class="dropdown-item" href="/stats/stats-categories">Statistiques par catégories</a></li>
                     </ul>
                     <ul class="dropdown-menu" id="dd-menu-rsf" aria-labelledby="dropdownUser1" v-else>
                         <li><a class="dropdown-item" href="#">{{ $i18n.t('my-announces') }}</a></li>
