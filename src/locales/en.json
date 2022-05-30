@@ -1,7 +1,7 @@
 {
     "home":         "Home",
 
-    "publish-t":    "Training",
+    "publish-t":    "Training publish",
     "publish-a":    "Announce",
     "search":       "Search...",
     
@@ -65,9 +65,10 @@
     "name":         "Name",
     "distance":     "Distance",
     "hour":         "hour",
-    "start-hh":     "Start hour",
-    "end-hh":       "End hour",
+    "start-hh":     "Start",
+    "end-hh":       "End",
 
+    "informations": "Informations",
     "language":     "Language",
     "communication": "Communication",
     
@@ -91,9 +92,9 @@
     "msg-con3":     "Refuse",
     "msg-yes":      "Yes",
 
-    "en-cours":     "Demand in progress",
-    "confirmed":    "Demand confirmed",
-    "cancelled":    "Demand cancelled",
+    "en-cours":     "In progress",
+    "confirmed":    "Confirmed",
+    "cancelled":    "Cancelled",
     
     "msg-suc1":     "Welcome back 🖐",
     "msg-suc2":     "Registration successful!",

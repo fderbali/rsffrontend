@@ -1,12 +1,12 @@
 
 <template>
     <div class="container">
-        <div class="titre-principal">{{ $i18n.t('title-5') }}</div>
         <div class="row">
+            <div class="titre-principal">{{ $i18n.t('title-5') }}</div>
             <div class="list-group">
                 <a v-for="training, index in sessionsByProf" :key="index" href="#" class="list-group-item list-group-item-action" aria-current="true">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h2 class="mb-1 text-center">{{ $i18n.t('title') }}:{{training.title}}</h2>
+                    <div class="bg-rsf">
+                        <h3 class="mb-1 text-center">{{training.title}}</h3>
                     </div>
                     <div>
                         <table class="table table-striped">
@@ -17,7 +17,7 @@
                                 <th>{{ $i18n.t('name') }}</th>
                             </tr>
                             <tr v-for="session, indice in training.sessions" :key="index + indice">
-                                <td> {{ moment(session.start).format('YYYY-MM-DD') }}</td>
+                                <td>{{ moment(session.start).format('YYYY-MM-DD') }}</td>
                                 <td>{{ moment(session.start).format('HH:mm')}}</td>
                                 <td>{{ moment(session.end).format('HH:mm') }}</td>
                                 <td>{{session.user.first_name}} {{session.user.last_name}} </td>
