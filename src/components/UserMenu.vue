@@ -5,7 +5,7 @@
         <a href="/">{{ $i18n.t('home') }}</a>
         <a href="/" class="col-2"><img src="@/assets/images/school.png" id="home" alt="home" width="43px" height="43px"></a>
     
-        <a href="form-trainings">{{ $i18n.t('publish-t') }}</a>   
+        <a href="/form-trainings">{{ $i18n.t('publish-t') }}</a>
 
         <div classe="">
             <a class="dropdown dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
