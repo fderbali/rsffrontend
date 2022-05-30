@@ -4,7 +4,8 @@ const resource_csrf_cookies  = '/sanctum/csrf-cookie';
 const resource = '/api';
 
 const state = () => ({
-    user: null
+    user: null,
+    isAdmin: false
 });
 
 
@@ -78,9 +79,13 @@ const mutations = {
     ['SET_AUTH_USER']: (state, payload) => {
         state.user = payload.data.user;
         localStorage.setItem("jwt", payload.data.jwt);
+        if(payload.data.user.roles[0].name == 'admin'){
+            state.isAdmin = true;
+        }
     },
     ['REMOVE_AUTH_USER']: (state) => {
         state.user = null;
+        state.isAdmin = false;
         localStorage.removeItem("jwt");
     }
 };

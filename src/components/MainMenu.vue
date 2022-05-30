@@ -50,6 +50,9 @@ export default {
         ...mapState('core/auth', [
             'user'
         ]),
+        ...mapState('core/auth', [
+            'isAdmin'
+        ]),
         initials(){
             return this.user.first_name.charAt(0).toUpperCase() + this.user.last_name.charAt(0).toUpperCase();
         }
