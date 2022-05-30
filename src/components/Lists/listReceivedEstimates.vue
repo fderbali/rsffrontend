@@ -52,7 +52,7 @@ export default {
             'getEstimate','cancelEstimate','getListEstimatesByUser'
         ]),
         payEstimate(received_estimate){
-            this.getEstimate(received_estimate.id).then(()=>{
+            this.getEstimate(received_estimate.estimate.id).then(()=>{
                 router.push({
                     name: 'checkout'
                 });
@@ -62,7 +62,7 @@ export default {
             Alert.confirmation("Etes vous sûr !", "Vous allez annuler le devis" ,"Oui")
                 .then((response) => {
                     if(response.isConfirmed) {
-                        this.cancelEstimate(received_estimate.id).then(() => {
+                        this.cancelEstimate(received_estimate.estimate.id).then(() => {
                             Alert.success("Devis annulé avec succès");
                             this.getListEstimatesByUser(this.user.id);
                         })

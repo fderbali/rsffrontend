@@ -71,6 +71,9 @@ export default {
                 'getSessionsByUser'
             ]
         ),
+        ...mapActions("core/order", [
+            'getOrders'
+        ]),
         deconnexion(){
             this.logout().then(()=>{
                 router.push({
@@ -129,8 +132,14 @@ export default {
         },
         updateSearchString(){
             EventBus.$emit('recherche', this.search);
+        },
+        getCommandes(){
+            this.getOrders().then(()=>{
+                router.push({
+                    name: 'orders-per-prof'
+                });
+            });
         }
-        
     }
 
 

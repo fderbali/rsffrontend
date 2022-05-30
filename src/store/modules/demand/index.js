@@ -2,8 +2,8 @@ import Api from '@/libraries/Api.js';
 const resource = '/api/demand';
 
 const state = () => ({
-    demands: null,
-    received_demands: null
+    demands: [],
+    received_demands: []
 });
 
 
@@ -62,7 +62,9 @@ const actions = {
 // Mutations
 const mutations = {
     ['ADD_DEMAND']: (state, payload) => {
-        state.demands.push(payload.data);
+        if(Array.isArray(state.demands)) {
+            state.demands.push(payload.data);
+        }
     },
     ['SET_DEMANDS']: (state, payload) => {
         state.demands = payload.data;

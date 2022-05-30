@@ -12,21 +12,23 @@
                     </tr>
                 </thead>
                 <tbody class="border-bottom border-success">
-                    <tr v-for="received_demand, index in received_demands" :key="index">
-                        <td>{{received_demand.title}}</td>
-                        <td>{{received_demand.demands[0].user.first_name}} {{received_demand.demands[0].user.last_name}}</td>
-                        <td>{{received_demand.demands[0].status}}</td>
-                        <td v-if="received_demand.demands[0].status == 'initiated'">
-                            <button class="btn btn-sm btn-outline-success" @click.prevent="updateDemandStatus(received_demand, true, )">
-                            {{ $i18n.t('msg-con2') }}</button>
-                            &nbsp;&nbsp;
-                            <button class="btn btn-sm btn-outline-danger" @click.prevent="updateDemandStatus(received_demand, false)">
-                            {{ $i18n.t('msg-con3') }}</button>
-                        </td>
-                        <td v-else>
-                            &nbsp;--------
-                        </td>
-                    </tr>
+                    <template v-for="received_demand in received_demands">
+                        <tr v-for="demand in received_demand.demands" :key="demand.id">
+                            <td>{{received_demand.title}}</td>
+                            <td>{{demand.user.first_name}} {{demand.user.last_name}}</td>
+                            <td>{{demand.status}}</td>
+                            <td v-if="demand.status == 'initiated'">
+                                <button class="btn btn-sm btn-outline-success" @click.prevent="updateDemandStatus(received_demand, demand, true, )">
+                                {{ $i18n.t('msg-con2') }}</button>
+                                &nbsp;&nbsp;
+                                <button class="btn btn-sm btn-outline-danger" @click.prevent="updateDemandStatus(received_demand, demand, false)">
+                                {{ $i18n.t('msg-con3') }}</button>
+                            </td>
+                            <td v-else>
+                                &nbsp;--------
+                            </td>
+                        </tr>
+                    </template>
                 </tbody>
             </table>
         </div>
@@ -60,10 +62,10 @@ export default {
         ...mapActions('core/demand', [
             'updateDemand','getDemandsByTeacher'
         ]),
-        updateDemandStatus(received_demand, decision) {
+        updateDemandStatus(received_demand, demand, decision) {
             this.loading = true;
             this.updateDemand({
-                id: received_demand.id,
+                id: demand.id,
                 training_id: received_demand.training_id,
                 user_id: received_demand.user_id,
                 decision: decision,
