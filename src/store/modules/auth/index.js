@@ -80,7 +80,7 @@ const mutations = {
     ['SET_AUTH_USER']: (state, payload) => {
         state.user = payload.data.user;
         localStorage.setItem("jwt", payload.data.jwt);
-        if(Array.isArray(payload.data.user.roles) && payload.data.user.roles.lenght > 0){
+        if(Array.isArray(payload.data.user.roles) && payload.data.user.roles.length > 0){
             if(payload.data.user.roles[0].name == 'admin') {
                 state.isAdmin = true;
             }
