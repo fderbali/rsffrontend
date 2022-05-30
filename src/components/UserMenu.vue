@@ -4,12 +4,26 @@
     
         <a href="/">{{ $i18n.t('home') }}</a>
         <a href="/" class="col-2"><img src="@/assets/images/school.png" id="home" alt="home" width="43px" height="43px"></a>
+    
+        <a href="form-trainings">{{ $i18n.t('publish-t') }}</a>   
 
-        <router-link to="inscription">{{ $i18n.t('register') }}</router-link>
-        <router-link to="inscription"><img src="@/assets/images/pencil.png" width="30px" height="30px"></router-link>
-        
-        <router-link to="connexion">{{ $i18n.t('login') }}</router-link>
-        <router-link to="connexion"><img src="@/assets/images/school-bus.png" width="45px" height="45px"></router-link>
+        <div classe="">
+            <a class="dropdown dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <span id="initials" >{{initials}}</span>
+            </a>
+                <ul class="dropdown-menu" id="dd-menu-rsf" aria-labelledby="dropdownUser1">
+                    <li><a class="dropdown-item" href="#">{{ $i18n.t('my-announces') }}</a></li>
+                    <li><a class="dropdown-item" href="#" @click.prevent="getCommandes()">{{ $i18n.t('my-orders') }}</a></li>
+                    <li><a class="dropdown-item" href="#" @click.prevent="getCeduleByProf()">{{ $i18n.t('i-teach') }}</a></li>
+                    <li><a class="dropdown-item" href="#" @click.prevent="getCeduleByUser()">{{ $i18n.t('i-learn') }}</a></li>
+                    <li><a class="dropdown-item" href="#" @click.prevent="getListDemands()">{{ $i18n.t('s-demands') }}</a></li>
+                    <li><a class="dropdown-item" href="#" @click.prevent="getListDemandsByProf()">{{ $i18n.t('r-demands') }}</a></li>
+                    <li><a class="dropdown-item" href="#" @click.prevent="getListEstimatesByProf()">{{ $i18n.t('s-estimates') }}</a></li>
+                    <li><a class="dropdown-item" href="#" @click.prevent="getListEstimates()">{{ $i18n.t('r-estimates') }}</a></li>
+                    <li><hr class="dropdown-divider text-success"></li>
+                    <li><a class="dropdown-item" href="#" @click.prevent="deconnexion()">{{ $i18n.t('logoff') }}</a></li>
+                </ul>
+        </div>
         
         <div class="topnav-right pt-3 pe-2">
             <input v-model="search" @keyup.enter="updateSearchString()" type="text" class="form-control"
@@ -49,9 +63,6 @@ export default {
     computed: {
         ...mapState('core/auth', [
             'user'
-        ]),
-        ...mapState('core/auth', [
-            'isAdmin'
         ]),
         initials(){
             return this.user.first_name.charAt(0).toUpperCase() + this.user.last_name.charAt(0).toUpperCase();
