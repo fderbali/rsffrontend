@@ -24,11 +24,6 @@ Vue.use(VueSession, {
   persist: true
 });
 
-// Chart js
-import "chart.js";
-import "hchs-vue-charts";
-Vue.use(window.VueCharts);
-
 Vue.config.productionTip = false;
 
 // i18n
