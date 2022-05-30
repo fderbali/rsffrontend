@@ -54,7 +54,8 @@
     "title-4":      "Liste des devis reçus",
     "title-5":      "Cédule de formation de l'enseignant",
     "title-6":      "Cédule de formation du participant",
-    "title-7":      "Ajouter une séance",
+    "title-7":      "Ajouter une séance pour : ",
+    "title-8":      "Liste des commandes de formations",
 
     "ss-title-1":   "Formation",
     "ss-title-2":   "Enseignant(e)",
@@ -87,9 +88,10 @@
     "cancelled":    "Annulé",
 
     "free-register": "Inscription gratuite",
-
     "copyright":    "© 2022 Droits d'auteur : ",
-
+    "msg-paypal":    "Paiement sécurisé",
+    "msg-follow-us": "Suivez-nous!",
+    "about":        "À propos",
     
     "msg-con1":     "Confirmez l'envoi de cette demande SVP!",
     "msg-con2":     "Accepter",
@@ -107,7 +109,6 @@
     "msg-err3":     "Ces identifiants ne correspondent pas à nos enregistrements.",
     "msg-err4":     "Une erreur s'est produite ! veuillez re-essayer plus tard !",
     "msg-err5":     "Erreur de récupération de la commande, veuillez essayer plus tard",
-    
 
     "msg404-1":     "Oups!",
     "msg404-2":     "Page inexistante",

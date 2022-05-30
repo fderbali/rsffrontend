@@ -1,9 +1,9 @@
 <template>
     <div class="topnav">
-        <a href="/" class="topnav-left col-2"><img src="@/assets/images/logo.png" id="logo" alt="logo"></a>
+        <a href="/" class="topnav-left"><img src="@/assets/images/logo.png" id="logo" alt="logo"></a>
     
         <a href="/">{{ $i18n.t('home') }}</a>
-        <a href="/" class="col-2"><img src="@/assets/images/school.png" id="home" alt="home" width="43px" height="43px"></a>
+        <a href="/"><img src="@/assets/images/school.png" id="home" alt="home" width="43px" height="43px"></a>
     
         <a href="form-trainings">{{ $i18n.t('publish-t') }}</a>   
 
@@ -48,8 +48,7 @@
             </div>
         </div>
         <div class="topnav-right">
-            <a href="#"> À propos</a>
-            <a href="#"> Contact</a>
+            <a href="#" @click.prevent="deconnexion()">{{ $i18n.t('logoff') }}</a>
         </div>
         
     </div>

@@ -1,19 +1,17 @@
 <template>
-    <div class="topnav">
-        <a href="/" class="topnav-left col-2"><img src="@/assets/images/logo.png" id="logo" alt="logo"></a>
-    
-        <a href="/">{{ $i18n.t('home') }}</a>
-        <a href="/" class="col-2"><img src="@/assets/images/school.png" id="home" alt="home" width="43px" height="43px"></a>
+    <div class="topnav row-100">
+        <div class="topnav-left">
+            <a href="/"><img src="@/assets/images/logo.png" id="logo" alt="logo"></a>
+            <a href="/">{{ $i18n.t('home') }}</a>
+            <a href="/"><img src="@/assets/images/school.png" id="home" alt="home" width="43px" height="43px"></a>
 
-        <router-link to="inscription">{{ $i18n.t('register') }}</router-link>
-        <router-link to="inscription"><img src="@/assets/images/pencil.png" width="30px" height="30px"></router-link>
-        
-        <router-link to="connexion">{{ $i18n.t('login') }}</router-link>
-        <router-link to="connexion"><img src="@/assets/images/school-bus.png" width="45px" height="45px"></router-link>
-        
-        <div class="topnav-right pt-3 pe-2">
+            <router-link to="inscription">{{ $i18n.t('register') }}</router-link>
+            <router-link to="inscription"><img src="@/assets/images/pencil.png" width="30px" height="30px"></router-link>
+        </div>
+    
+        <div class="topnav-right pt-3 ">
             <input v-model="search" @keyup.enter="updateSearchString()" type="text" class="form-control"
-             :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
+            :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
         </div>
         <div class="topnav-right">
             <div v-if="this.$i18n.locale=='fr'">
@@ -27,11 +25,14 @@
                 </a>
             </div>
         </div>
-        <div class="topnav-right">
-            <a href="#"> À propos</a>
-            <a href="#"> Contact</a>
-        </div>
         
+        <div class="topnav-right"><a href="#">{{ $i18n.t('about') }}</a></div>
+        <div class="topnav-right"><a href="#"> Contact</a></div>
+        
+        <div class="topnav-right">
+            <router-link to="connexion">{{ $i18n.t('login') }}</router-link>
+            <router-link to="connexion"><img src="@/assets/images/school-bus.png" width="45px" height="45px"></router-link>
+        </div>
     </div>
 </template>
 

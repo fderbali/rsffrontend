@@ -23,10 +23,13 @@ table{
     margin-bottom: 1em;
 }
 thead{
-    font-size: x-large;
+    font-size: 1.5em;
+    color: darkgreen;
+    /* font-weight: .5em; */
+    background-color: rgb(172, 230, 201);
 }
 tbody{
-    font-size: large;
+    font-size: 1.1em;
 }
 @media only screen and (min-width: 1550px) {
     #wrapper {
@@ -39,16 +42,6 @@ tbody{
     align-items: center;
     justify-content: center;
 }
-#nav-rsf{
-    background-color: rgb(172, 230, 201);
-    color: rgb(59, 99, 87);
-    padding: .1em;
-    margin-bottom: 1em;
-    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    font-size: 1.3em;
-    font-weight: 500;
-}
-
 #dd-menu-rsf{
     background-color: rgb(247, 228, 125);
     border-color: darkorange;
@@ -71,6 +64,7 @@ tbody{
     color: orange;
     margin-top: .5em;
     font-weight: bold;
+    padding-bottom: 1em;
 }
 form{
     font-size: large;
@@ -129,18 +123,19 @@ button[type=submit]{
 }
 
 .card{
-    color:green;
+    color:darkgreen;
     font-size: medium;
     font-weight: 500;
-    width: 15em;
+    width: 18em;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px;
     background: white;
+    margin-bottom: 2em;
     
 }
 .card-img-top{
-    height: 150px;
+    height: 180px;
     width: 45px;
 }
 
@@ -170,8 +165,8 @@ button[type=submit]{
     background-color: rgb(172, 230, 201);
     margin-bottom: 1em;
     
-  }
-  .topnav a {
+}
+.topnav a {
     float: left;
     color: rgb(59, 99, 87);
     padding: .4em;
@@ -179,24 +174,24 @@ button[type=submit]{
     text-decoration: none;
     font-size: 1.5em;
     font-weight: 600;
-  }
-  
-  .topnav a:hover {
+}
+
+.topnav a:hover {
     background-color: rgb(172, 230, 201);
     color: white;
-  }
-  
-  .topnav a.active {
+}
+
+.topnav a.active {
     background-color: #04AA6D;
     color: white;
-  }
-  .topnav-right {
+}
+.topnav-right {
     float: right;
-  }
-  .topnav-none {
+}
+.topnav-none {
     float: none;
-  }
-  .topnav-left {
+}
+.topnav-left {
     float: left;
-  }
+}
   

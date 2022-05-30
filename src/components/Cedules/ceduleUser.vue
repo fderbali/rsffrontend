@@ -1,7 +1,7 @@
 
 <template>
     <div class="container">
-        <div class="row-30">
+        <div class="row">
             <div class="titre-principal">{{ $i18n.t('title-6') }}</div>
             <div class="list-group">
                 <table class="table table-striped">
@@ -11,7 +11,7 @@
                             <th>{{ $i18n.t('date') }}</th>
                             <th>{{ $i18n.t('start-hh') }}</th>
                             <th>{{ $i18n.t('end-hh') }}</th>
-                            <th>{{ $i18n.t('first-name') }}</th>
+                            <th>{{ $i18n.t('ss-title-2') }}</th>
                             <th>{{ $i18n.t('last-name') }}</th>
                         </tr>
                     </thead>
