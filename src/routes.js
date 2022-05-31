@@ -4,6 +4,7 @@ import Register from '@/components/auth/Register.vue';
 import NotFound from '@/components/NotFound.vue';
 import FormTraining from "@/components/form-training";
 import formSession from "@/components/forms/form-session";
+import formCategory from "@/components/forms/form-category";
 import listDemands from "@/components/Lists/listDemands";
 import listReceivedDemands from "@/components/Lists/listReceivedDemands";
 import listReceivedEstimates from "@/components/Lists/listReceivedEstimates";
@@ -14,6 +15,7 @@ import ceduleProf from "@/components/Cedules/ceduleProf";
 import ceduleUser from "@/components/Cedules/ceduleUser";
 import turnover from "@/components/admin/statistiques/turnover";
 import statsCategories from "@/components/admin/statistiques/statsCategories";
+
 
 export default [
     {
@@ -46,6 +48,14 @@ export default [
         component: FormTraining,
         meta: {
             title: "Form formations"
+        }
+    },
+    {
+        path: '/form-category',
+        name: 'form-category',
+        component: formCategory,
+        meta: {
+            title: "Form categories"
         }
     },
     {

@@ -1,9 +1,9 @@
 <template>
     <div class="topnav">
-        <a href="/" class="topnav-left col-2"><img src="@/assets/images/logo.png" id="logo" alt="logo"></a>
+        <a href="/" class="topnav-left"><img src="@/assets/images/logo.png" id="logo" alt="logo"></a>
     
         <a href="/">{{ $i18n.t('home') }}</a>
-        <a href="/" class="col-2"><img src="@/assets/images/school.png" id="home" alt="home" width="43px" height="43px"></a>
+        <a href="/"><img src="@/assets/images/school.png" id="home" alt="home" width="43px" height="43px"></a>
     
         <a href="/form-trainings">{{ $i18n.t('publish-t') }}</a>
 
@@ -13,9 +13,10 @@
             </a>
                 <ul class="dropdown-menu" id="dd-menu-rsf" aria-labelledby="dropdownUser1" v-if="isAdmin">
                     <li><a class="dropdown-item" href="/stats/turnover">Chiffre d'affaire</a></li>
-                    <li><a class="dropdown-item" href="/stats/stats-categories">Statistiques par catégories</a></li>
-                    <li><hr class="dropdown-divider text-success"></li>
-                    <li><a class="dropdown-item" href="#" @click.prevent="deconnexion()">{{ $i18n.t('logoff') }}</a></li>
+                    <li><a class="dropdown-item" href="/stats/turnover">Chiffre d'affaire</a></li>
+                    <li><a class="dropdown-item" href="form-category">Ajouter une categorie</a></li>
+                    
+                    
                 </ul>
                 <ul class="dropdown-menu" id="dd-menu-rsf" aria-labelledby="dropdownUser1" v-else>
                     <li><a class="dropdown-item" href="#">{{ $i18n.t('my-announces') }}</a></li>
@@ -26,8 +27,8 @@
                     <li><a class="dropdown-item" href="#" @click.prevent="getListDemandsByProf()">{{ $i18n.t('r-demands') }}</a></li>
                     <li><a class="dropdown-item" href="#" @click.prevent="getListEstimatesByProf()">{{ $i18n.t('s-estimates') }}</a></li>
                     <li><a class="dropdown-item" href="#" @click.prevent="getListEstimates()">{{ $i18n.t('r-estimates') }}</a></li>
-                    <li><hr class="dropdown-divider text-success"></li>
-                    <li><a class="dropdown-item" href="#" @click.prevent="deconnexion()">{{ $i18n.t('logoff') }}</a></li>
+                    
+                    
                 </ul>
         </div>
         
@@ -48,8 +49,7 @@
             </div>
         </div>
         <div class="topnav-right">
-            <a href="#"> À propos</a>
-            <a href="#"> Contact</a>
+            <a href="#" @click.prevent="deconnexion()">{{ $i18n.t('logoff') }}</a>
         </div>
         
     </div>

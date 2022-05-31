@@ -54,7 +54,9 @@
     "title-4":      "List of received estimates",
     "title-5":      "Teacher training schedule",
     "title-6":      "Participant training schedule",
-    "title-7":      "Add a session",
+    "title-7":      "Add a session for : ",
+    "title-8":      "List of training commands",
+    "title-9":      "Add a category",
 
     "ss-title-1":   "Training",
     "ss-title-2":   "Teacher",
@@ -86,6 +88,11 @@
     "free-register": "Register for free",
 
     "copyright":    "© 2022 Copyright : ",
+
+    "msg-paypal":   "Secure payment",
+    "msg-follow-us": "Follow us!",
+    "about":        "About",
+    
 
     "msg-con1":     "Please confirm the sending of this request!",
     "msg-con2":     "Accept",

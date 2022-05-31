@@ -12,11 +12,11 @@ require('bootstrap');
 
 //Font awesome
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faFacebook, faTwitter, faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faTimes, faAngleDown, faStar, faPlus, faFileAlt, faArrowRight, faSearch, faPen, faMapMarker } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faTwitter, faInstagram, faLinkedin, faGithub, faPaypal} from '@fortawesome/free-brands-svg-icons';
+import { faTimes, faAngleDown, faStar, faPlus, faFileAlt, faArrowRight, faSearch, faPen, faMapMarker} from '@fortawesome/free-solid-svg-icons';
 import { } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-library.add(faTimes, faAngleDown, faStar, faFileAlt, faPlus, faArrowRight, faSearch, faPen, faFacebook, faTwitter, faInstagram, faLinkedin, faGithub, faMapMarker);
+library.add(faTimes, faAngleDown, faStar, faFileAlt, faPlus, faArrowRight, faSearch, faPen, faFacebook, faTwitter, faInstagram, faLinkedin, faGithub, faMapMarker, faPaypal);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 // Session may persist between tabs and browser instances

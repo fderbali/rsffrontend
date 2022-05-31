@@ -1,37 +1,38 @@
 <template>
-    <div class="container w-50">
+    <div class="container">
         <form>
             <div class="titre-principal">{{ $i18n.t('title-7') }}</div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="">
                     <ul>
-                        <li>{{ $i18n.t('training') }}:{{ order.training.title }}</li>
-                        <li>{{ $i18n.t('ss-title-4') }}:{{ order.estimate.demand.user.first_name }} {{ order.estimate.demand.user.last_name }}</li>
-                        <li>{{ $i18n.t('email') }}:{{ order.estimate.demand.user.email }}</li>
-                        <img :src="`http://rsfbackend.test/images/${order.training.thumbnail}`" class="card-img-top img-thumbnail w-50" alt="">
+                        <img :src="`http://rsfbackend.test/images/${order.training.thumbnail}`" class="card-img-top mb-3" alt="Image formation">
+                        <li>{{ $i18n.t('training') }} : {{ order.training.title }}</li>
+                        <li>{{ $i18n.t('ss-title-4') }} : {{ order.estimate.demand.user.first_name }} {{ order.estimate.demand.user.last_name }}</li>
+                        <li>{{ $i18n.t('email') }} : {{ order.estimate.demand.user.email }}</li>
+                        
                     </ul>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="">
                     <label class="col-form-label">{{ $i18n.t('date') }}</label>
                     <input type="date" class="form-control" v-model="date">
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="">
                     <label class="col-form-label">{{ $i18n.t('start-hh') }}</label>
                     <input type="time" class="form-control" v-model="heureDebut">
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="">
                     <label class="col-form-label">{{ $i18n.t('end-hh') }}</label>
                     <input type="time" class="form-control" v-model="heureFin">
                 </div>
             </div>
 
-            <button class="btn" type="submit" @click.prevent="saveSession()">
+            <button class="btn-sm btn-outline-success" type="submit" @click.prevent="saveSession()">
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" v-if="loading"></span>
                 {{ $i18n.t('submit') }}
             </button>
