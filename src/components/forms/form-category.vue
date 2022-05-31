@@ -3,10 +3,8 @@
         <form >
             <div class="titre-principal">{{ $i18n.t('title-9') }}</div>
             <div class="row">
-                <div class="">
-                    <label class="">{{ $i18n.t('category') }}</label>
-                    <input type="text" class="form-control" name="category" v-model="category">
-                </div>
+                <label class="">{{ $i18n.t('category') }}</label>
+                <input type="text" class="form-control" name="category" v-model="category">
             </div>
             <button type="submit" class="btn" @click.prevent="enregistrerCategory()">{{ $i18n.t('submit') }}</button>
         </form>
@@ -53,10 +51,5 @@ export default {
             })
         }
     },
-    // mounted(){
-    //     this.getCategories().catch(()=>{
-    //         Alert.fail(this.$i18n.t('msg-err1'));//"Une erreur s'est produite, veuillez actualiser la page SVP!"
-    //     });
-    // }
 }
 </script>

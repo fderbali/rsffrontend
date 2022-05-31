@@ -75,7 +75,7 @@
 import {mapActions} from "vuex";
 import Alert from '@/libraries/Alert.js';
 import router from "@/libraries/VueRouter";
-//import router from "@/libraries/VueRouter";
+
 export default {
     name: "Register",
     data(){

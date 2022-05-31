@@ -2,7 +2,7 @@
     <body>
 
         <h1>Contact</h1>
-        <h3>Pour toute information n'hésitez pas à nous contacter:</h3>
+        <h3>{{ $i18n.t('msg-info') }}</h3>
 
         <div class="flip-card">
             <div class="flip-card-inner">
@@ -10,10 +10,10 @@
                     <img src="@/assets/images/logo.png" id="logo" alt="logo" style="width:300px;height:300px;">
                 </div>
                 <div class="flip-card-back">
-                    <h1>Réseau su Savoir Faire - RSF</h1> 
-                    <p>Concepteurs ; Raouf, Sylvie, Fahmi</p>
-                    <p>Cellulaire : 514 555-1144</p>
-                    <p>Couriel : rsfrsf2022@gmail.com</p> 
+                    <h4>{{ $i18n.t('us') }}</h4> 
+                    <p>{{ $i18n.t('concept') }}</p>
+                    <p>{{ $i18n.t('cell') }}</p>
+                    <p>{{ $i18n.t('email-us') }}</p> 
                 </div>
             </div>
         </div>

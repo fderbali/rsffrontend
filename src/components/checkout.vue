@@ -74,7 +74,6 @@ export default {
                     },
                     onError: err => {
                         Alert.fail(err);
-                        console.log(err);
                     }
                 })
                 .render(this.$refs.paypal);

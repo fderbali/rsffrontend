@@ -6,7 +6,7 @@
             <a href="/"><img src="@/assets/images/school.png" id="home" alt="home" width="43px" height="43px"></a>
 
             <router-link to="inscription">{{ $i18n.t('register') }}</router-link>
-            <router-link to="inscription"><img src="@/assets/images/pencil.png" width="30px" height="30px"></router-link>
+            <router-link to="inscription"><img src="@/assets/images/pencil.png" alt="Inscr" width="30px" height="30px"></router-link>
         </div>
     
         <div class="topnav-right pt-3 ">
@@ -31,7 +31,7 @@
         
         <div class="topnav-right">
             <router-link to="connexion">{{ $i18n.t('login') }}</router-link>
-            <router-link to="connexion"><img src="@/assets/images/school-bus.png" width="45px" height="45px"></router-link>
+            <router-link to="connexion"><img src="@/assets/images/school-bus.png" alt="Connex" width="45px" height="45px"></router-link>
         </div>
     </div>
 </template>
