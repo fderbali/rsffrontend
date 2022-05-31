@@ -1,10 +1,11 @@
 {
+    "us":           "Réseau du Savoir Faire - RSF",
+
     "home":         "Accueil",
     "publish-t":    "Publier une formation",
     "training":     "Formation",
     "announce":     "Annonce",
     "search":       "Recherche...",
-    
     
     "register":     "Inscription",
     "email":        "Courriel",
@@ -119,6 +120,6 @@
     "paid":         "Payé",
     "pending":      "En attente",
     
-    "my-orders":    "Mes commandes"
+    "my-orders":    "Mes commandes",
 
 }
