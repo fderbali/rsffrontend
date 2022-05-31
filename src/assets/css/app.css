@@ -116,7 +116,7 @@ button[type=submit]{
     font-weight: bold;
     color: darkgreen;
     text-decoration: none;
-
+    cursor: pointer;
 }
 .footer{
     background-color: mediumseagreen;
