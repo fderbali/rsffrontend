@@ -24,7 +24,6 @@ Vue.use(VueSession, {
   persist: true
 });
 
-
 Vue.config.productionTip = false;
 
 // i18n
