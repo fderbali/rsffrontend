@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <form >
-            <div class="titre-principal">{{ $i18n.t('title') }}</div>
+            <div class="titre-principal">{{ $i18n.t('title-9') }}</div>
             <div class="row">
                 <div class="">
                     <label class="">{{ $i18n.t('category') }}</label>
