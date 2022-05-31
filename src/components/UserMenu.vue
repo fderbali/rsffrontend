@@ -13,9 +13,10 @@
             </a>
                 <ul class="dropdown-menu" id="dd-menu-rsf" aria-labelledby="dropdownUser1" v-if="isAdmin">
                     <li><a class="dropdown-item" href="/stats/turnover">Chiffre d'affaire</a></li>
-                    <li><a class="dropdown-item" href="/stats/stats-categories">Statistiques par catégories</a></li>
-                    <li><hr class="dropdown-divider text-success"></li>
-                    <li><a class="dropdown-item" href="#" @click.prevent="deconnexion()">{{ $i18n.t('logoff') }}</a></li>
+                    <li><a class="dropdown-item" href="/stats/turnover">Chiffre d'affaire</a></li>
+                    <li><a class="dropdown-item" href="form-categories">Ajouter une categorie</a></li>
+                    
+                    
                 </ul>
                 <ul class="dropdown-menu" id="dd-menu-rsf" aria-labelledby="dropdownUser1" v-else>
                     <li><a class="dropdown-item" href="#">{{ $i18n.t('my-announces') }}</a></li>
@@ -26,8 +27,8 @@
                     <li><a class="dropdown-item" href="#" @click.prevent="getListDemandsByProf()">{{ $i18n.t('r-demands') }}</a></li>
                     <li><a class="dropdown-item" href="#" @click.prevent="getListEstimatesByProf()">{{ $i18n.t('s-estimates') }}</a></li>
                     <li><a class="dropdown-item" href="#" @click.prevent="getListEstimates()">{{ $i18n.t('r-estimates') }}</a></li>
-                    <li><hr class="dropdown-divider text-success"></li>
-                    <li><a class="dropdown-item" href="#" @click.prevent="deconnexion()">{{ $i18n.t('logoff') }}</a></li>
+                    
+                    
                 </ul>
         </div>
         
