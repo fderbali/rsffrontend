@@ -14,7 +14,7 @@
                 <ul class="dropdown-menu" id="dd-menu-rsf" aria-labelledby="dropdownUser1" v-if="isAdmin">
                     <li><a class="dropdown-item" href="/stats/turnover">Chiffre d'affaire</a></li>
                     <li><a class="dropdown-item" href="/stats/turnover">Chiffre d'affaire</a></li>
-                    <li><a class="dropdown-item" href="form-category">Ajouter une categorie</a></li>
+                    <li><a class="dropdown-item" href="/form-category">Ajouter une categorie</a></li>
                     
                     
                 </ul>
