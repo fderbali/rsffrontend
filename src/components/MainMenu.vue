@@ -26,8 +26,8 @@
             </div>
         </div>
         
-        <div class="topnav-right"><a href="#">{{ $i18n.t('about') }}</a></div>
-        <div class="topnav-right"><a href="#"> Contact</a></div>
+        <div class="topnav-right"><a href="/about-us">{{ $i18n.t('about') }}</a></div>
+        <div class="topnav-right"><a href="/contact"> Contact</a></div>
         
         <div class="topnav-right">
             <router-link to="connexion">{{ $i18n.t('login') }}</router-link>

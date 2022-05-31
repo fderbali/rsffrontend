@@ -15,7 +15,8 @@ import ceduleProf from "@/components/Cedules/ceduleProf";
 import ceduleUser from "@/components/Cedules/ceduleUser";
 import turnover from "@/components/admin/statistiques/turnover";
 import statsCategories from "@/components/admin/statistiques/statsCategories";
-
+import Contact from "@/components/Contact";
+import AboutUs from "@/components/AboutUs";
 
 export default [
     {
@@ -144,6 +145,22 @@ export default [
         component: statsCategories,
         meta: {
             title: "stats catégories"
+        }
+    },
+    {
+        path: '/about-us',
+        name: 'AboutUs',
+        component: AboutUs,
+        meta: {
+            title: "À propos de nous"
+        }
+    },
+    {
+        path: '/contact',
+        name: 'Contact',
+        component: Contact,
+        meta: {
+            title: "Contcat"
         }
     },
     {
