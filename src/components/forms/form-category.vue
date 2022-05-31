@@ -21,7 +21,7 @@ export default {
     name: "form-category",
     data(){
         return{
-            categorie: null,
+            category: null,
         }
     },
     computed:{
@@ -36,7 +36,7 @@ export default {
         
         enregistrerCategory(){
             let formCategory = {
-                'categorie': this.categorie, 
+                category: this.category,
             };
             this.saveCategory(formCategory).then(()=>{
                 Alert.success(this.$i18n.t('msg-suc2')) //"Enregistrement effectué avec succès!",

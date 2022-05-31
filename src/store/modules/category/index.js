@@ -8,6 +8,18 @@ const state = () => ({
 
 // Actions
 const actions = {
+    saveCategory(context, {category}){
+        return new Promise((resolve, reject) => {
+            Api.post(`${resource}/create`, {
+                'title': category
+            }).then((response) => {
+                resolve(response);
+            })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
+    },
     getCategories: (context) => {
         return new Promise((resolve, reject) => {
             Api.get(resource).then((response) => {
