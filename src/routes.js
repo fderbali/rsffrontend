@@ -17,6 +17,7 @@ import turnover from "@/components/admin/statistiques/turnover";
 import statsCategories from "@/components/admin/statistiques/statsCategories";
 import Contact from "@/components/Contact";
 import AboutUs from "@/components/AboutUs";
+import StatsDemandsEstimates from "@/components/admin/statistiques/StatsDemandsEstimates";
 
 export default [
     {
@@ -145,6 +146,14 @@ export default [
         component: statsCategories,
         meta: {
             title: "stats catégories"
+        }
+    },
+    {
+        path: '/stats/stats-demands-estimates',
+        name: 'StatsDemandsEstimates',
+        component: StatsDemandsEstimates,
+        meta: {
+            title: "Stats demands estimates"
         }
     },
     {
