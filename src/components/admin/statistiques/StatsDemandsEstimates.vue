@@ -66,12 +66,14 @@ export default {
                     {
                         label: 'Statistiques',
                         data: [],
-                        backgroundColor: ['#212f65',
-                            '#ff7f00',
-                            'rgba(255,252,6,0.87)',
-                            '#d70026',
-                            '#257c6c',
-                            '#f109c2'
+                        backgroundColor: [
+                            '#FF5733',
+                            '#FFFF00',
+                            '#3cb371',
+                            '#00FF00',
+                            '#FF0000',
+                            '#f122dc',
+                            '#00218d'
                         ],
                     }
                 ]
