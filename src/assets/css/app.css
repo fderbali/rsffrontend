@@ -3,8 +3,12 @@
     display: wrap;
     align-items: center;
     justify-content: center;
-    font-family: cursive;
     color: darkgreen;
+}
+.pagination{
+    font-size: 1em;
+    padding: 5em;
+    position:fixed;
 }
 .bg-rsf{
     background-color: rgb(172, 230, 201);
@@ -125,6 +129,7 @@ button[type=submit] {
 }
 .footer{
     background-color: mediumseagreen;
+
 }
 .card{
     color:darkgreen;
@@ -168,7 +173,6 @@ button[type=submit] {
 }
 .topnav a {
     float: left;
-    font-family: cursive;
     color:darkgreen;
     padding: .4em;
     padding-top: .6em;
@@ -223,6 +227,7 @@ button[type=submit] {
     background-image: url('../images/tableau.jpg');
 }
 .flip-card-back {
+    font-family: cursive;
     padding-top: 2em;
     background-image: url('../images/tableau.jpg');
     color: rgb(247, 228, 125);
@@ -230,6 +235,7 @@ button[type=submit] {
 }
 ul {
     list-style-type : none;
+    font-family: cursive;
     font-size: 1.3em;
-    color:rgb(247, 228, 125);
+    color: rgb(247, 228, 125);
 }

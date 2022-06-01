@@ -93,7 +93,7 @@
     "pay":          "Payer",
     "payment":      "Paiement",
     "cad":          "CAD",
-    "price-ttc":    "Prix TTC",
+    "price-ttc":    "Prix TTC (CAD)",
     "tot-orders":   "Total des commandes:",
     
 
