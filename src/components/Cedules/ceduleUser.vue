@@ -1,6 +1,6 @@
 
 <template>
-    <div class="container">
+    <div class="container w-50">
         <div class="row">
             <div class="titre-principal">{{ $i18n.t('title-6') }}</div>
             <div class="list-group">

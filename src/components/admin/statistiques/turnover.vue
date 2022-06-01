@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
+    <div class="container w-50">
         <loader v-if="loading"></loader>
-        <div class="w-40">
+        <div>
             <div class="text-center my-5 alert alert-info border border-success">
                 <h3 class="text-success">
                     {{ $i18n.t('tot-orders') }} : ${{total.toFixed(2)}} CAD
