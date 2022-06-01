@@ -62,6 +62,9 @@
     "title-7":      "Ajouter une séance",
     "title-8":      "Liste des commandes de formations",
     "title-9":      "Ajouter une catégorie",
+    "title-10":     "Statistiques par catégorie",
+    "title-11":     "Statistiques des commandes",
+    "title-12":     "Chiffre d'affaire",
 
     "ss-title-1":   "Formation",
     "ss-title-2":   "Enseignant(e)",
@@ -90,7 +93,7 @@
     "pay":          "Payer",
     "payment":      "Paiement",
     "cad":          "CAD",
-    "price-ttc":    "Prix TTC (CAD)",
+    "price-ttc":    "Prix TTC",
     "tot-orders":   "Total des commandes:",
     
 

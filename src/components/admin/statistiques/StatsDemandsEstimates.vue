@@ -1,5 +1,6 @@
 <template>
-    <div class="container w-50">
+    <div class="container w-50 pt-5">
+        <div class="titre-principal text-success">{{ $i18n.t('title-11') }}</div>
         <loader v-if="loading"></loader>
         <Bar
             :chart-options="chartOptions"
@@ -92,7 +93,7 @@ export default {
             });
         })
             .catch(() => {
-                Alert.fail("Une erreur s'est produite, veuillez re-essayer plus tard !");
+                Alert.fail(this.$i18n.t('msg-err4'));//"Une erreur s'est produite, veuillez re-essayer plus tard !"
             })
             .finally(()=>{
                 this.loading = false;

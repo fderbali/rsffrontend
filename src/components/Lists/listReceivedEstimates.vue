@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="row-30">
+        <div class="row">
             <div class="titre-principal">{{ $i18n.t('title-4') }}</div>
             <table class="table">
                 <thead>
@@ -10,6 +10,7 @@
                         <th scope="col">{{ $i18n.t('price') }}</th>
                         <th scope="col">{{ $i18n.t('ss-title-3') }}</th>
                         <th scope="col">{{ $i18n.t('ss-title-5') }}</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody class="border-bottom border-success">

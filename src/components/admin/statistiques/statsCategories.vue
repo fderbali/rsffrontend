@@ -1,7 +1,9 @@
 <template>
+
     <div class="container">
+        <div class="titre-principal mt-5 text-success">{{ $i18n.t('title-10') }}</div>
         <loader v-if="loading"></loader>
-        <div class="w-50 mt-5">
+        <div class="row mt-5 pe-5">
             <Pie
                 :chart-options="chartOptions"
                 :chart-data="chartData"

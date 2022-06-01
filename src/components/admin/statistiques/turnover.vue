@@ -1,24 +1,30 @@
 <template>
     <div class="container">
         <loader v-if="loading"></loader>
-        <div class="w-50">
-            <div class="text-center my-5 alert alert-info">
+        <div class="w-40">
+            <div class="text-center my-5 alert alert-info border border-success">
                 <h3 class="text-success">
-                    {{ $i18n.t('tot-orders') }} : {{total.toFixed(2)}} CAD
+                    {{ $i18n.t('tot-orders') }} : ${{total.toFixed(2)}} CAD
                 </h3>
             </div>
+            <div class="titre-principal text-success mt-5">{{ $i18n.t('title-12') }}</div>
             <table class="table table-striped">
-                <tr>
-                    <th>{{ $i18n.t('title') }}</th>
-                    <th>{{ $i18n.t('price-ttc') }}</th>
-                </tr>
-                <template v-for="order in orders">
-                    <tr :key="order.id" class="table-primary">
-                        <td>{{order.training.title}}</td>
-                        <td>{{order.estimate.price.toFixed(2)}}</td>
+                <thead>
+                    <tr>
+                        <th>{{ $i18n.t('title') }}</th>
+                        <th>{{ $i18n.t('price') }}</th>
                     </tr>
-                </template>
+                </thead>
+                <tbody>
+                    <template v-for="order in orders">
+                        <tr :key="order.id" class="table-primary border-bottom border-success">
+                            <td>{{order.training.title}}</td>
+                            <td>${{order.estimate.price.toFixed(2)}}</td>
+                        </tr>
+                    </template>
+                </tbody>
             </table>
+            
         </div>
     </div>
 </template>
