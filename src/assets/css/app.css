@@ -145,15 +145,15 @@ button[type=submit]{
 }
 
 .card-header{
-    color:green;
+    color:darkgreen;
     text-align: center;
 }
 .card-title{
-    color:green;
+    color:darkgreen;
     text-align: center;
 }
 .card-body{
-    color:green;
+    color:darkgreen;
     text-align: left;
 }
 .card-footer{
@@ -163,12 +163,13 @@ button[type=submit]{
 .topnav {
     overflow: hidden;
     background-color: rgb(172, 230, 201);
-    margin-bottom: 1em;
-    
+    margin-bottom: .7em;
+    color:darkgreen;
 }
 .topnav a {
     float: left;
-    color: rgb(59, 99, 87);
+    /* color: rgb(59, 99, 87); */
+    color:darkgreen;
     padding: .4em;
     padding-top: .6em;
     text-decoration: none;
@@ -197,8 +198,8 @@ button[type=submit]{
   
 .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 200px;
     perspective: 1000px;
   }
   
@@ -225,12 +226,20 @@ button[type=submit]{
   }
   
   .flip-card-front {
-    background-color: #bbb;
+    background-color: mediumseagreen;
     color: black;
   }
   
   .flip-card-back {
-    background-color: #2980b9;
+    padding-top: 2em;
+    background-color: mediumseagreen;
     color: white;
     transform: rotateY(180deg);
   }
+  ul {
+    list-style-type : none;
+    font-size: 1.5em;
+    color:darkgreen;
+    /* text-justify:left; */
+  }
+  
