@@ -30,6 +30,5 @@ export default {
 </script>
 <style>
   @import url('assets/css/app.css');
-  @import url('assets/css/login.css');
   @import'~bootstrap/dist/css/bootstrap.css'
 </style>

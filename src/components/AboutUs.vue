@@ -51,7 +51,7 @@
     </div>
     <div v-else>
 
-            <h1></h1>{{ $i18n.t('about') }}</h1>
+            <h1>{{ $i18n.t('about') }}</h1>
             <h2>{{ $i18n.t('us') }}</h2>
 
             <p>This Web application makes it possible to share know-how between users, regardless of the category!</p>
