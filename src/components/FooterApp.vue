@@ -47,7 +47,7 @@
 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">{{ $i18n.t('copyright') }}
-        <a class="text-white" href="#">ReseauSavoirFaire@gmail.com</a>
+        <a class="text-white" href="#">{{ $i18n.t('email-rsf') }}</a>
     </div>
     <!-- Copyright -->
   </footer>

@@ -35,7 +35,7 @@
 
 import {mapState} from "vuex";
 import moment     from 'moment';
-// Ajouter moment !
+
 export default {
     computed: {
         ...mapState('core/cedule', [

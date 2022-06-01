@@ -3,7 +3,7 @@
 
         <div class="text-center d-flex justify-content-center loader">
             <div class="spinner-border align-self-center text-light" style="width: 6rem; height: 6rem;" role="status">
-                <span class="visually-hidden">Loading...</span>
+                <span class="visually-hidden">{{ $i18n.t('loading') }}</span>
             </div>
         </div>
 

@@ -17,7 +17,6 @@
                     <li><a class="dropdown-item" href="/form-category">Ajouter une categorie</a></li>
                 </ul>
                 <ul class="dropdown-menu" id="dd-menu-rsf" aria-labelledby="dropdownUser1" v-else>
-                    <li><a class="dropdown-item" href="#">{{ $i18n.t('my-announces') }}</a></li>
                     <li><a class="dropdown-item" href="#" @click.prevent="getCommandes()">{{ $i18n.t('my-orders') }}</a></li>
                     <li><a class="dropdown-item" href="#" @click.prevent="getCeduleByProf()">{{ $i18n.t('i-teach') }}</a></li>
                     <li><a class="dropdown-item" href="#" @click.prevent="getCeduleByUser()">{{ $i18n.t('i-learn') }}</a></li>

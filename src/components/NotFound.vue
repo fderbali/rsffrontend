@@ -1,10 +1,10 @@
 <template>
 
   <body>
-    <div class="d-flex align-items-center justify-content-center vh-100">
-        <div class="text-center row">
-            <div class=" col-md-6 pd-20">
-                <img src="https://cdn.pixabay.com/photo/2017/03/09/12/31/error-2129569__340.jpg" alt=""
+    <div class="container">
+        <div class="row">
+            <div class="">
+                <img src="https://cdn.pixabay.com/photo/2017/03/09/12/31/error-2129569__340.jpg" alt="img404"
                     class="img-fluid">
             </div>
             <div class=" col-md-6 mt-5">
