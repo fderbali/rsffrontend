@@ -4,13 +4,13 @@
         <div class="w-50">
             <div class="text-center my-5 alert alert-info">
                 <h3 class="text-success">
-                    Total des commandes: {{total.toFixed(2)}} CAD
+                    {{ $i18n.t('tot-orders') }} : {{total.toFixed(2)}} CAD
                 </h3>
             </div>
             <table class="table table-striped">
                 <tr>
-                    <th>Titre</th>
-                    <th>Prix TTC (CAD)</th>
+                    <th>{{ $i18n.t('title') }}</th>
+                    <th>{{ $i18n.t('price-ttc') }}</th>
                 </tr>
                 <template v-for="order in orders">
                     <tr :key="order.id" class="table-primary">
@@ -47,7 +47,7 @@ export default {
             })
         })
             .catch(() => {
-                Alert.fail("Une erreur s'est produite, veuillez re-essayer plus tard !");
+                Alert.fail(this.$i18n.t('msg-err4'));//"Une erreur s'est produite, veuillez re-essayer plus tard !"
             })
             .finally(()=>{
                 this.loading = false;

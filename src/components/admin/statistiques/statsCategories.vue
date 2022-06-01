@@ -77,7 +77,7 @@ export default {
                 labels: [],
                 datasets: [
                     {
-                        backgroundColor: ['#06228c', '#fffc1a', '#00D8FF', '#DD1B16', '#c9f600'],
+                        backgroundColor: ['#FF5733', '#FFFF00', '#00FF00', '#3cb371 ', '#FF0000'],
                         data: []
                     }
                  ]
@@ -96,7 +96,7 @@ export default {
             });
         })
             .catch(() => {
-                Alert.fail("Une erreur s'est produite, veuillez re-essayer plus tard !");
+                Alert.fail(this.$i18n.t('msg-err4'));//"Une erreur s'est produite, veuillez re-essayer plus tard !"
             })
             .finally(()=>{
                 this.loading = false;

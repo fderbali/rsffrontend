@@ -1,10 +1,15 @@
 {
+    "us":           "Réseau du Savoir Faire - RSF",
+    "concept":      "Concepteurs ; Raouf, Sylvie, Fahmi",
+    "cell":         "Cellulaire : 514 555-1144",
+    "email-us":     "Courriel : rsfrsf2022@gmail.com",
+    "email-rsf":    "rsfrsf2022@gmail.com",
+
     "home":         "Accueil",
     "publish-t":    "Publier une formation",
     "training":     "Formation",
     "announce":     "Annonce",
     "search":       "Recherche...",
-    
     
     "register":     "Inscription",
     "email":        "Courriel",
@@ -54,7 +59,7 @@
     "title-4":      "Liste des devis reçus",
     "title-5":      "Cédule de formation de l'enseignant",
     "title-6":      "Cédule de formation du participant",
-    "title-7":      "Ajouter une séance pour : ",
+    "title-7":      "Ajouter une séance",
     "title-8":      "Liste des commandes de formations",
     "title-9":      "Ajouter une catégorie",
 
@@ -77,22 +82,33 @@
     "french":       "Français",
     "english":      "Anglais",
 
+    "my-trainings": "Mes formations",
+    "my-orders":    "Mes commandes",
+    "congrat":      "Félicitations ! Bon choix de formation",
+
+    "paid":         "Payé",
     "pay":          "Payer",
     "payment":      "Paiement",
     "cad":          "CAD",
-    "congrat":      "Félicitations ! Bon choix de formation",
+    "price-ttc":    "Prix TTC (CAD)",
+    "tot-orders":   "Total des commandes:",
+    
 
+    "pending":      "En attente",
     "cancel":       "Canceller",
     "submit":       "Soumettre",
     "en-cours":     "En cours",
     "confirmed":    "Confirmé",
     "cancelled":    "Annulé",
+    "loading":      "Chargement...",
 
     "free-register": "Inscription gratuite",
     "copyright":    "© 2022 Droits d'auteur : ",
     "msg-paypal":    "Paiement sécurisé",
     "msg-follow-us": "Suivez-nous!",
     "about":        "À propos",
+
+    "msg-info":     "Pour toute information n'hésitez pas à nous contacter!",
     
     "msg-con1":     "Confirmez l'envoi de cette demande SVP!",
     "msg-con2":     "Accepter",
@@ -113,12 +129,6 @@
 
     "msg404-1":     "Oups!",
     "msg404-2":     "Page inexistante",
-    "msg404-3":     "La page que vous recherchée n'existe pas.",
-
-    "my-trainings": "Mes formations",
-    "paid":         "Payé",
-    "pending":      "En attente",
+    "msg404-3":     "La page que vous recherchée n'existe pas."
     
-    "my-orders":    "Mes commandes"
-
 }
