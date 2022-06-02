@@ -80,6 +80,8 @@ export default {
         ]),
         deconnexion(){
             this.logout().then(()=>{
+                this.$session.destroy();
+                window.localStorage.clear();
                 router.push({
                     name: 'login'
                 });
