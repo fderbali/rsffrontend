@@ -1,5 +1,5 @@
 <template>
-    <div class="container bg-texture">
+    <div class="container bg-texture" id="about-us">
         
         <div v-if="this.$i18n.locale=='fr'">
             

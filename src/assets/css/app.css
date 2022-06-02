@@ -235,7 +235,10 @@ button[type=submit] {
 }
 ul {
     list-style-type : none;
-    font-family: cursive;
     font-size: 1.3em;
     color: rgb(247, 228, 125);
+}
+
+#about-us{
+    font-family: cursive;
 }
