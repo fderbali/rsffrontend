@@ -4,7 +4,7 @@ import HttpErrorHandler from './HttpErrorHandler.js';
 
 
 // API link
-axios.defaults.baseURL = "http://rsfbackend.test";
+axios.defaults.baseURL = "https://rsfbackend.fahmiderbali.com";
 axios.defaults.withCredentials = true;
 
 const axiosInstance = axios.create({

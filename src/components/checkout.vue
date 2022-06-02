@@ -2,7 +2,7 @@
     <div class="container w-50 d-block">
         <div v-if="!paidFor">
             <h1 class="titre-principal">{{ $i18n.t('payment') }}</h1>
-            <p class="text-center"><img :src="`http://rsfbackend.test/images/${estimate.training.thumbnail}`" class="card-img-top img-thumbnail w-50" alt=""></p>
+            <p class="text-center"><img :src="`https://rsfbackend.fahmiderbali.com/images/${estimate.training.thumbnail}`" class="card-img-top img-thumbnail w-50" alt=""></p>
             <h3 class="pb-2">{{ estimate.training.title }}</h3>
             <p>{{ estimate.training.description }}</p>
             <p>{{ estimate.training.total_duration }} {{ $i18n.t('hour') }}</p>

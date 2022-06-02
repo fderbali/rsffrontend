@@ -4,7 +4,7 @@
             <div class="titre-principal">{{ $i18n.t('title-7') }}</div>
             <div class="row">
                 <ul>
-                    <img :src="`http://rsfbackend.test/images/${order.training.thumbnail}`" class="card-img-top mb-3" alt="Training">
+                    <img :src="`https://rsfbackend.fahmiderbali.com/images/${order.training.thumbnail}`" class="card-img-top mb-3" alt="Training">
                     <li>{{ $i18n.t('training') }} : {{ order.training.title }}</li>
                     <li>{{ $i18n.t('ss-title-4') }} : {{ order.estimate.demand.user.first_name }} {{ order.estimate.demand.user.last_name }}</li>
                     <li>{{ $i18n.t('email') }} : {{ order.estimate.demand.user.email }}</li>
