@@ -144,7 +144,7 @@ button[type=submit] {
 }
 .card-img-top{
     height: 180px;
-    width: 45px;
+    /*width: 45px;*/
 }
 /* On mouse-over, add a deeper shadow */
 .card:hover {
