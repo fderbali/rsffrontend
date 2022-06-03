@@ -16,8 +16,9 @@
             
                                 <div>{{ training.description }}</div>
                                 <div>{{ $i18n.t('by') }} : {{ training.user.first_name }} {{ training.user.last_name }}</div>
-                                <div>{{ $i18n.t('language') }} : {{ $i18n.t('french') }}</div>
-                                <div>{{ $i18n.t('duration') }} : {{ training.total_duration }} Heures</div>
+                                <div>{{ $i18n.t('language') }} : {{ $i18n.t(training.language) }}</div>
+                                <div>{{ $i18n.t('duration') }} : {{ training.total_duration }} {{ $i18n.t('hours') }}</div>
+                                <div>{{ $i18n.t('level') }} : {{ training.level }} </div>
                                 <div>{{ $i18n.t('price') }} : {{ training.price }}$</div>
                                 <div>{{ $i18n.t('location') }} :
                                     <span v-if="training.location=='domicile'">{{ $i18n.t('loc-1') }}</span>

@@ -75,6 +75,7 @@
     "name":         "Name",
     "distance":     "Distance",
     "hour":         "hour",
+    "hours":        "hours",
     "start-hh":     "Start",
     "end-hh":       "End",
 
