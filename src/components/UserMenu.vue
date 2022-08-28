@@ -1,13 +1,10 @@
 <template>
     <div class="topnav">
-        <a href="/" class="topnav-left"><img src="@/assets/images/logo.png" id="logo" alt="logo"></a>
-    
-        <a href="/">{{ $i18n.t('home') }}</a>
-        <a href="/"><img src="@/assets/images/school.png" id="home" alt="home" width="43px" height="43px"></a>
-    
-        <a href="/form-trainings">{{ $i18n.t('publish-t') }}</a>
-
-        <div classe="">
+        <a href="/" class="topnav-left logo"><img src="@/assets/images/logo.png" id="logo" alt="logo"></a>
+        <a href="/" class="home-link">{{ $i18n.t('home') }}</a>
+        <a href="/" class="home-shool-link"><img src="@/assets/images/school.png" id="home" alt="home" width="43px" height="43px"></a>
+        <a href="/form-trainings" class="link-trainings">{{ $i18n.t('publish-t') }}</a>
+        <div class="">
             <a class="dropdown dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                 <span id="initials" >{{initials}}</span>
             </a>
@@ -34,18 +31,18 @@
         </div>
         <div class="topnav-right">
             <div v-if="this.$i18n.locale=='fr'">
-                <a href="#" @click.prevent="changeLanguage()">
-                    <img src="@/assets/images/qc.png" alt="fr" width="44px" height="30px">
+                <a href="#" class="link-language" @click.prevent="changeLanguage()">
+                    <img src="@/assets/images/fr.png" alt="fr" width="44px" height="30px">
                 </a>
             </div>
             <div v-else>
-                <a href="#" @click.prevent="changeLanguage()">
+                <a href="#" class="link-language" @click.prevent="changeLanguage()">
                     <img src="@/assets/images/en.png" alt="en" width="44px" height="30px">
                 </a>
             </div>
         </div>
         <div class="topnav-right">
-            <a href="#" @click.prevent="deconnexion()">{{ $i18n.t('logoff') }}</a>
+            <a href="#" @click.prevent="deconnexion()" class="link-disconnect">{{ $i18n.t('logoff') }}</a>
         </div>
         
     </div>

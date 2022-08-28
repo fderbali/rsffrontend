@@ -32,6 +32,16 @@
     text-align: center;
     color: white;
     border-radius: 100%;
+    padding-top: 5px;
+}
+.link-disconnect {
+    padding-top: 18px !important;
+}
+.link-language {
+    padding-top: 18px !important;
+}
+#dropdownUser1{
+    padding-top: 15px;
 }
 #wrapper{
     min-height: 500px;
@@ -177,8 +187,14 @@ button[type=submit] {
     padding: .4em;
     padding-top: .6em;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.1em;
     font-weight: 600;
+}
+.link-trainings {
+    padding-top: 18px !important;
+}
+.home-link {
+    padding-top: 18px !important;
 }
 .topnav a:hover {
     background-color: rgb(172, 230, 201);
