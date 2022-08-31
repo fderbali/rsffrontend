@@ -1,37 +1,34 @@
 <template>
-    <div class="topnav row-100">
-        <div class="topnav-left">
-            <a href="/"><img src="@/assets/images/logo.png" id="logo" alt="logo"></a>
-            <a href="/">{{ $i18n.t('home') }}</a>
-            <a href="/"><img src="@/assets/images/school.png" id="home" alt="home" width="43px" height="43px"></a>
+    <div class="topnav row-100 d-flex justify-content-between">
+        <div class="topnav-left d-flex align-items-center">
+            <a href="/">
+                <img src="@/assets/images/logo.png" id="logo" alt="logo">
+            </a>
+            <a href="/" class="pt-0">{{ $i18n.t('home') }}</a>
+            <router-link to="inscription" class="pt-0">{{ $i18n.t('register') }}</router-link>
+        </div>
+        <div class="d-flex align-items-center">
+        </div>
 
-            <router-link to="inscription">{{ $i18n.t('register') }}</router-link>
-            <router-link to="inscription"><img src="@/assets/images/pencil.png" alt="Inscr" width="30px" height="30px"></router-link>
-        </div>
-    
-        <div class="topnav-right pt-3 ">
+
+        <div class="topnav-right d-flex align-items-center">
+            <router-link to="connexion" class="pt-0">{{ $i18n.t('login') }}</router-link>
+            <a class="pt-0" href="/about-us">{{ $i18n.t('about') }}</a>
+            <a class="pt-0" href="/contact"> Contact</a>
+            <div class="topnav-right pt-1">
+                <div v-if="this.$i18n.locale=='fr'">
+                    <a href="#" @click.prevent="changeLanguage()" class="pt-0">
+                        <img src="@/assets/images/fr.png" alt="fr" width="44px" height="30px">
+                    </a>
+                </div>
+                <div v-else>
+                    <a href="#" @click.prevent="changeLanguage()" class="pt-0">
+                        <img src="@/assets/images/en.png" alt="en" width="44px" height="30px">
+                    </a>
+                </div>
+            </div>
             <input v-model="search" @keyup.enter="updateSearchString()" type="text" class="form-control"
-            :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
-        </div>
-        <div class="topnav-right">
-            <div v-if="this.$i18n.locale=='fr'">
-                <a href="#" @click.prevent="changeLanguage()">
-                    <img src="@/assets/images/qc.png" alt="fr" width="44px" height="30px">
-                </a>
-            </div>
-            <div v-else>
-                <a href="#" @click.prevent="changeLanguage()">
-                    <img src="@/assets/images/en.png" alt="en" width="44px" height="30px">
-                </a>
-            </div>
-        </div>
-        
-        <div class="topnav-right"><a href="/about-us">{{ $i18n.t('about') }}</a></div>
-        <div class="topnav-right"><a href="/contact"> Contact</a></div>
-        
-        <div class="topnav-right">
-            <router-link to="connexion">{{ $i18n.t('login') }}</router-link>
-            <router-link to="connexion"><img src="@/assets/images/school-bus.png" alt="Connex" width="45px" height="45px"></router-link>
+                   :placeholder="$i18n.t('search')" :aria-label="$i18n.t('search')">
         </div>
     </div>
 </template>
